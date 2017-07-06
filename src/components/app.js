@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import CurrentProjects from './currentProjects';
+import Navbar from './navbar';
 import React from 'react';
 import TaskList from './taskList';
 
@@ -103,7 +104,15 @@ export default class App extends React.Component {
   render() {
     return (
     <div id="app container" >
-      <h1>React Tasks!</h1>
+      <Navbar />
+      <div>
+        <header>
+          <h1>Hi, I'm Ariel Salem</h1>
+        </header>
+        <div>
+          <p>FULL STACK DEVELOPER & UI/UX DESIGNER</p>
+        </div>
+      </div>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
             <CurrentProjects
