@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import AddTask from './addTask';
+import CurrentProjects from './currentProjects';
 import React from 'react';
 import TaskList from './taskList';
 
@@ -106,7 +106,7 @@ export default class App extends React.Component {
       <h1>React Tasks!</h1>
         <nav className="navbar">
           <div className="col-md-6 col-md-offset-3">
-            <AddTask
+            <CurrentProjects
               tasks={this.state.tasks}
               createTask={this.createTask.bind(this)}
              />
