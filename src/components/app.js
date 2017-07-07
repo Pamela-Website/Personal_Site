@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import Contact from './contact.js'
 import CurrentProjects from './currentProjects';
 import Navigation from './navbar';

@@ -20,7 +20,7 @@
    render() {
      return (
       <nav className="navbar navbar-toggleable-md navbar-light bg-faded navMaster">
-        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU  <span className="navbar-toggler-icon" onClick={this.toggle}></span>
+        <button className="navbar-toggler navbar-toggler-right btn" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU  <span className="navbar-toggler-icon" onClick={this.toggle}></span>
         </button>
         <a className="navbar-brand" href="#"><strong>AS ARIEL SALEM</strong></a>
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
