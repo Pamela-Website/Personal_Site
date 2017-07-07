@@ -1,7 +1,19 @@
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
+button {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*.navMaster {
+  position: fixed;
+}*/
+
+.pageHeader {
+  text-align: center;
+}
+
 body {
-  background: #f1f1f1;
+  background-image: url('../public/img/Big-Sur.Jpg');
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -10,7 +22,7 @@ strong {
 }
 
 .navbar {
-  background: #fff;
+  background: #f1f1f1;
   margin-bottom: 20px;
 }
 

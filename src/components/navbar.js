@@ -1,7 +1,7 @@
  import React from 'react';
  import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
- export default class addTask extends React.Component {
+ export default class Navigation extends React.Component {
    constructor(props) {
       super(props);
         this.toggle = this.toggle.bind(this);
@@ -11,14 +11,16 @@
     }
 
     toggle() {
-      this.setState({ isOpen: !this.state.isOpen });
+      console.log('this is toggled')
+      this.setState({
+        isOpen: !this.state.isOpen
+      });
     }
 
    render() {
      return (
-      <nav className="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-toggleable-md navbar-light bg-faded navMaster">
+        <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU  <span className="navbar-toggler-icon" onClick={this.toggle}></span>
         </button>
         <a className="navbar-brand" href="#"><strong>AS ARIEL SALEM</strong></a>
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
