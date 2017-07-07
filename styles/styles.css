@@ -101,7 +101,7 @@ strong {
   padding-left: 20px;
 }
 
-input {
+input, textarea {
   border-radius: 5px;
 }
 

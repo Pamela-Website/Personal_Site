@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import Contact from './contact.js'
 import CurrentProjects from './currentProjects';
 import Navigation from './navbar';
 import PageHeader from './pageHeader'
@@ -122,6 +123,9 @@ export default class App extends React.Component {
               tasks={this.state.tasks}
             />
         </div>
+      </div>
+      <div>
+        <Contact />
       </div>
     </div>
     );

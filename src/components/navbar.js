@@ -35,7 +35,7 @@
                 <a className="nav-link" href="#">BLOG</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">CONTACT ME</a>
+                <a className="nav-link" href="#">CONTACT</a>
               </li>
           </ul>
         </div>
