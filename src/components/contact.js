@@ -24,7 +24,7 @@ export default class Contact extends React.Component {
               <div className="row">
                 <div className="field">
                   <label for="comments">Message </label>
-                  <textarea className="contact_container" name="comments" id="comments" rows="10" cols="50"></textarea>
+                  <textarea className="contact_container col-sm-10 offset-sm-1" name="comments" id="comments" rows="10" cols="50"></textarea>
                 </div>
                 <ul className="actions">
                   <li><input type="submit" value="Send Message" className="special" /></li>
