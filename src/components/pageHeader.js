@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default class PageHeader extends React.Component {
+export default class PageHeader extends Component {
   render() {
     return (
       <div className="pageHeader">
