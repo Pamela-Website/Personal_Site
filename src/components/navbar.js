@@ -26,16 +26,16 @@
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
           <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">ABOUT ME</a>
+                <a className="nav-link" href="#about">ABOUT ME</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">PROJECTS</a>
+                <a className="nav-link" href="#projects">PROJECTS</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">BLOG</a>
+                <a className="nav-link" href="#blog">BLOG</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">CONTACT</a>
+                <a className="nav-link" href="#contact">CONTACT</a>
               </li>
           </ul>
         </div>
