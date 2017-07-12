@@ -107,7 +107,7 @@ export default class App extends React.Component {
     <div id="app container" >
       <Navigation />
       <PageHeader />
-      <div className="col-md-6 col-md-offset-3">
+      <div className="col-md-12">
         <CurrentProjects
           tasks={this.state.tasks}
           createTask={this.createTask.bind(this)}
