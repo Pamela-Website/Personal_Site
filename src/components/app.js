@@ -1,22 +1,22 @@
-import Contact from './contact.js'
-import CurrentProjects from './currentProjects';
+import Blog from './blog';
+import Home from './home'
 import Navigation from './navbar';
-import PageHeader from './pageHeader'
 import React, { Component } from 'react';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 export default class App extends Component {
   render() {
     return (
-    <div id="app container" >
-      <Navigation />
-      <PageHeader />
-      <div className="col-md-12">
-        <CurrentProjects />
-      </div>
-      <div>
-        <Contact />
-      </div>
-    </div>
+      <Router>
+        <div>
+          <Navigation />
+          <div className="container-fluid">
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/home" component={Home}></Route>
+            <Route path="/blog" component={Blog}></Route>
+          </div>
+        </div>
+      </Router>
     );
   }
 }
