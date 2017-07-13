@@ -10,13 +10,13 @@ export default class addTask extends Component {
   render() {
     return (
       <div>
-        <div className="row">
+        <div className="row project-body-right">
           <div>
             <a href="https://organico-plantr.herokuapp.com">
               <img className="project-picture" src="../../public/img/Plantr.png" />
             </a>
           </div>
-          <div className="col-md-8 project-body-right">
+          <div className="col-md-8">
             <br />
             <div className="project-info">
               <h2 className="project-name">PLANTR</h2>
@@ -29,8 +29,8 @@ export default class addTask extends Component {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-8 project-body-left">
+        <div className="row project-body-left">
+          <div className="col-md-8">
             <br />
             <h2 className="project-name">STACKETS</h2>
             <div className="project-description">
@@ -42,17 +42,17 @@ export default class addTask extends Component {
           </div>
           <div>
             <a href="https://stackets-orion.herokuapp.com">
-              <img className="project-picture" src="../../public/img/Stackets.png" />
+              <img className="project-picture-right" src="../../public/img/Stackets.png" />
             </a>
           </div>
         </div>
-        <div className="row">
+        <div className="row project-body-right">
           <div>
             <a href="https://organico-plantr.herokuapp.com">
               <img className="project-picture" src="../../public/img/Plantr.png" />
             </a>
           </div>
-          <div className="col-md-8 project-body-right">
+          <div className="col-md-8">
             <br />
             <h2 className="project-name">PLANTR</h2>
             <div className="project-description">
