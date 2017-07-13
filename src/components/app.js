@@ -2,12 +2,12 @@ import Blog from './blog';
 import Home from './home'
 import Navigation from './navbar';
 import React, { Component } from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-
+import { BrowserRouter, Route } from 'react-router-dom';
+// webpack-dev-server --content-base src/ --inline --hot --history-api-fallback
 export default class App extends Component {
   render() {
     return (
-      <Router>
+      <BrowserRouter>
         <div>
           <Navigation />
           <div className="container-fluid">
@@ -16,7 +16,7 @@ export default class App extends Component {
             <Route path="/blog" component={Blog}></Route>
           </div>
         </div>
-      </Router>
+      </BrowserRouter>
     );
   }
 }

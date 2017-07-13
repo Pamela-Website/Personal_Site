@@ -18,12 +18,14 @@ export default class addTask extends Component {
           </div>
           <div className="col-md-8 project-body-right">
             <br />
-            <h2 className="project-name">PLANTR</h2>
-            <div className="project-description">
-              <p>Plantr is an online gardening and outdoor decor service where you can create and plan your seasonal gardens based on regional variations and personal needs. </p>
-              <br />
-              <b>ROLE: </b>
-              <i>Scrum Master</i>
+            <div className="project-info">
+              <h2 className="project-name">PLANTR</h2>
+              <div className="project-description">
+                <p>Plantr is an online gardening and outdoor decor service where you can create and plan your seasonal gardens based on regional variations and personal needs. </p>
+                <br />
+                <b>ROLE: </b>
+                <i>Scrum Master</i>
+              </div>
             </div>
           </div>
         </div>
