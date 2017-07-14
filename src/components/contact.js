@@ -5,30 +5,34 @@ export default class Contact extends Component {
     return (
       <div className="contact">
         <section>
-          <header className="reach_out">
-            <h2>Reach Out</h2>
+          <header>
+            <p className="contact-header">Reach Out</p>
           </header>
-          <form className="form_styling" action="submit" method="post">
+          <hr />
+          <form className="form-styling" action="submit" method="post">
             <div className="container">
               <div className="row">
-                <div className="col-sm-5 offset-sm-1">
-                  <label for="name">Name </label>
-                  <input className="contact_container" type="text" name="name" id="name" />
+                <div className="col-sm-5">
+                  <label  className="contact-label" for="name">Name </label>
+                  <input className="contact-container" type="text" name="name" id="name" />
                 </div>
                 <div className="col-sm-5 offset-sm-1">
-                  <label for="email">Email</label>
-                  <input className="contact_container" type="text" name="email" id="email" />
+                  <label  className="contact-label" for="email">Email</label>
+                  <input className="contact-container" type="text" name="email" id="email" />
                 </div>
               </div>
               <br />
               <div className="row">
-                <div className="field">
-                  <label for="comments">Message </label>
-                  <textarea className="contact_container col-sm-10 offset-sm-1" name="comments" id="comments" rows="10" cols="50"></textarea>
+                <div className="col-sm-5">
+                  <label className="contact-label" for="message">Message </label>
                 </div>
-                <ul className="actions">
-                  <li><input type="submit" value="Send Message" className="special" /></li>
-                </ul>
+                  <div className="col-sm-12">
+                    <textarea className="contact-container col-sm-11" name="comments" rows="10"></textarea>
+                  </div>
+              </div>
+              <br />
+              <div className="row send-message">
+                <button type="submit" className="send-message-button"> Send Message </button>
               </div>
             </div>
           </form>

@@ -16,6 +16,7 @@ export default class Home extends Component {
         <div className="col-md-12">
           <CurrentProjects />
         </div>
+        <br />
         <div>
           <Contact />
         </div>
