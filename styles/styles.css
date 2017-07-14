@@ -181,12 +181,13 @@ h5 {
 }
 
 .send-message-button {
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 1px;
   background-color: white;
   font-variant: small-caps;
   border: 0px;
-  padding: 1px 6px;
+  padding: 4px 11px;
+  font-weight: 800;
 }
 
 /*
@@ -236,6 +237,10 @@ h5 {
   font-size: 20px;
   font-weight: 600;
    /*font-variant: small-caps;*/
+}
+
+i {
+  font-variant: small-caps;
 }
 
 b {
