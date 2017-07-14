@@ -26,6 +26,9 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    historyApiFallback: true
+  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // for hot reloading
     new webpack.NoEmitOnErrorsPlugin() // won't compile with errors

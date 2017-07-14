@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const index = require('./routes/index');
-const tasks = require('./routes/tasks');
+const nodemailer = require('nodemailer');
+const xoauth2 = require('xoauth2');
+const oauth = require('./public/oauth');
 
 const app = express();
 let port = process.env.PORT || 3000
@@ -21,9 +22,37 @@ app.use(express.static(__dirname));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-// Sets our Routes
-app.use('/', index);
-app.use('/api', tasks);
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
+  });
+
+app.post('/send', function(req, res, next) {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      xoauth2: xoauth2.createXOAuth2Generator({
+        user: 'ariel.salem1989@gmail.com',
+        clientId: oauth.clientId,
+        clientSecret: oauth.secret,
+        refreshToken: oauth.token
+      })
+    }
+  })
+  const mailOptions = {
+    from: `${req.body.email}`,
+    to: 'ariel.salem1989@gmail.com',
+    subject: `${req.body.name}`,
+    text: `${req.body.message}`
+  }
+  transporter.sendMail(mailOptions, function(err, res) {
+    if (err) {
+      console.error('there was an error: ', err);
+    } else {
+      console.log('here is the res: ', res)
+    }
+    // res.redirect('/')
+  })
+})
 
 app.listen(port, function() {
   console.log('we are in the mainframe: ', port);

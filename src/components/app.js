@@ -3,7 +3,7 @@ import Home from './home'
 import Navigation from './navbar';
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-// webpack-dev-server --content-base src/ --inline --hot --history-api-fallback
+
 export default class App extends Component {
   render() {
     return (

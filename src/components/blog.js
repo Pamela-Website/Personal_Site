@@ -1,3 +1,4 @@
+import BlogList from './blogList';
 import React, { Component } from 'react';
 
 export default class Blog extends Component {
@@ -8,7 +9,19 @@ export default class Blog extends Component {
 
   render() {
     return (
-      <h1>This is the blog</h1>
+      <div>
+        <div className="blog">
+          <header>
+            <p className="blog-header">Ariel Salem</p>
+            <p className="blog-description"> Lover of Tech, Programming, and all things JavaScript </p>
+          </header>
+          <hr />
+        </div>
+        <br />
+        <div>
+          <BlogList />
+        </div>
+      </div>
     )
   }
 }

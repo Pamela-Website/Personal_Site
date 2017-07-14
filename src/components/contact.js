@@ -9,16 +9,16 @@ export default class Contact extends Component {
             <p className="contact-header">Reach Out</p>
           </header>
           <hr />
-          <form className="form-styling" action="submit" method="post">
+          <form className="form-styling" action="/api/send" method="post">
             <div className="container">
               <div className="row">
                 <div className="col-sm-5">
                   <label  className="contact-label" for="name">Name </label>
-                  <input className="contact-container" type="text" name="name" id="name" />
+                  <input className="contact-container" type="text" name="name" />
                 </div>
                 <div className="col-sm-5 offset-sm-1">
                   <label  className="contact-label" for="email">Email</label>
-                  <input className="contact-container" type="text" name="email" id="email" />
+                  <input className="contact-container" type="text" name="email" />
                 </div>
               </div>
               <br />
@@ -27,7 +27,7 @@ export default class Contact extends Component {
                   <label className="contact-label" for="message">Message </label>
                 </div>
                   <div className="col-sm-12">
-                    <textarea className="contact-container col-sm-11" name="comments" rows="10"></textarea>
+                    <textarea className="contact-container col-sm-11" name="message" rows="10"></textarea>
                   </div>
               </div>
               <br />
