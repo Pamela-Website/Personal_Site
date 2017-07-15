@@ -134,6 +134,10 @@ input:focus, textarea:focus {
 .project-picture:hover {
   -webkit-filter: brightness(70%);
   filter: brightness(70%);
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .project-picture-right {
@@ -144,6 +148,10 @@ input:focus, textarea:focus {
 .project-picture-right:hover {
   -webkit-filter: brightness(70%);
   filter: brightness(70%);
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
 }
 
 .project-name {
@@ -235,4 +243,38 @@ b {
 .blog-summary {
   font-size: 18px;
   padding: 0px 30px;
+}
+
+/*
+||||||||||||||||||||||| FOOTER |||||||||||||||||||||||
+ */
+
+.footer {
+  background-color: white;
+}
+
+.footer-icons {
+  font-size: xx-large;
+  padding: 0px 2%;
+}
+
+.a-icons {
+  padding: 0px 1%;
+  color: black;
+}
+
+.a-icons:hover {
+  padding: 0px 1%;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  color: #9bf1ff;
+}
+
+.footer-copyright {
+  padding-left: 2.75%;
+  font-size: large;
+  font-weight: 600;
+  opacity: 0.5;
 }
