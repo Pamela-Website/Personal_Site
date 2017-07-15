@@ -10,7 +10,7 @@ export default class App extends Component {
       <BrowserRouter>
         <div>
           <Navigation />
-          <div className="container-fluid">
+          <div>
             <Route exact path="/" component={Home}></Route>
             <Route path="/home" component={Home}></Route>
             <Route path="/blog" component={Blog}></Route>

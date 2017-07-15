@@ -1,24 +1,54 @@
 import React, { Component } from 'react';
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
+
+  sendEmail (name, email, message) {
+    fetch('/send', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        message: message
+      })
+    })
+    .then((res) => res.json())
+    .then((res) => {
+      console.log('here is the response: ', res);
+    })
+    .catch((err) => {
+      console.error('here is the error: ', err);
+    })
+  }
+
   render() {
+    let name;
+    let email;
+    let message;
     return (
-      <div className="contact">
+      <div id="contact" className="contact">
         <section>
           <header>
             <p className="contact-header">Reach Out</p>
           </header>
           <hr />
-          <form className="form-styling" action="/api/send" method="post">
-            <div className="container">
+          <form className="form-styling">
+            <div>
               <div className="row">
                 <div className="col-sm-5">
                   <label  className="contact-label" for="name">Name </label>
-                  <input className="contact-container" type="text" name="name" />
+                  <input className="contact-container" type="text" name="name" ref={(input) => name = input}/>
                 </div>
                 <div className="col-sm-5 offset-sm-1">
                   <label  className="contact-label" for="email">Email</label>
-                  <input className="contact-container" type="text" name="email" />
+                  <input className="contact-container" type="text" name="email" ref={(input) => email = input}/>
                 </div>
               </div>
               <br />
@@ -27,13 +57,22 @@ export default class Contact extends Component {
                   <label className="contact-label" for="message">Message </label>
                 </div>
                   <div className="col-sm-12">
-                    <textarea className="contact-container col-sm-11" name="message" rows="10"></textarea>
+                    <textarea className="contact-container col-sm-11" name="message" rows="10" ref={(input) => message = input}></textarea>
                   </div>
               </div>
               <br />
               <div className="row send-message">
-                <button type="submit" className="send-message-button"> Send Message </button>
+                <button type="submit" className="send-message-button" onClick={() => {
+                  name = name.value;
+                  email = email.value;
+                  message = message.value;
+                  this.sendEmail(name, email, message);
+                  name.value = '';
+                  email.value = '';
+                  message.value = ''
+                }}> Send Message </button>
               </div>
+              <br />
             </div>
           </form>
         </section>

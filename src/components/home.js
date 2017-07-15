@@ -1,5 +1,6 @@
 import Contact from './contact.js'
 import CurrentProjects from './currentProjects';
+import Footer from './footer';
 import PageHeader from './pageHeader'
 import React, { Component } from 'react';
 
@@ -19,6 +20,9 @@ export default class Home extends Component {
         <br />
         <div>
           <Contact />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     )

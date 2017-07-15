@@ -64,8 +64,9 @@ strong {
 /*
 ||||||||||||||||||||||| CONTACT |||||||||||||||||||||||
  */
-.form-styling {
+.form-styling, .contact-header {
   padding-left: 5%;
+  margin: 0px 6%;
 }
 
 .contact {
@@ -73,19 +74,23 @@ strong {
 }
 
 .contact-header {
-  text-align: center;
-  font-size: 35px;
-  padding-top: 15px;
+  font-size: 50px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-variant: small-caps;
 }
 
 input, textarea {
-  border-radius: 5px;
+  /*border-radius: 5px;*/
+  outline: none;
+  border: 3px solid #e0afea;
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
-h5 {
-  border: 2px solid red;
-  text-align: center;
-  padding: 10px;
+input:focus, textarea:focus {
+  outline: none;
+  border: 3px solid #9BF1FF;
 }
 
 .contact-container {
@@ -100,7 +105,7 @@ h5 {
 }
 
 .contact-label {
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 1px;
   font-variant: small-caps;
 }
@@ -113,6 +118,7 @@ h5 {
   border: 0px;
   padding: 4px 11px;
   font-weight: 800;
+  margin-left: 0.5%;
 }
 
 /*
@@ -120,8 +126,9 @@ h5 {
  */
 
 .project-picture {
-  max-width: 550px; /*can be 40%*/
+  max-width: 100%;
   height: auto;
+  margin-left: -5%;
 }
 
 .project-picture:hover {
@@ -130,9 +137,8 @@ h5 {
 }
 
 .project-picture-right {
-  max-width: 550px; /*can be 40%*/
-  height: auto;
-  margin-left: 73px;
+  max-width: 100%;
+  margin-left: 2%;
 }
 
 .project-picture-right:hover {

@@ -30,13 +30,13 @@
                 <Link className="nav-link" to="/about">ABOUT ME</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">PROJECTS</Link>
+                <a className="nav-link" href="/#projects">PROJECTS</a>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/blog">BLOG</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">CONTACT</Link>
+                <a className="nav-link" href="/#contact">CONTACT</a>
               </li>
           </ul>
         </div>

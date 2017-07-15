@@ -30,17 +30,13 @@ app.post('/send', function(req, res, next) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      xoauth2: xoauth2.createXOAuth2Generator({
-        user: 'ariel.salem1989@gmail.com',
-        clientId: oauth.clientId,
-        clientSecret: oauth.secret,
-        refreshToken: oauth.token
-      })
+      user: oauth.user,
+      pass: oauth.pass
     }
   })
   const mailOptions = {
     from: `${req.body.email}`,
-    to: 'ariel.salem1989@gmail.com',
+    to: oauth.user,
     subject: `${req.body.name}`,
     text: `${req.body.message}`
   }
@@ -49,8 +45,8 @@ app.post('/send', function(req, res, next) {
       console.error('there was an error: ', err);
     } else {
       console.log('here is the res: ', res)
-    }
     // res.redirect('/')
+    }
   })
 })
 
