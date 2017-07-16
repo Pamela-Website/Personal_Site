@@ -2,7 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const xoauth2 = require('xoauth2');
 const oauth = require('./public/oauth');
 
 const app = express();
@@ -46,7 +45,6 @@ app.post('/send', function(req, res, next) {
       console.error('there was an error: ', err);
     } else {
       console.log('here is the res: ', res)
-    // res.redirect('/')
     }
   })
 })

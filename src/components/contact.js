@@ -56,21 +56,20 @@ export default class Contact extends Component {
                 <div className="col-sm-5">
                   <label className="contact-label" for="message">Message </label>
                 </div>
-                  <div className="col-sm-12">
-                    <textarea className="contact-container col-sm-11" name="message" rows="10" ref={(input) => message = input}></textarea>
-                  </div>
-              </div>
-              <br />
-              <div className="row send-message">
-                <button type="submit" className="send-message-button" onClick={() => {
-                  name = name.value;
-                  email = email.value;
-                  message = message.value;
-                  this.sendEmail(name, email, message);
-                  name.value = '';
-                  email.value = '';
-                  message.value = ''
-                }}> Send Message </button>
+                <div className="col-sm-12">
+                  <textarea className="contact-container col-sm-11" name="message" rows="10" ref={(input) => message = input}></textarea>
+                </div>
+                <div className="row send-message">
+                  <button type="submit" className="send-message-button" onClick={() => {
+                    name = name.value;
+                    email = email.value;
+                    message = message.value;
+                    this.sendEmail(name, email, message);
+                    name.value = '';
+                    email.value = '';
+                    message.value = ''
+                  }}> Send Message </button>
+                </div>
               </div>
               <br />
             </div>

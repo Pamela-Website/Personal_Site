@@ -27,9 +27,6 @@
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
           <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/about">ABOUT ME</Link>
-              </li>
-              <li className="nav-item">
                 <a className="nav-link" href="/#projects">PROJECTS</a>
               </li>
               <li className="nav-item">

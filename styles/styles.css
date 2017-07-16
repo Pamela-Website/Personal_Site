@@ -73,7 +73,7 @@ strong {
 
 .contact-header {
   font-size: calc(30px + 2vw);
-  padding-top: 50px;
+  padding-top: 2.5%;
   padding-bottom: 1%;
   font-variant: small-caps;
 }
@@ -99,7 +99,8 @@ input:focus, textarea:focus {
 }
 
 .send-message {
-  padding-left: 1.5%;
+  padding-left: calc(26px + 0.5vw);
+  padding-top: calc(10px + 0.5vw);
 }
 
 .contact-label {
@@ -116,15 +117,19 @@ input:focus, textarea:focus {
   border: 0px;
   padding: 4px 11px;
   font-weight: 800;
-  margin-left: 0.5%;
 }
 
 /*
 ||||||||||||||||||||||| CURRENTPROJECTS |||||||||||||||||||||||
  */
 
+.project-info {
+
+}
+
 .project-picture {
   max-width: 100%;
+  min-width: 300px;
   height: auto;
   margin-left: -5%;
 }
@@ -140,7 +145,8 @@ input:focus, textarea:focus {
 
 .project-picture-right {
   max-width: 100%;
-  margin-left: 2%;
+  min-width: 300px;
+  margin-left: calc(5px + 0.5vw);
 }
 
 .project-picture-right:hover {
@@ -153,9 +159,10 @@ input:focus, textarea:focus {
 }
 
 .project-name {
+  font-size: calc(26px + 0.75vw);
   text-align: center;
   font-weight: bold;
-  padding: 30px;
+  padding: 2.5%;
 }
 
 .project-body-right {
@@ -169,20 +176,24 @@ input:focus, textarea:focus {
 }
 
 .project-description {
-  padding: 30px;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: calc(15px + 0.5vw);
   font-weight: 600;
-   /*font-variant: small-caps;*/
+  font-variant: small-caps;
+  padding-left: calc(30px + 1.5vw);
 }
 
 i {
+  font-size: calc(17px + 0.2vw);
   font-variant: small-caps;
 }
 
 b {
-  font-size: 22px;
-  font-weight: 1000;
+  font-size: calc(17px + 0.2vw);
+  font-weight: bolder;
+}
+
+.project-role {
 }
 
 /*
