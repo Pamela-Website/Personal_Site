@@ -17,8 +17,6 @@ export default class Footer extends Component {
         <div className="footer-copyright">© Ariel Salem </div>
         <br />
         <br />
-        <br />
-        <br />
       </div>
     )
   }

@@ -38,7 +38,8 @@ app.post('/send', function(req, res, next) {
     from: `${req.body.email}`,
     to: oauth.user,
     subject: `${req.body.name}`,
-    text: `${req.body.message}`
+    text: `${req.body.message}`,
+    replyTo: `${req.body.email}`
   }
   transporter.sendMail(mailOptions, function(err, res) {
     if (err) {
