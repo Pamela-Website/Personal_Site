@@ -49,6 +49,6 @@ app.post('/send', function(req, res, next) {
   })
 })
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
   console.log('we are in the mainframe: ', port);
 })
