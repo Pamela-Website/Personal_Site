@@ -119,6 +119,20 @@ input:focus, textarea:focus {
   font-weight: 800;
 }
 
+.success-alert {
+  -webkit-animation: fadein 300;
+  -moz-animation: fadein 300;
+  -ms-animation: fadein 300;
+  -o-animation: fadein 300;
+  animation: fadein 300;
+  /*delay( 1500 )*/ /*not sure if it's transition delay or animation delay*/
+  -webkit-animation: fadeout 400;
+  -moz-animation: fadeout 400;
+  -ms-animation: fadeout 400;
+  -o-animation: fadeout 400;
+  animation: fadeout 400;
+}
+
 /*
 ||||||||||||||||||||||| CURRENTPROJECTS |||||||||||||||||||||||
  */

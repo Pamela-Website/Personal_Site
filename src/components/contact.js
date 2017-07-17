@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { Alert } from 'reactstrap';
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      success: false
+    }
   }
 
   sendEmail (name, email, message) {
@@ -21,11 +24,28 @@ export default class Contact extends Component {
     })
     .then((res) => res.json())
     .then((res) => {
+      this.setState({ success: !this.state.success })
       console.log('here is the response: ', res);
     })
     .catch((err) => {
+      this.setState({ success: !this.state.success })
       console.error('here is the error: ', err);
     })
+  }
+
+  renderSuccessMessage() {
+    // preventDefault();
+    console.log('this was called')
+    if (this.state.success) {
+      return (
+        <div>
+          <Alert color="success" className="sucess-alert">
+            <p>Your email was sent successfully. </p>
+          </Alert>
+        </div>
+
+      )
+    }
   }
 
   render() {
@@ -74,6 +94,9 @@ export default class Contact extends Component {
               <br />
             </div>
           </form>
+          <div>
+            {this.renderSuccessMessage()}
+          </div>
         </section>
       </div>
     );
