@@ -12,8 +12,10 @@ export default class Blog extends Component {
     fetch(`https://api.medium.com/v1/users/${oauth.userId}/publications`, {
       method: 'GET',
       headers: {
+        'Authorization': `Bearer ${oauth.secret}`,
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept-Charset': 'utf-8'
       }
     })
     .then((res) => res.json())
