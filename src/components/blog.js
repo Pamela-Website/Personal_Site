@@ -9,10 +9,15 @@ export default class Blog extends Component {
   }
 
   getBlogs() {
+    // fetch(`https://medium.com/m/oauth/authorize?client_id=${oauth.clientId}
+    // &scope=publishPost
+    // &state={{state}}
+    // &response_type=code
+    // &redirect_uri={{redirectUri}}`)
     fetch(`https://api.medium.com/v1/users/${oauth.userId}/publications`, {
       method: 'GET',
       headers: {
-        'Authorization': `Bearer ${oauth.secret}`,
+        'Authorization': `ariel salem ${oauth.token}`,
         'Accept': 'application/json',
         'Content-Type': 'application/json',
         'Accept-Charset': 'utf-8'
