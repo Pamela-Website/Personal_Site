@@ -253,7 +253,7 @@ b {
 }
 
 .blog-list-entry {
-/*TODO*/
+  /*TODO*/
 }
 
 .blog-title {
@@ -266,6 +266,15 @@ b {
 .blog-summary {
   font-size: 18px;
   padding: 0px 30px;
+}
+
+.blog-link {
+  color: black;
+}
+
+.blog-link:hover, .blog-link:active {
+  color: black;
+  text-decoration: none;
 }
 
 /*

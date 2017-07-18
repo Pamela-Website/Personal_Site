@@ -1,34 +1,23 @@
 import BlogList from './blogList';
 import React, { Component } from 'react';
-import oauth from '../../public/oauth.js'
+import $ from 'jquery';
 
 export default class Blog extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      blogs: []
+    }
   }
 
   getBlogs() {
-    // fetch(`https://medium.com/m/oauth/authorize?client_id=${oauth.clientId}
-    // &scope=publishPost
-    // &state={{state}}
-    // &response_type=code
-    // &redirect_uri={{redirectUri}}`)
-    fetch(`https://api.medium.com/v1/users/${oauth.userId}/publications`, {
-      method: 'GET',
-      headers: {
-        'Authorization': `ariel salem ${oauth.token}`,
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Accept-Charset': 'utf-8'
+    const data = {
+      rss_url: 'https://medium.com/feed/@ariel.salem1989'
+    }
+    $.get('https://api.rss2json.com/v1/api.json', data, (res) => {
+      if (res.status === 'ok') {
+        this.setState({ blogs: res.items })
       }
-    })
-    .then((res) => res.json())
-    .then((res) => {
-      console.log('here is the response: ', res);
-    })
-    .catch((err) => {
-      console.error('here is the error: ', err);
     })
   }
 
@@ -37,6 +26,7 @@ export default class Blog extends Component {
   }
 
   render() {
+    const blogs = this.state.blogs;
     return (
       <div>
         <div className="blog">
@@ -48,7 +38,7 @@ export default class Blog extends Component {
         </div>
         <br />
         <div>
-          <BlogList />
+          <BlogList blogs={blogs} />
         </div>
       </div>
     )

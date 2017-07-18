@@ -63,18 +63,18 @@ export default class Contact extends Component {
             <div>
               <div className="row">
                 <div className="col-sm-5">
-                  <label  className="contact-label" for="name">Name </label>
+                  <label  className="contact-label" htmlFor="name">Name </label>
                   <input className="contact-container" type="text" name="name" ref={(input) => name = input}/>
                 </div>
                 <div className="col-sm-5 offset-sm-1">
-                  <label  className="contact-label" for="email">Email</label>
+                  <label  className="contact-label" htmlFor="email">Email</label>
                   <input className="contact-container" type="text" name="email" ref={(input) => email = input}/>
                 </div>
               </div>
               <br />
               <div className="row">
                 <div className="col-sm-5">
-                  <label className="contact-label" for="message">Message </label>
+                  <label className="contact-label" htmlFor="message">Message </label>
                 </div>
                 <div className="col-sm-12">
                   <textarea className="contact-container col-sm-11" name="message" rows="10" ref={(input) => message = input}></textarea>
