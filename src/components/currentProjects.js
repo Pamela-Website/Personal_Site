@@ -13,7 +13,7 @@ export default class CurrentProjects extends Component {
           </div>
           <div className="col-md-8 col-sm-12">
             <br />
-            <div id="projects" className="project-info">
+            <div id="portfolio" className="project-info">
               <p className="project-name">PLANTR</p>
               <div className="project-description">
                 <p>Plantr is an online gardening and outdoor decor service where you can create and plan your seasonal gardens based on regional variations and personal needs.</p>
