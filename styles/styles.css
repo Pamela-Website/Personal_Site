@@ -184,7 +184,7 @@ input:focus, textarea:focus {
 
 .project-picture {
   max-width: 100%;
-  max-height: 50vw;
+  max-height: 100vw;
   /*min-width: 300px;*/
   /*min-height: 300px;*/
   height: auto;
@@ -203,22 +203,22 @@ input:focus, textarea:focus {
   transition: all 200ms ease-in;
 }
 
-.project-picture-right {
+/*.project-picture-right {
   max-width: 100%;
-  max-height: 50vw;
-  /*min-width: 300px;*/
-  /*min-height: 300px;*/
-  /*margin-left: calc(5px + 0.5vw);*/
-}
+  max-height: 100vw;
+  min-width: 300px;
+  /*min-height: 300px;
+  /*margin-left: calc(5px + 0.5vw);
+}*/
 
-.project-picture-right:hover {
+/*.project-picture-right:hover {
   -webkit-filter: brightness(70%);
   filter: brightness(70%);
   -webkit-transition: all 200ms ease-in;
   -ms-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
-}
+}*/
 
 .project-name {
   font-size: calc(26px + 0.75vw);
@@ -227,15 +227,13 @@ input:focus, textarea:focus {
   /*padding: 2.5%;*/
 }
 
-.project-body-right, .project-body-left {
-  background: #8D9C9F;
+.project-body {
+  background: white;
+  /*background-image: url('../public/img/fog.Jpeg');*/
+  /*background-position: center;*/
+  /*background: #8D9C9F;*/
   opacity: 0.8;
-  margin: 0 1%;
-}
-
-.project-body-left {
-  /*background: #C2CFD5 #526665 #ededed;*/
-  margin: 0 5.5%;
+  margin: 0 4%;
 }
 
 .project-description {
