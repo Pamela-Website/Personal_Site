@@ -40,21 +40,21 @@ app.post('/send', function(req, res, next) {
     text: `${req.body.message}`,
     replyTo: `${req.body.email}`
   }
+  const firstName = req.body.name.split(' ')[0]
   const confirmationEmail = {
     from: oauth.user,
     to: `${req.body.email}`,
     subject: 'Confirmation Email from Ariel',
-    text: `Hello ${req.body.name},
+    text: `
+    Hello ${firstName},
 
-      Thank you for reaching out!
+    Thank you for reaching out!
 
-      I will get back to you shortly, if you have any further questions
-      please let us know.
+    If you have any further questions please let me know. I will get back to you shortly.
 
-      Best wishes,
+    Best wishes,
 
-      Ariel Salem
-    `
+    Ariel Salem`
   }
   transporter.sendMail(mailOptions, function(err, res) {
     if (err) {
@@ -66,11 +66,11 @@ app.post('/send', function(req, res, next) {
           console.error('there was an error: ', err);
           res.status(500);
         } else {
-          console.log('here is the res: ', res);
+          console.log('here is the res in confirmationEmail: ', res);
           res.status(200);
         }
       })
-      console.log('here is the res: ', res);
+      console.log('here is the res in mailOptions: ', res);
       res.status(200);
     }
   })
