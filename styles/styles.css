@@ -16,12 +16,47 @@ strong {
   font-size: 30px;
 }
 
+
+/*
+||||||||||||||||||||||| NAVBAR |||||||||||||||||||||||
+ */
+
+ .menu-button {
+  color: rgba(0,0,0,.5);
+  font-size: 18px;
+  font-weight: 800;
+ }
+
 .navbar {
   background: none;
   margin-bottom: 20px;
   font-weight: 800
 }
 
+.btn-secondary {
+  background: none !important;
+  border: none !important;
+}
+
+.btn {
+  -webkit-appearance: none !important;
+  border: none !important;
+}
+
+.navbar-toggler-icon {
+  margin-top: -1px !important;
+  padding-left: 35px;
+}
+
+.dropdown-menu {
+  background: none !important;
+  left: -15px !important;
+  border: none !important;
+}
+.nav-link {
+  color: rgba(0,0,0,.5) !important;
+  font-weight: 800 !important;
+}
 /*.navMaster {
   position: fixed;
 }*/
@@ -49,7 +84,7 @@ strong {
 
 .pageHeader {
   text-align: center;
-  padding: 150px 0px;
+  padding: 10% 0px;
 }
 
 .name-header {
@@ -60,7 +95,7 @@ strong {
 .description-header {
   font-size: calc(15px + 0.5vw);
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 7%;
 }
 
 /*
@@ -72,7 +107,7 @@ strong {
 }
 
 .contact {
-  background-color: #e0afea;
+  background-color: #B9C6CE;
 }
 
 .contact-header {
@@ -85,14 +120,14 @@ strong {
 input, textarea {
   /*border-radius: 5px;*/
   outline: none;
-  border: 3px solid #e0afea;
+  border: 3px solid #B9C6CE;
   font-size: 25px;
   letter-spacing: 1px;
 }
 
 input:focus, textarea:focus {
   outline: none;
-  border: 3px solid #9BF1FF;
+  border: 3px solid black;
 }
 
 .contact-container {
@@ -261,7 +296,10 @@ b {
 
 .blog-title {
   color: white;
-  text-shadow: 1px 1px 15px #000;
+/*  text-shadow: 0px 1px 1px #000,
+      0px -1px 1px #000,
+      -1px 0px 1px #000,
+      1px 0px 1px #000;*/
   padding-top: 5px;
   font-size: 25px;
   font-weight: 800;
@@ -270,7 +308,10 @@ b {
 }
 
 .blog-summary {
-  text-shadow: 1px 1px 15px #000;
+/*  text-shadow: 0px 1px 1px #000,
+      0px -1px 1px #000,
+      -1px 0px 1px #000,
+      1px 0px 1px #000;*/
   color: white;
   font-size: 18px;
   padding: 0px 30px;
@@ -279,12 +320,18 @@ b {
 }
 
 .blog-link {
-  text-shadow: 1px 1px 15px #000;
+/*  text-shadow: 0px 1px 1px #000,
+      0px -1px 1px #000,
+      -1px 0px 1px #000,
+      1px 0px 1px #000;*/
   color: white;
 }
 
 .blog-link:hover, .blog-link:active {
-  text-shadow: 1px 1px 15px #000;
+/*  text-shadow: 0px 1px 1px #000,
+      0px -1px 1px #000,
+      -1px 0px 1px #000,
+      1px 0px 1px #000;*/
   color: white;
   text-decoration: none;
 }
