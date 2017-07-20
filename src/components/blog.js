@@ -1,4 +1,5 @@
 import BlogList from './blogList';
+import Footer from './footer';
 import React, { Component } from 'react';
 import $ from 'jquery';
 
@@ -39,6 +40,9 @@ export default class Blog extends Component {
         <br />
         <div>
           <BlogList blogs={blogs} />
+        </div>
+        <div>
+          <Footer />
         </div>
       </div>
     )
