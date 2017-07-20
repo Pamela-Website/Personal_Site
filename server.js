@@ -40,11 +40,38 @@ app.post('/send', function(req, res, next) {
     text: `${req.body.message}`,
     replyTo: `${req.body.email}`
   }
+  const confirmationEmail = {
+    from: oauth.user,
+    to: `${req.body.email}`,
+    subject: 'Confirmation Email from Ariel',
+    text: `Hello ${req.body.name},
+
+      Thank you for reaching out!
+
+      I will get back to you shortly, if you have any further questions
+      please let us know.
+
+      Best wishes,
+
+      Ariel Salem
+    `
+  }
   transporter.sendMail(mailOptions, function(err, res) {
     if (err) {
       console.error('there was an error: ', err);
+      res.status(500);
     } else {
-      console.log('here is the res: ', res)
+      transporter.sendMail(confirmationEmail, function(err, res) {
+        if (err) {
+          console.error('there was an error: ', err);
+          res.status(500);
+        } else {
+          console.log('here is the res: ', res);
+          res.status(200);
+        }
+      })
+      console.log('here is the res: ', res);
+      res.status(200);
     }
   })
 })
