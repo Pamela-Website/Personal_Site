@@ -21,7 +21,7 @@ strong {
 ||||||||||||||||||||||| NAVBAR |||||||||||||||||||||||
  */
 
- .menu-button {
+.menu-button {
   color: rgba(0,0,0,.5);
   font-size: 18px;
   font-weight: 800;
@@ -53,6 +53,7 @@ strong {
   left: -15px !important;
   border: none !important;
 }
+
 .nav-link {
   color: rgba(0,0,0,.5) !important;
   font-weight: 800 !important;
@@ -108,6 +109,7 @@ strong {
 
 .contact {
   background-color: #B9C6CE;
+  opacity: 0.8;
 }
 
 .contact-header {
@@ -182,9 +184,14 @@ input:focus, textarea:focus {
 
 .project-picture {
   max-width: 100%;
-  min-width: 300px;
+  max-height: 50vw;
+  /*min-width: 300px;*/
+  /*min-height: 300px;*/
   height: auto;
-  margin-left: -5%;
+  /*padding-right: 0px !important;*/
+  /*padding-left: 15px !important;*/
+  /*margin-left: calc(-17.5px - 0.75vw);*/
+  padding-bottom: 1%;
 }
 
 .project-picture:hover {
@@ -198,8 +205,10 @@ input:focus, textarea:focus {
 
 .project-picture-right {
   max-width: 100%;
-  min-width: 300px;
-  margin-left: calc(5px + 0.5vw);
+  max-height: 50vw;
+  /*min-width: 300px;*/
+  /*min-height: 300px;*/
+  /*margin-left: calc(5px + 0.5vw);*/
 }
 
 .project-picture-right:hover {
@@ -215,25 +224,28 @@ input:focus, textarea:focus {
   font-size: calc(26px + 0.75vw);
   text-align: center;
   font-weight: bold;
-  padding: 2.5%;
+  /*padding: 2.5%;*/
 }
 
-.project-body-right {
-  background: white;
-  opacity: 0.5;
+.project-body-right, .project-body-left {
+  background: #8D9C9F;
+  opacity: 0.8;
+  margin: 0 1%;
 }
 
 .project-body-left {
-  background: #ededed;
-  opacity: 0.7;
+  /*background: #C2CFD5 #526665 #ededed;*/
+  margin: 0 5.5%;
 }
 
 .project-description {
-  letter-spacing: 2px;
+  /*letter-spacing: 2px;*/
   font-size: calc(15px + 0.5vw);
   font-weight: 600;
   font-variant: small-caps;
-  padding-left: calc(30px + 1.5vw);
+  text-align: center;
+  padding: 0 5%;
+  /*padding-left: calc(30px + 1.5vw);*/
 }
 
 i {
@@ -247,6 +259,7 @@ b {
 }
 
 .project-role {
+  padding-bottom: 10%;
 }
 
 /*
