@@ -5,11 +5,27 @@ export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      success: false
+      success: ''
     }
   }
 
-  sendEmail (name, email, message) {
+  checkInputs(event) {
+    event.preventDefault();
+    let name = this.refs.name.value;
+    let email = this.refs.email.value;
+    let message = this.refs.message.value;
+    if (!name.length || !email.length || !message.length) {
+      this.setState({ success: false })
+    } else {
+      this.setState({ success: true }) // need to remove once nodemailer works
+      this.sendEmail(name, email, message);
+      this.refs.name.value = '';
+      this.refs.email.value = '';
+      this.refs.message.value = '';
+    }
+  }
+
+  sendEmail(name, email, message) {
     fetch('/send', {
       method: 'POST',
       headers: {
@@ -24,27 +40,45 @@ export default class Contact extends Component {
     })
     .then((res) => res.json())
     .then((res) => {
-      this.setState({ success: !this.state.success })
       console.log('here is the response: ', res);
+      this.setState({ success: true })
     })
     .catch((err) => {
-      this.setState({ success: !this.state.success })
+      this.setState({ success: false })
       console.error('here is the error: ', err);
     })
   }
 
   renderSuccessMessage() {
-    // preventDefault();
-    console.log('this was called')
-    if (this.state.success) {
+    console.log('what is the state: ', this.state)
+    if (this.state.success === true) {
       return (
         <div>
           <Alert color="success" className="sucess-alert">
             <p>Your email was sent successfully. </p>
           </Alert>
         </div>
-
       )
+    } else if (this.state.success === false) {
+        return (
+          <div>
+            <Alert color="danger" className="sucess-alert">
+              <p>Please make sure to fill-in all the input fields. </p>
+            </Alert>
+          </div>
+        )
+    } else {
+      return (
+          <br />
+      )
+    }
+  }
+
+  componentDidUpdate() {
+    console.log('Component updated');
+    if (this.state.success === false || this.state.success === true) {
+      const context = this;
+      setTimeout(() => context.setState({ success: '' }), 5000)
     }
   }
 
@@ -59,16 +93,16 @@ export default class Contact extends Component {
             <p className="contact-header">Reach Out</p>
           </header>
           <hr />
-          <form className="form-styling">
+          <form onSubmit={this.checkInputs.bind(this)} className="form-styling">
             <div>
               <div className="row">
                 <div className="col-sm-5">
                   <label  className="contact-label" htmlFor="name">Name </label>
-                  <input className="contact-container" type="text" name="name" ref={(input) => name = input}/>
+                  <input className="contact-container" type="text" name="name" ref="name" />
                 </div>
                 <div className="col-sm-5 offset-sm-1">
                   <label  className="contact-label" htmlFor="email">Email</label>
-                  <input className="contact-container" type="text" name="email" ref={(input) => email = input}/>
+                  <input className="contact-container" type="text" name="email" ref="email" />
                 </div>
               </div>
               <br />
@@ -77,18 +111,10 @@ export default class Contact extends Component {
                   <label className="contact-label" htmlFor="message">Message </label>
                 </div>
                 <div className="col-sm-12">
-                  <textarea className="contact-container col-sm-11" name="message" rows="10" ref={(input) => message = input}></textarea>
+                  <textarea className="contact-container col-sm-11" name="message" rows="10" ref="message" ></textarea>
                 </div>
                 <div className="row send-message">
-                  <button type="submit" className="send-message-button" onClick={() => {
-                    name = name.value;
-                    email = email.value;
-                    message = message.value;
-                    this.sendEmail(name, email, message);
-                    name.value = '';
-                    email.value = '';
-                    message.value = ''
-                  }}> Send Message </button>
+                  <button type="submit" className="send-message-button"> Send Message </button>
                 </div>
               </div>
               <br />

@@ -59,12 +59,12 @@ app.post('/send', function(req, res, next) {
   transporter.sendMail(mailOptions, function(err, res) {
     if (err) {
       console.error('there was an error: ', err);
-      res.status(500);
+      // res.status(500);
     } else {
       transporter.sendMail(confirmationEmail, function(err, res) {
         if (err) {
           console.error('there was an error: ', err);
-          res.status(500);
+          // res.status(500);
         } else {
           console.log('here is the res in confirmationEmail: ', res);
           res.status(200);

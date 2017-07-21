@@ -8,7 +8,7 @@ export default class CurrentProjects extends Component {
       <div className="row">
         <div className="col-md-3 offset-md-1 col-sm-11 project-body">
           <div className="row">
-            <a href="https://organico-plantr.herokuapp.com">
+            <a target="_blank"  href="https://organico-plantr.herokuapp.com">
              <img className="project-picture" src="../../public/img/Plantr.png" />
             </a>
           </div>
@@ -27,7 +27,7 @@ export default class CurrentProjects extends Component {
          </div>
         </div>
         <div className="col-md-3 col-sm-11 project-body">
-          <div className="row"><a href="https://stackets-orion.herokuapp.com">
+          <div className="row"><a target="_blank" href="https://stackets-orion.herokuapp.com">
              <img className="project-picture" src="../../public/img/Plantr.png" />
            </a>
          </div>
@@ -36,7 +36,7 @@ export default class CurrentProjects extends Component {
            <div className="project-info">
            <p className="project-name">STACKETS</p>
            <div className="project-description">
-             <p>Stackets is a personalized programming assistant that allows users to work through, solve, and store helpful tips and tricks for computer programming.</p>
+             <p>Stackets is a personalized programming assistant that allows users to work through, solve, and store helpful tips and tricks for becoming a computer programming.</p>
              <div className="project-role">
                <b>ROLE: </b>
                <i>Product Owner</i>
@@ -46,7 +46,7 @@ export default class CurrentProjects extends Component {
          </div>
         </div>
         <div className="col-md-3 col-sm-11 project-body">
-            <div className="row"><a href="https://organico-plantr.herokuapp.com">
+            <div className="row"><a target="_blank" href="https://organico-plantr.herokuapp.com">
                <img className="project-picture" src="../../public/img/Plantr.png" />
              </a></div>
             <div className="row">
