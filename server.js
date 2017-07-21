@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
 const oauth = require('./public/oauth');
+const xoauth2 = require('xoauth2');
 
 const app = express();
 let port = process.env.PORT || 3000
@@ -29,8 +30,12 @@ app.post('/send', function(req, res, next) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: oauth.user,
-      pass: oauth.pass
+      xoauth2: {
+        user: oauth.user,
+        clientId: oauth.clientId,
+        clientSecret: oauth.secret,
+        refreshToken: oauth.token
+      }
     }
   })
   const mailOptions = {
