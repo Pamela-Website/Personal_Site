@@ -17,7 +17,6 @@ export default class Contact extends Component {
     if (!name.length || !email.length || !message.length) {
       this.setState({ success: false })
     } else {
-      // this.setState({ success: true }) // need to remove once nodemailer works
       this.sendEmail(name, email, message);
       this.refs.name.value = '';
       this.refs.email.value = '';
@@ -40,7 +39,6 @@ export default class Contact extends Component {
     })
     .then((res) => res.json())
     .then((res) => {
-      console.log('here is the response: ', res);
       this.setState({ success: true })
     })
     .catch((err) => {

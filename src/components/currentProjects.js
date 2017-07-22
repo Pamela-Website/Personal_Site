@@ -9,7 +9,7 @@ export default class CurrentProjects extends Component {
         <div className="col-md-3 offset-md-1 col-sm-11 project-body">
           <div className="row">
             <a target="_blank"  href="https://organico-plantr.herokuapp.com">
-             <img className="project-picture" src="../../public/img/Plantr.png" />
+             <img className="project-picture" src="../../public/img/Plantr.jpg" />
             </a>
           </div>
           <div className="row">
@@ -28,7 +28,7 @@ export default class CurrentProjects extends Component {
         </div>
         <div className="col-md-3 col-sm-11 project-body">
           <div className="row"><a target="_blank" href="https://stackets-orion.herokuapp.com">
-             <img className="project-picture" src="../../public/img/Plantr.png" />
+             <img className="project-picture" src="../../public/img/Stackets.jpg" />
            </a>
          </div>
           <div className="row">
@@ -47,7 +47,7 @@ export default class CurrentProjects extends Component {
         </div>
         <div className="col-md-3 col-sm-11 project-body">
             <div className="row"><a target="_blank" href="https://organico-plantr.herokuapp.com">
-               <img className="project-picture" src="../../public/img/Plantr.png" />
+               <img className="project-picture" src="../../public/img/Thymer.jpg" />
              </a></div>
             <div className="row">
              <br />
@@ -68,6 +68,8 @@ export default class CurrentProjects extends Component {
     );
   }
 }
+
+// ALTERNATIVE LOOK
 /*      <div>
         <div className="row project-body-right">
           <div className="col-md-4 col-sm-12">

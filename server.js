@@ -54,40 +54,41 @@ app.post('/send', function(req, res, next) {
           expires: 1494388182480
       }
   };
-  const firstName = req.body.name.split(' ')[0]
-  const confirmationEmail = {
-    from: oauth.user,
-    to: `${req.body.email}`,
-    subject: 'Confirmation Email from Ariel',
-    text: `
-    Hello ${firstName},
+  // const firstName = req.body.name.split(' ')[0]
+  // const confirmationEmail = {
+  //   from: oauth.user,
+  //   to: `${req.body.email}`,
+  //   subject: 'Confirmation Email from Ariel',
+  //   text: `
+  //   Hello ${firstName},
 
-    Thank you for reaching out!
+  //   Thank you for reaching out!
 
-    If you have any further questions please let me know. I will get back to you shortly.
+  //   If you have any further questions please let me know. I will get back to you shortly.
 
-    Best wishes,
+  //   Best wishes,
 
-    Ariel Salem`
-  }
-  transporter.sendMail(mailOptions, function(err, res) {
+  //   Ariel Salem`
+  // }
+  transporter.sendMail(mailOptions, function(err, data) {
     if (err) {
       console.error('there was an error: ', err);
-      // res.status(500);
+      res.status(404);
+      res.send(err);
     } else {
-      console.log('here is the res in mailOptions: ', res);
-      // res.send(200);
+      console.log('here is the data in mailOptions: ', data);
+      res.send(data);
     }
   })
-  transporter.sendMail(confirmationEmail, function(err, res) {
-    if (err) {
-      console.error('there was an error: ', err);
-      // res.status(500);
-    } else {
-      console.log('here is the res in confirmationEmail: ', res);
-      // res.send(200);
-    }
-  })
+  // This auto-response functionality isn't working - need to figure out why
+  // transporter.sendMail(confirmationEmail, function(err, data) {
+  //   if (err) {
+  //     console.error('there was an error: ', err);
+  //   } else {
+  //     console.log('here is the data in confirmationEmail: ', data);
+  //     res.send(200);
+  //   }
+  // })
 })
 
 app.listen(process.env.PORT || port, function() {
