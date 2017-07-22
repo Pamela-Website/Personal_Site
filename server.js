@@ -27,24 +27,33 @@ app.get('*', (req, res) => {
   });
 
 app.post('/send', function(req, res, next) {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      xoauth2: {
-        user: oauth.user,
-        clientId: oauth.clientId,
-        clientSecret: oauth.secret,
-        refreshToken: oauth.token
+  let transporter = nodemailer.createTransport({
+      service: 'Gmail',
+      auth: {
+          type: 'OAuth2',
+          clientId: oauth.clientId,
+          clientSecret: oauth.secret
       }
-    }
-  })
+  });
+  transporter.on('token', (token) => {
+      console.log('A new access token was generated');
+      console.log('User: %s', token.user);
+      console.log('Access Token: %s', token.accessToken);
+      console.log('Expires: %s', new Date(token.expires));
+  });
   const mailOptions = {
     from: `${req.body.email}`,
     to: oauth.user,
     subject: `${req.body.name}`,
     text: `${req.body.message}`,
-    replyTo: `${req.body.email}`
-  }
+    replyTo: `${req.body.email}`,
+    auth : {
+          user: oauth.user,
+          refreshToken: oauth.token,
+          accessToken : oauth.access,
+          expires: 1494388182480
+      }
+  };
   const firstName = req.body.name.split(' ')[0]
   const confirmationEmail = {
     from: oauth.user,
@@ -66,17 +75,17 @@ app.post('/send', function(req, res, next) {
       console.error('there was an error: ', err);
       // res.status(500);
     } else {
-      transporter.sendMail(confirmationEmail, function(err, res) {
-        if (err) {
-          console.error('there was an error: ', err);
-          // res.status(500);
-        } else {
-          console.log('here is the res in confirmationEmail: ', res);
-          res.status(200);
-        }
-      })
       console.log('here is the res in mailOptions: ', res);
-      res.status(200);
+      // res.send(200);
+    }
+  })
+  transporter.sendMail(confirmationEmail, function(err, res) {
+    if (err) {
+      console.error('there was an error: ', err);
+      // res.status(500);
+    } else {
+      console.log('here is the res in confirmationEmail: ', res);
+      // res.send(200);
     }
   })
 })

@@ -17,7 +17,7 @@ export default class Contact extends Component {
     if (!name.length || !email.length || !message.length) {
       this.setState({ success: false })
     } else {
-      this.setState({ success: true }) // need to remove once nodemailer works
+      // this.setState({ success: true }) // need to remove once nodemailer works
       this.sendEmail(name, email, message);
       this.refs.name.value = '';
       this.refs.email.value = '';
@@ -50,7 +50,6 @@ export default class Contact extends Component {
   }
 
   renderSuccessMessage() {
-    console.log('what is the state: ', this.state)
     if (this.state.success === true) {
       return (
         <div>
@@ -75,7 +74,6 @@ export default class Contact extends Component {
   }
 
   componentDidUpdate() {
-    console.log('Component updated');
     if (this.state.success === false || this.state.success === true) {
       const context = this;
       setTimeout(() => context.setState({ success: '' }), 5000)
@@ -83,9 +81,6 @@ export default class Contact extends Component {
   }
 
   render() {
-    let name;
-    let email;
-    let message;
     return (
       <div id="contact" className="contact">
         <section>
