@@ -4,9 +4,10 @@ import React, { Component } from 'react';
 export default class About extends Component {
   componentDidMount() {
     document.body.style.backgroundImage = "url('../public/img/Acre.jpg')"
-    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.backgroundSize = "calc(50vw + 140vh)";
     document.body.style.backgroundPosition = "center";
-    // document.body.style.fontFamily = 'Quicksand'
+    document.body.style.fontFamily = 'Quicksand';
   }
 
   render() {
@@ -17,10 +18,12 @@ export default class About extends Component {
             <p className="about-header"> ARIEL SALEM </p>
           </div>
           <div className="row">
-            <p className="about-divide"> ----------- ABOUT ----------- </p>
+            <div className="col-sm-4 line-decoration"></div>
+            <div className="col-sm-4"><p className="about-divide">ABOUT</p></div>
+            <div className="col-sm-4 line-decoration"></div>
           </div>
           <div className="row">
-            <p className="about-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p className="about-description">Ariel is a full-stack engineer with a strong background in JavaScript (ES6) that is passionate about design, development and building innovative products and systems that empower individuals and companies to succeed. He loves working autonomously and in groups to take on challenges and solve problems that require cutting-edge technology and creativity.</p>
           </div>
         </div>
       </div>

@@ -6,8 +6,11 @@ import React, { Component } from 'react';
 
 export default class Home extends Component {
   componentDidMount() {
-    document.body.style.backgroundImage = "url('../public/img/fog.jpg')";
+    document.body.style.backgroundImage = `url('../public/img/aus.jpg')`;
     document.body.style.fontFamily = 'Quicksand';
+    document.body.style.backgroundAttachment = 'fixed';
+    document.body.style.backgroundSize = 'calc(90vw + 90vh)';
+    document.body.style.backgroundPosition = 'center';
   }
 
   render() {
