@@ -27,6 +27,7 @@
               </span></span>
           </DropdownToggle>
           <DropdownMenu>
+            <DropdownItem><Link className="nav-link" to="/about">ABOUT</Link></DropdownItem>
             <DropdownItem><li className="nav-item">
                 <a className="nav-link" href="/#portfolio">PORTFOLIO</a>
               </li></DropdownItem>
@@ -39,15 +40,20 @@
         <Link className="navbar-brand" to="/"><strong>AS ARIEL SALEM</strong></Link>
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
           <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="/#portfolio">PORTFOLIO</a>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/blog">BLOG</Link>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/#contact">CONTACT</a>
-              </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">ABOUT</Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#portfolio">PORTFOLIO
+              </a>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/blog">BLOG</Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/#contact">CONTACT
+              </a>
+            </li>
           </ul>
         </div>
     </nav>

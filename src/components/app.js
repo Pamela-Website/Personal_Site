@@ -1,3 +1,4 @@
+import About from './about';
 import Blog from './blog';
 import Home from './home'
 import Navigation from './navbar';
@@ -40,6 +41,7 @@ export default class App extends Component {
             <Route path="/blog" render={() => (
               <Blog blogs={blogs} />
             )}/>
+            <Route path="/about" component={About}></Route>
           </div>
         </div>
       </BrowserRouter>

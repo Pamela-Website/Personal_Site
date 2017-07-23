@@ -1,21 +1,43 @@
 @import url("http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 
-button {
-  font-family: 'Quicksand', sans-serif;
-}
-
-body {
-  background-image: url('../public/img/fog.jpg');
-  font-family: 'Quicksand', sans-serif;
-  /*background-repeat: no-repeat;*/
-  /*background-size: contain;*/
-  /*background-position: center;*/
-}
-
 strong {
   font-size: 30px;
 }
 
+/*
+||||||||||||||||||||||| ABOUT |||||||||||||||||||||||
+ */
+
+.about-container {
+  margin-top: 12.5%;
+  text-align: center;
+  background-color: rgba(255,255,255,0.4);
+  padding: 0 5%;
+  color: black;
+  max-width: 50%;
+}
+
+.about-inf0 {
+}
+
+.about-header {
+  letter-spacing: 1px;
+  margin: auto;
+  font-size: 200%;
+  padding-top: 7%;
+  font-family: 'Bellefair', serif;
+}
+
+.about-divide {
+  margin: auto;
+  padding: 1%;
+  font-weight: 800;
+  font-family: 'Bellefair', serif;
+}
+
+.about-description {
+  padding: 3%;
+}
 
 /*
 ||||||||||||||||||||||| NAVBAR |||||||||||||||||||||||

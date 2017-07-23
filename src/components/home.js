@@ -5,9 +5,9 @@ import PageHeader from './pageHeader'
 import React, { Component } from 'react';
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
+  componentDidMount() {
+    document.body.style.backgroundImage = "url('../public/img/fog.jpg')";
+    document.body.style.fontFamily = 'Quicksand';
   }
 
   render() {
