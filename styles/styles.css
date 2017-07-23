@@ -58,6 +58,7 @@ strong {
 .btn-secondary {
   background: none !important;
   border: none !important;
+  font-family: 'Quicksand';
 }
 
 .btn {
@@ -74,9 +75,11 @@ strong {
   background: none !important;
   left: -15px !important;
   border: none !important;
+
 }
 
 .nav-link {
+  font-family: 'Quicksand';
   color: rgba(0,0,0,.5) !important;
   font-weight: 800 !important;
 }
