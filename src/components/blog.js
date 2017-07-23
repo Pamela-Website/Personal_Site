@@ -10,7 +10,7 @@ export default class Blog extends Component {
   }
 
   componentDidMount() {
-    document.body.style.backgroundImage = "url('../public/img/big-sur.Jpg')";
+    document.body.style.backgroundImage = "url('../public/img/big-sur.jpg')";
     document.body.style.fontFamily = 'Quicksand';
     document.body.style.backgroundAttachment = 'fixed';
     document.body.style.backgroundSize = 'calc(90vw + 90vh)';
