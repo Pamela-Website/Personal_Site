@@ -74,7 +74,7 @@ export default class Contact extends Component {
   componentDidUpdate() {
     if (this.state.success === false || this.state.success === true) {
       const context = this;
-      setTimeout(() => context.setState({ success: '' }), 5000)
+      setTimeout(() => context.setState({ success: '' }), 7000)
     }
   }
 
