@@ -5,7 +5,7 @@ import PageHeader from './pageHeader'
 import React, { Component } from 'react';
 
 export default class Home extends Component {
-  componentDidMount() {
+  componentWillMount() {
     document.body.style.backgroundImage = `url('../public/img/aus.jpg')`;
     document.body.style.fontFamily = 'Quicksand';
     document.body.style.backgroundAttachment = 'fixed';

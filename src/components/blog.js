@@ -9,7 +9,7 @@ export default class Blog extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     document.body.style.backgroundImage = "url('../public/img/beach.jpg')";
     document.body.style.fontFamily = 'Quicksand';
     document.body.style.backgroundAttachment = 'fixed';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 export default class About extends Component {
-  componentDidMount() {
+  componentWillMount() {
     document.body.style.backgroundImage = "url('../public/img/Acre.jpg')"
     document.body.style.backgroundAttachment = 'fixed';
     document.body.style.backgroundSize = "calc(50vw + 140vh)";
