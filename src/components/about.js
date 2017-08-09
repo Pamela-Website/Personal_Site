@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 
-
 export default class About extends Component {
-  componentWillMount() {
-    document.body.style.backgroundImage = "url('../public/img/Acre.jpg')"
-    document.body.style.backgroundAttachment = 'fixed';
-    document.body.style.backgroundSize = "calc(50vw + 140vh)";
-    document.body.style.backgroundPosition = "center";
-    document.body.style.fontFamily = 'Quicksand';
-  }
-
   render() {
     return (
       <div className="container about-container">
