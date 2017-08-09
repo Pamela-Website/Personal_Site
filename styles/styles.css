@@ -11,7 +11,7 @@ strong {
  */
 
 .about-container {
-  margin-top: 12%;
+  margin-top: 10%;
   text-align: center;
   background-color: rgba(255,255,255,0.6);
   padding: 0 5%;
@@ -48,6 +48,8 @@ strong {
 
 .about-description {
   padding: 3%;
+  font-size: 130%;
+  margin-bottom: 5%;
 }
 
 /*
@@ -157,7 +159,7 @@ strong {
 }
 
 .contact {
-  background-color: #f2dcb5;
+  background-color: #9DADAD;
   opacity: 0.9;
 }
 
@@ -171,7 +173,7 @@ strong {
 input, textarea {
   /*border-radius: 5px;*/
   outline: none;
-  border: 3px solid #f2dcb5;
+  border: 3px solid #9DADAD;
   font-size: 25px;
   letter-spacing: 1px;
 }
