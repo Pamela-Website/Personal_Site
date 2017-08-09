@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import Tooltip from 'react-toolbox/lib/tooltip';
+import Link from 'react-toolbox/lib/link';
+
+const TooltipLink = Tooltip(Link);
 
 export default class CurrentProjects extends Component {
 
@@ -6,11 +10,11 @@ export default class CurrentProjects extends Component {
     return (
      <div id="portfolio" className="project-info">
       <div className="row">
-        <div className="col-md-3 offset-md-1 col-sm-11 project-body">
+        <div className="col-lg-3 offset-md-1 col-sm-11 project-body">
           <div className="row">
-            <a target="_blank"  href="https://organico-plantr.herokuapp.com">
+            <TooltipLink target="_blank"  href="https://organico-plantr.herokuapp.com" tooltip='Click to Navigate to Plantr'>
              <img className="project-picture" src="../../public/img/Plantr.jpg" />
-            </a>
+            </TooltipLink>
           </div>
           <div className="row">
            <br />
@@ -26,10 +30,11 @@ export default class CurrentProjects extends Component {
            </div>
          </div>
         </div>
-        <div className="col-md-3 col-sm-11 project-body">
-          <div className="row"><a target="_blank" href="https://stackets-orion.herokuapp.com">
+        <div className="col-lg-3 col-sm-11 project-body">
+          <div className="row">
+          <TooltipLink target="_blank"  href="https://stackets-orion.herokuapp.com" tooltip='Click to Navigate to Stackets'>
              <img className="project-picture" src="../../public/img/Stackets.jpg" />
-           </a>
+           </TooltipLink>
          </div>
           <div className="row">
            <br />
@@ -45,11 +50,13 @@ export default class CurrentProjects extends Component {
           </div>
          </div>
         </div>
-        <div className="col-md-3 col-sm-11 project-body">
-            <div className="row"><a target="_blank" href="https://organico-plantr.herokuapp.com">
-               <img className="project-picture" src="../../public/img/Thymer.jpg" />
-             </a></div>
-            <div className="row">
+        <div className="col-lg-3 col-sm-11 project-body">
+          <div className="row">
+            <TooltipLink target="_blank"  href="http://orion-thyme.herokuapp.com/#/" tooltip='Click to Navigate to Thymer'>
+              <img className="project-picture" src="../../public/img/Thymer.jpg" />
+            </TooltipLink>
+          </div>
+          <div className="row">
              <br />
              <div className="project-info">
              <p className="project-name">THYMER</p>
