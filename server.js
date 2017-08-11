@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const oauth = require('./public/oauth');
-const xoauth2 = require('xoauth2');
+// const oauth = require('./public/oauth');
+// const xoauth2 = require('xoauth2');
 
 const app = express();
 let port = process.env.PORT || 3000
@@ -26,34 +26,34 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
   });
 
-app.post('/send', function(req, res, next) {
-  let transporter = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-          type: 'OAuth2',
-          clientId: oauth.clientId,
-          clientSecret: oauth.secret
-      }
-  });
-  transporter.on('token', (token) => {
-      console.log('A new access token was generated');
-      console.log('User: %s', token.user);
-      console.log('Access Token: %s', token.accessToken);
-      console.log('Expires: %s', new Date(token.expires));
-  });
-  const mailOptions = {
-    from: `${req.body.email}`,
-    to: oauth.user,
-    subject: `${req.body.name}`,
-    text: `${req.body.message}`,
-    replyTo: `${req.body.email}`,
-    auth : {
-          user: oauth.user,
-          refreshToken: oauth.token,
-          accessToken : oauth.access,
-          expires: 1494388182480
-      }
-  };
+// app.post('/send', function(req, res, next) {
+//   let transporter = nodemailer.createTransport({
+//       service: 'Gmail',
+//       auth: {
+//           type: 'OAuth2',
+//           clientId: oauth.clientId,
+//           clientSecret: oauth.secret
+//       }
+//   });
+//   transporter.on('token', (token) => {
+//       console.log('A new access token was generated');
+//       console.log('User: %s', token.user);
+//       console.log('Access Token: %s', token.accessToken);
+//       console.log('Expires: %s', new Date(token.expires));
+//   });
+//   const mailOptions = {
+//     from: `${req.body.email}`,
+//     to: oauth.user,
+//     subject: `${req.body.name}`,
+//     text: `${req.body.message}`,
+//     replyTo: `${req.body.email}`,
+//     auth : {
+//           user: oauth.user,
+//           refreshToken: oauth.token,
+//           accessToken : oauth.access,
+//           expires: 1494388182480
+//       }
+//   };
   // const firstName = req.body.name.split(' ')[0]
   // const confirmationEmail = {
   //   from: oauth.user,
@@ -70,16 +70,16 @@ app.post('/send', function(req, res, next) {
 
   //   Ariel Salem`
   // }
-  transporter.sendMail(mailOptions, function(err, data) {
-    if (err) {
-      console.error('there was an error: ', err);
-      res.status(404);
-      res.send(err);
-    } else {
-      console.log('here is the data in mailOptions: ', data);
-      res.send(data);
-    }
-  })
+  // transporter.sendMail(mailOptions, function(err, data) {
+  //   if (err) {
+  //     console.error('there was an error: ', err);
+  //     res.status(404);
+  //     res.send(err);
+  //   } else {
+  //     console.log('here is the data in mailOptions: ', data);
+  //     res.send(data);
+  //   }
+  // })
   // This auto-response functionality isn't working - need to figure out why
   // transporter.sendMail(confirmationEmail, function(err, data) {
   //   if (err) {
@@ -89,7 +89,7 @@ app.post('/send', function(req, res, next) {
   //     res.send(200);
   //   }
   // })
-})
+// })
 
 app.listen(process.env.PORT || port, function() {
   console.log('we are in the mainframe: ', port);

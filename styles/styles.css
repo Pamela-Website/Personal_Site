@@ -7,9 +7,9 @@ strong {
 }
 
 body {
-  background: url('../public/img/fog.jpg');
-  background-attachment: fixed;
-  background-position: center;
+  /*background: url('../public/img/fog.jpg');*/
+  /*background-attachment: fixed;*/
+  /*background-position: center;*/
   font-family: 'Quicksand';
 }
 

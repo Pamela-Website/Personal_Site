@@ -6,7 +6,7 @@ export default class About extends Component {
       <div className="container about-container">
         <div className="about-info">
           <div className="row">
-            <p className="about-header"> ARIEL SALEM </p>
+            <p className="about-header"> PAMELA SANDLER </p>
           </div>
           <div className="row">
             <div className="col-sm-4 line-decoration"></div>
