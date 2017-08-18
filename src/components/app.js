@@ -1,10 +1,12 @@
 import About from './about';
 import Blog from './blog';
+import Contact from './contact';
 import Home from './home'
-import Navigation from './navbar';
-import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import $ from 'jquery';
+import { BrowserRouter, Route } from 'react-router-dom';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import React, { Component } from 'react';
+import Navigation from './navbar';
 
 export default class App extends Component {
   constructor(props) {
@@ -32,19 +34,22 @@ export default class App extends Component {
   render() {
     const blogs = this.state.blogs;
     return (
-      <BrowserRouter>
-        <div>
-          <Navigation />
+      <MuiThemeProvider>
+        <BrowserRouter>
           <div>
-            <Route exact path="/" component={Home}></Route>
-            <Route path="/home" component={Home}></Route>
-            <Route path="/blog" render={() => (
-              <Blog blogs={blogs} />
-            )}/>
-            <Route path="/about" component={About}></Route>
+            <Navigation />
+            <div>
+              <Route exact path="/" component={Home}></Route>
+              <Route path="/home" component={Home}></Route>
+              <Route path="/blog" render={() => (
+                <Blog blogs={blogs} />
+              )}/>
+              <Route path="/about" component={About}></Route>
+              <Route path="/contact" component={Contact}></Route>
+            </div>
           </div>
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </MuiThemeProvider>
     );
   }
 }
