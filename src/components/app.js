@@ -1,7 +1,11 @@
 import About from './about';
-import Blog from './blog';
+import Blog from './blog/blog';
 import Contact from './contact';
+import Corporate from './offerings/corporate';
+import Footer from './footer';
+import Group from './offerings/group';
 import Home from './home'
+import Nutrition from './offerings/nutrition';
 import $ from 'jquery';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -46,7 +50,11 @@ export default class App extends Component {
               )}/>
               <Route path="/about" component={About}></Route>
               <Route path="/contact" component={Contact}></Route>
+              <Route path="/nutritional-counseling" component={Nutrition}></Route>
+              <Route path="/group-sessions" component={Group}></Route>
+              <Route path="/corporate-wellness" component={Corporate}></Route>
             </div>
+            <Footer />
           </div>
         </BrowserRouter>
       </MuiThemeProvider>

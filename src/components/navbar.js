@@ -85,9 +85,17 @@ import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
               animation={PopoverAnimationVertical}
             >
               <Menu className="menu">
-                <MenuItem className="menu-item" primaryText="NUTRITIONAL COUNSELING" />
-                <MenuItem className="menu-item" primaryText="GROUP SESSIONS" />
-                <MenuItem className="menu-item" primaryText="CORPORATE WELLNESS" />
+                <ul className="navbar-nav mr-auto">
+                  <li className="nav-menu">
+                    <Link className="menu-item" to="/nutritional-counseling">NUTRITIONAL COUNSELING</Link>
+                  </li>
+                  <li className="nav-menu">
+                    <Link className="menu-item" to="/group-sessions">GROUP SESSIONS</Link>
+                  </li>
+                  <li className="nav-menu">
+                    <Link className="menu-item" to="/corporate-wellness">CORPORATE WELLNESS</Link>
+                  </li>
+                </ul>
               </Menu>
             </Popover>
             <li className="nav-item">

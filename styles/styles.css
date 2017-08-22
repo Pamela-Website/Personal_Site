@@ -8,6 +8,7 @@
   /*--main-font: 'Rasa', serif;*/
   --main-header: 'Playfair Display', serif;
   --main-body: 'EB Garamond', serif;
+  --main-intro: 'Muli', serif;
 }
 
 strong {
@@ -164,6 +165,18 @@ body {
   font-family: var(--main-font) !important;
   color: rgba(0,0,0,.5) !important;
   font-weight: 800 !important
+}
+
+.nav-menu {
+  text-align: center;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.nav-menu:hover, menu-item:hover {
+  background-color: #c1c1c1;
 }
 /*.navMaster {
   position: fixed;
@@ -433,26 +446,27 @@ b {
  */
 
 .footer {
-  background-color: white;
+  background-color: #F5F5F5;
 }
 
 .footer-icons {
-  font-size: calc(20px + 0.5vw);
-  padding: 0px 2%;
+  font-size: 20px;
+  padding: 2% 0;
+  text-align: center;
 }
 
 .a-icons {
-  padding: 0px 1%;
+  padding: 0px 5px;
   color: black;
 }
 
 .a-icons:hover {
-  padding: 0px 1%;
+  padding: 0px 5px;
   -webkit-transition: all 200ms ease-in;
   -ms-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
-  color: #9bf1ff;
+  color: #c98cff;
 }
 
 .footer-copyright {
@@ -473,7 +487,38 @@ b {
   background-image: url(../public/img/Plantr.png);
 }
 
-
 .first-col {
   margin-left: 5.5%;
+}
+
+/*
+||||||||||||||||||||||| NUTRITION |||||||||||||||||||||||
+ */
+
+.offering-intro {
+  padding: 1% 5%;
+}
+
+.pamela-quote {
+  font-weight: 800;
+  text-align: center;
+}
+
+.nutrition-intro {
+  font-family: var(--main-font);
+  font-weight: 800;
+  font-size: 40px;
+  font-variant: small-caps;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.nutrition-header {
+  font-weight: 800;
+  font-size: 21px;
+  font-family: var(--main-intro);
+  font-variant: small-caps;
+  /*padding: 4%;*/
+  text-align: center;
+  /*letter-spacing: 1.5px;*/
 }

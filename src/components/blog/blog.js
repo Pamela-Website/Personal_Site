@@ -1,5 +1,4 @@
 import BlogList from './blogList';
-import Footer from './footer';
 import React, { Component } from 'react';
 
 export default class Blog extends Component {
@@ -16,9 +15,6 @@ export default class Blog extends Component {
         <br />
         <div>
           <BlogList blogs={this.props.blogs} />
-        </div>
-        <div>
-          <Footer />
         </div>
       </div>
     )
