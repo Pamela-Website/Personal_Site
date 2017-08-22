@@ -15,6 +15,8 @@ export default class Nutrition extends Component {
     this.state ={
       stepIndex: 0,
     }
+    this.handleNext = this.handleNext.bind(this);
+    this.handlePrev = this.handlePrev.bind(this);
   }
 
   handleNext() {
@@ -72,7 +74,9 @@ export default class Nutrition extends Component {
             onClick={() => this.setState({stepIndex: 0})}
             icon={'+'}
           >
-             Complementary Nutritional Introductory Consultation (20-minutes)
+             <p className="offering-price">
+               Complementary Nutritional Introductory Consultation (20-minutes)
+             </p>
            </StepButton>
            <StepContent>
              <p className="offering-description">
@@ -86,7 +90,9 @@ export default class Nutrition extends Component {
              onClick={() => this.setState({stepIndex: 1})}
              icon={'+'}
            >
-              One-on-One Nutritional Consultation (90-minutes)
+             <p className="offering-price">
+               One-on-One Nutritional Consultation (90-minutes)
+            </p>
            </StepButton>
            <StepContent>
              <div>
@@ -114,7 +120,9 @@ export default class Nutrition extends Component {
              onClick={() => this.setState({stepIndex: 2})}
              icon={'+'}
            >
-             Virtual Nutritional Consultation (60-minutes)
+             <p className="offering-price">
+               Virtual Nutritional Consultation (60-minutes)
+             </p>
            </StepButton>
            <StepContent>
              <p className="offering-description">
@@ -128,7 +136,9 @@ export default class Nutrition extends Component {
              onClick={() => this.setState({stepIndex: 3})}
              icon={'+'}
            >
-             Wellness Packages
+             <p className="offering-price">
+               Wellness Packages
+             </p>
            </StepButton>
            <StepContent>
              <p className="offering-title">
@@ -177,7 +187,9 @@ export default class Nutrition extends Component {
              onClick={() => this.setState({stepIndex: 4})}
              icon={'+'}
            >
-             In-Home Services
+             <p className="offering-price">
+               In-Home Services
+             </p>
            </StepButton>
            <StepContent>
              <p className="offering-title">
@@ -202,6 +214,7 @@ export default class Nutrition extends Component {
            </StepContent>
          </Step>
        </Stepper>
+       <br />
       </div>
     );
   }

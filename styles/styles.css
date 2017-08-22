@@ -522,3 +522,29 @@ b {
   text-align: center;
   /*letter-spacing: 1.5px;*/
 }
+
+.offering-price {
+  font-family: var(--main-font) !important;
+  font-size: 20px;
+  padding-top: 15px;
+  font-weight: 800;
+}
+
+.offering-description {
+  padding: 15px 0;
+  font-family: var(--main-body) !important;
+  font-size: 18px;
+}
+
+.offering-title {
+  font-family: var(--main-header) !important;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+/*  --main-font: 'Cormorant Garamond', serif;
+  --main-header: 'Playfair Display', serif;
+  --main-body: 'EB Garamond', serif;
+  --main-intro: 'Muli', serif;
+*/
