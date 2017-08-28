@@ -1,15 +1,43 @@
+import Coverflow from 'react-coverflow';
 import React, { Component } from 'react';
-import Tooltip from 'react-toolbox/lib/tooltip';
-import Link from 'react-toolbox/lib/link';
+// import Link from 'react-toolbox/lib/link';
+// import Tooltip from 'react-toolbox/lib/tooltip';
 
-const TooltipLink = Tooltip(Link);
+// const TooltipLink = Tooltip(Link);
 
 export default class CurrentProjects extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 0
+    };
+  }
 
   render() {
     return (
-     <div id="portfolio" className="project-info">
-      <div className="row">
+     <div id="resources" className="project-info">
+       <Coverflow
+          width={960}
+          height={720}
+          displayQuantityOfSide={1}
+          enableHeading={true}
+          active={this.state.active}
+          >
+          <img src='http://www.goldenpoppyherbs.com/media/wysiwyg/Dong_Quai_botanical_Drawing.png' alt='Dong Quai Healing Properties' data-action='../../public/docs/DQ.pdf'  />
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album two' data-action="http://passer.cc"/>
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album three' data-action="https://doce.cc/"/>
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album four' data-action="http://tw.yahoo.com"/>
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album one' data-action="https://facebook.github.io/react/"/>
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album two' data-action="http://passer.cc"/>
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album three' data-action="https://doce.cc/"/>
+          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album four' data-action="http://tw.yahoo.com"/>
+        </Coverflow>
+      </div>
+    );
+  }
+}
+
+/* <div className="row">
         <div className="col-lg-3 offset-md-1 col-sm-11 project-body">
           <div className="row">
             <TooltipLink target="_blank"  href="https://organico-plantr.herokuapp.com" tooltip='Click to Navigate to Plantr'>
@@ -70,11 +98,7 @@ export default class CurrentProjects extends Component {
             </div>
            </div>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
+        </div>*/
 
 // ALTERNATIVE LOOK
 /*      <div>

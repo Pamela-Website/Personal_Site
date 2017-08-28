@@ -5,7 +5,7 @@ export default class PageHeader extends Component {
     return (
       <div className="pageHeader">
         <header>
-          <p className="name-header">Hi, I'm Pamela Sandler</p>
+          <p className="name-header">Pamela Sandler</p>
         </header>
         <hr />
         <div>

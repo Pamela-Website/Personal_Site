@@ -26,6 +26,10 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
   });
 
+app.post('/send', (req, res, next) => {
+  console.log('here is the body: ', req.body)
+  res.send('success');
+})
 // app.post('/send', function(req, res, next) {
 //   let transporter = nodemailer.createTransport({
 //       service: 'Gmail',

@@ -1,30 +1,47 @@
 import { Alert } from 'reactstrap';
 import React, { Component } from 'react';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      success: ''
+      success: '',
+      open: false,
     }
+    this.handleOpen = this.handleOpen.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
+  handleOpen() {
+     this.setState({open: true});
+   };
+
+   handleClose() {
+     this.setState({open: false});
+   };
+
   checkInputs(event) {
+    console.log('here is the event: ', this.refs)
     event.preventDefault();
+    let hear = this.refs.hear.value;
     let name = this.refs.name.value;
     let email = this.refs.email.value;
     let message = this.refs.message.value;
-    if (!name.length || !email.length || !message.length) {
+    if (!name.length || !email.length || !message.length || !hear.length) {
       this.setState({ success: false })
     } else {
-      this.sendEmail(name, email, message);
+      this.sendEmail(name, email, message, hear);
       this.refs.name.value = '';
       this.refs.email.value = '';
       this.refs.message.value = '';
+      this.refs.hear.value = ''
     }
   }
 
-  sendEmail(name, email, message) {
+  sendEmail(name, email, message, hear) {
     fetch('/send', {
       method: 'POST',
       headers: {
@@ -34,7 +51,8 @@ export default class Contact extends Component {
       body: JSON.stringify({
         name: name,
         email: email,
-        message: message
+        message: message,
+        hear: hear,
       })
     })
     .then((res) => res.json())
@@ -48,6 +66,13 @@ export default class Contact extends Component {
   }
 
   renderSuccessMessage() {
+    const actions = [
+      <FlatButton
+        label="OK"
+        primary={true}
+        onClick={this.handleClose}
+      />,
+    ]
     if (this.state.success === true) {
       return (
         <div>
@@ -82,35 +107,42 @@ export default class Contact extends Component {
     return (
       <div id="contact" className="contact">
         <section>
-          <header>
-            <p className="contact-header">Reach Out</p>
+          <header className="pamela-header">
+            <p className="contact-header">Let's Connect</p>
           </header>
           <hr />
           <form onSubmit={this.checkInputs.bind(this)} className="form-styling">
             <div>
               <div className="row">
-                <div className="col-sm-5">
-                  <label  className="contact-label" htmlFor="name">Name </label>
-                  <input className="contact-container" type="text" name="name" ref="name" />
+                <div className="col-sm-7">
+                  <div className="row">
+                    <label  className="contact-label" htmlFor="name">Name </label>
+                    <input className="contact-container" type="text" name="name" ref="name" />
+                  </div>
+                  <br />
+                  <div className="row">
+                    <label  className="contact-label" htmlFor="email">Email</label>
+                    <input className="contact-container" type="text" name="email" ref="email" />
+                  </div>
+                  <br />
+                  <div className="row">
+                    <label className="contact-label" htmlFor="hear">How Did You Hear About Me? </label>
+                    <textarea className="contact-container" name="hear" rows="2" ref="hear" ></textarea>
+                  </div>
+                  <br />
+                  <div className="row">
+                    <label className="contact-label" htmlFor="message">Message </label>
+                    <textarea className="contact-container" name="message" rows="5" ref="message" ></textarea>
+                  </div>
+                  <br />
+                  <div className="row send-message">
+                    <button type="submit" className="send-message-button"> Send Message </button>
+                  </div>
                 </div>
-                <div className="col-sm-5 offset-sm-1">
-                  <label  className="contact-label" htmlFor="email">Email</label>
-                  <input className="contact-container" type="text" name="email" ref="email" />
+                <div className="col-sm-4 offset-sm-1 pamela-photo">
+
                 </div>
               </div>
-              <br />
-              <div className="row">
-                <div className="col-sm-5">
-                  <label className="contact-label" htmlFor="message">Message </label>
-                </div>
-                <div className="col-sm-12">
-                  <textarea className="contact-container col-sm-11" name="message" rows="10" ref="message" ></textarea>
-                </div>
-                <div className="row send-message">
-                  <button type="submit" className="send-message-button"> Send Message </button>
-                </div>
-              </div>
-              <br />
             </div>
           </form>
           <div>

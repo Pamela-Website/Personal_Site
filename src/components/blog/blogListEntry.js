@@ -35,7 +35,7 @@ export default class BlogListEntry extends Component {
   }
 
   render() {
-    const { link, pubDate } = this.props
+    const { link, pubDate } = this.props;
     return (
       <div className="blog-list-entry">
         <div className="blog-title">

@@ -22,7 +22,7 @@ export default class App extends Component {
 
   getBlogs() {
     const data = {
-      rss_url: 'https://medium.com/feed/@ariel.salem1989'
+      rss_url: 'https://medium.com/feed/@psandler123'
     }
     $.get('https://api.rss2json.com/v1/api.json', data, (res) => {
       if (res.status === 'ok') {

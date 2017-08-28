@@ -13,12 +13,6 @@ export default class Home extends Component {
           <CurrentProjects />
         </div>
         <br />
-        <div>
-          <Contact />
-        </div>
-        <div>
-          <Footer />
-        </div>
       </div>
     )
   }

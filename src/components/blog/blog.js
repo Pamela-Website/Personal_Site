@@ -7,8 +7,9 @@ export default class Blog extends Component {
       <div>
         <div className="blog">
           <header>
-            <p className="blog-header">Ariel Salem</p>
-            <p className="blog-description"> Lover of Tech, Programming, and all things JavaScript </p>
+            <p className="blog-header">Pamela Sandler</p>
+            <p className="blog-description"> Discover how it feels to nourish your mind, body and soul.
+            </p>
           </header>
           <hr />
         </div>
