@@ -14,7 +14,7 @@ export default class Landing extends Component {
           <p className="intro-name">PAMELA SANDLER</p>
         </div>
         <div className='row intro-description'>
-          <p className="intro-description">Recipe Developer | Fitness Lover | Holistic Lifestyle | Balancing Hormones</p>
+          <p className="intro-description">Whole Foods Nutrition l Recipe Creation l Mind-Body Wellness | Women’s Health & Wellbeing </p>
         </div>
         <div className='row enter-button'>
           <button className="enter" onClick={this.enterSite}>ENTER</button>
@@ -40,19 +40,19 @@ export default class Landing extends Component {
     return (
       <div>
         <Slider {...settings}>
-        <div className="landing-slider">
+        <div className="landing-slider-1">
           {this.intro()}
         </div>
-        <div className="landing-slider">
+        <div className="landing-slider-2">
           {this.intro()}
         </div>
-        <div className="landing-slider">
+        <div className="landing-slider-3">
           {this.intro()}
         </div>
-        <div className="landing-slider">
+        <div className="landing-slider-4">
           {this.intro()}
         </div>
-        <div className="landing-slider">
+        <div className="landing-slider-5">
           {this.intro()}
         </div>
         </Slider>

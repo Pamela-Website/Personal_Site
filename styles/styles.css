@@ -556,36 +556,59 @@ b {
 ||||||||||||||||||||||| LANDING |||||||||||||||||||||||
  */
 
-.landing-slider, .slick-slide {
+.landing-slider-1 {
+  background-image: url('https://static.pexels.com/photos/396132/pexels-photo-396132.jpeg');
+}
+
+.landing-slider-2 {
+  background-image: url('https://static.pexels.com/photos/87818/background-berries-berry-blackberries-87818.jpeg');
+}
+
+.landing-slider-3 {
+  background-image: url('https://static.pexels.com/photos/566566/pexels-photo-566566.jpeg');
+}
+
+.landing-slider-4 {
+  background-image: url('https://static.pexels.com/photos/256318/pexels-photo-256318.jpeg');
+}
+
+.landing-slider-5 {
+  background-image: url('https://static.pexels.com/photos/106877/pexels-photo-106877.jpeg');
+}
+
+.landing-slider-1, .landing-slider-2, .landing-slider-3, .landing-slider-4, .landing-slider-5, .slick-slide {
   transform: scale(1.22);
-  background-image: url('https://static.pexels.com/photos/4988/beach-palms.jpg');
   background-size: cover;
+  filter: brightness(70%);
   background-position: center center !important;
   height: 100vh !important;
 }
 
 .intro-name {
-  color: rgba(0,0,0,0.5);
+  filter: brightness(100%);
+  color: white;
   font-size: 40px;
   margin: auto;
 }
 
 .intro-description {
-  color: rgba(0,0,0,0.5);
-  font-size: 20px;
+  filter: brightness(100%);
+  color: white;
+  font-size: 19px;
   margin: auto;
   padding: 15px 0;
 }
 
 .enter-button > .enter{
+  filter: brightness(100%);
   margin: auto;
   background-color: transparent;
-  color: rgba(0,0,0,0.5);
+  color: white;
   outline: none;
   margin-top: 10px;
   font-size: 20px;
   letter-spacing: 1px;
-  border: 5px solid rgba(0,0,0,0.5);
+  border: 5px solid rgba(255,255,255,0.8);
   padding: 4px 11px;;
   /*text-shadow: 0px 0px 12px black;*/
 }
