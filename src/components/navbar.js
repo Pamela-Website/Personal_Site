@@ -48,15 +48,13 @@ import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
           <DropdownMenu>
             <DropdownItem><Link className="nav-link" to="/about">ABOUT</Link></DropdownItem>
             <DropdownItem><li className="nav-item">
-                <a className="nav-link" href="/#resources">RESOURCES</a>
+                <a className="nav-link" href="/resources">RESOURCES</a>
               </li></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/blog">BLOG</Link></DropdownItem>
-            <DropdownItem><li className="nav-item">
-                <a className="nav-link" href="/#contact">CONTACT</a>
-              </li></DropdownItem>
+            <DropdownItem><Link className="nav-link" to='/contact'>CONTACT</Link></DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Link className="navbar-brand" to="/"><strong>PAMELA SANDLER M.S.</strong></Link>
+        <Link className="navbar-brand" to="/resources"><strong>PAMELA SANDLER M.S.</strong></Link>
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
@@ -70,7 +68,7 @@ import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
                 >OFFERINGS</div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#resources">RESOURCES
+              <a className="nav-link" href="/resources">RESOURCES
               </a>
             </li>
             <li className="nav-item">

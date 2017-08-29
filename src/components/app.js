@@ -4,7 +4,8 @@ import Contact from './contact';
 import Corporate from './offerings/corporate';
 import Footer from './footer';
 import Group from './offerings/group';
-import Home from './home'
+import Home from './home';
+import Landing from './landing';
 import Nutrition from './offerings/nutrition';
 import $ from 'jquery';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -35,29 +36,46 @@ export default class App extends Component {
     this.getBlogs();
   }
 
+  renderLanding(path, blogs) {
+    if (path === '/') {
+      return (
+        <div>
+          <Landing />
+        </div>
+      )
+    } else {
+      return (
+        <MuiThemeProvider>
+          <BrowserRouter>
+            <div>
+              <Navigation />
+              <div>
+                <Route exact path="/" component={Landing}></Route>
+                <Route path="/resources" component={Home}></Route>
+                <Route path="/blog" render={() => (
+                  <Blog blogs={blogs} />
+                )}/>
+                <Route path="/about" component={About}></Route>
+                <Route path="/contact" component={Contact}></Route>
+                <Route path="/nutritional-counseling" component={Nutrition}></Route>
+                <Route path="/group-sessions" component={Group}></Route>
+                <Route path="/corporate-wellness" component={Corporate}></Route>
+              </div>
+              <Footer />
+            </div>
+          </BrowserRouter>
+        </MuiThemeProvider>
+      );
+    }
+  }
+
   render() {
     const blogs = this.state.blogs;
+    let path = window.location.pathname
     return (
-      <MuiThemeProvider>
-        <BrowserRouter>
-          <div>
-            <Navigation />
-            <div>
-              <Route exact path="/" component={Home}></Route>
-              <Route path="/home" component={Home}></Route>
-              <Route path="/blog" render={() => (
-                <Blog blogs={blogs} />
-              )}/>
-              <Route path="/about" component={About}></Route>
-              <Route path="/contact" component={Contact}></Route>
-              <Route path="/nutritional-counseling" component={Nutrition}></Route>
-              <Route path="/group-sessions" component={Group}></Route>
-              <Route path="/corporate-wellness" component={Corporate}></Route>
-            </div>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </MuiThemeProvider>
+      <div>
+        {this.renderLanding(path, blogs)}
+      </div>
     );
   }
 }
