@@ -7,6 +7,7 @@ import Group from './offerings/group';
 import Home from './home';
 import Landing from './landing';
 import Nutrition from './offerings/nutrition';
+import Offerings from './offerings/offerings';
 import $ from 'jquery';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -58,6 +59,7 @@ export default class App extends Component {
                 <Route path="/about" component={About}></Route>
                 <Route path="/contact" component={Contact}></Route>
                 <Route path="/nutritional-counseling" component={Nutrition}></Route>
+                <Route path="/offerings" component={Offerings}></Route>
                 <Route path="/group-sessions" component={Group}></Route>
                 <Route path="/corporate-wellness" component={Corporate}></Route>
               </div>

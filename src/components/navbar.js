@@ -47,9 +47,8 @@ import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem><Link className="nav-link" to="/about">ABOUT</Link></DropdownItem>
-            <DropdownItem><li className="nav-item">
-                <a className="nav-link" href="/resources">RESOURCES</a>
-              </li></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/offerings">OFFERINGS</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/resources">RESOURCES</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/blog">BLOG</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to='/contact'>CONTACT</Link></DropdownItem>
           </DropdownMenu>
