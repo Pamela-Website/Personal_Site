@@ -452,10 +452,15 @@ b {
   background-color: #F5F5F5;
 }
 
-.footer-icons {
+.footer-icons, .intro-icons {
   font-size: 20px;
   padding: 2% 0;
   text-align: center;
+}
+
+.intro-icons {
+  color: white;
+  transform: translate(0, 100%);
 }
 
 .a-icons {
@@ -463,7 +468,13 @@ b {
   color: black;
 }
 
-.a-icons:hover {
+.a-intro {
+  padding: 0px 5px;
+  color: white;
+  text-shadow: 0px 0px 12px black;
+}
+
+.a-icons:hover, .a-intro:hover {
   padding: 0px 5px;
   -webkit-transition: all 200ms ease-in;
   -ms-transition: all 200ms ease-in;
@@ -555,52 +566,62 @@ b {
 /*
 ||||||||||||||||||||||| LANDING |||||||||||||||||||||||
  */
-
 .landing-slider-1 {
-  background-image: url('https://static.pexels.com/photos/396132/pexels-photo-396132.jpeg');
-}
-
-.landing-slider-2 {
-  background-image: url('https://static.pexels.com/photos/87818/background-berries-berry-blackberries-87818.jpeg');
-}
-
-.landing-slider-3 {
-  background-image: url('https://static.pexels.com/photos/566566/pexels-photo-566566.jpeg');
-}
-
-.landing-slider-4 {
-  background-image: url('https://static.pexels.com/photos/256318/pexels-photo-256318.jpeg');
+  background-image: url('../public/img/img-1.jpeg');
 }
 
 .landing-slider-5 {
-  background-image: url('https://static.pexels.com/photos/106877/pexels-photo-106877.jpeg');
+  background-image: url('../public/img/img-2.jpeg');
+}
+
+.landing-slider-2 {
+  background-image: url('../public/img/img-3.jpeg');
+}
+
+.landing-slider-3 {
+  background-image: url('../public/img/img-4.jpeg');
+}
+
+.landing-slider-4 {
+  background-image: url('../public/img/img-5.jpg');
 }
 
 .landing-slider-1, .landing-slider-2, .landing-slider-3, .landing-slider-4, .landing-slider-5, .slick-slide {
   transform: scale(1.22);
   background-size: cover;
-  filter: brightness(70%);
   background-position: center center !important;
   height: 100vh !important;
 }
 
+/*  --main-font: 'Cormorant Garamond', serif;
+  --main-header: 'Playfair Display', serif;
+  --main-body: 'EB Garamond', serif;
+  --main-intro: 'Muli', serif;
+*/
+
+
 .intro-name {
-  filter: brightness(100%);
+  font-family: var(--main-body);
   color: white;
-  font-size: 40px;
+  font-size: 45px;
+  font-weight: 800;
   margin: auto;
+  letter-spacing: 4.5px;
+  text-shadow: 0px 0px 12px black;
 }
 
 .intro-description {
-  filter: brightness(100%);
+  font-family: var(--main-header);
   color: white;
-  font-size: 19px;
+  font-size: 18px;
   margin: auto;
   padding: 15px 0;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 12px black;
 }
 
 .enter-button > .enter{
-  filter: brightness(100%);
+  font-family: var(--main-header);
   margin: auto;
   background-color: transparent;
   color: white;
@@ -608,9 +629,9 @@ b {
   margin-top: 10px;
   font-size: 20px;
   letter-spacing: 1px;
-  border: 5px solid rgba(255,255,255,0.8);
+  border: 3.5px solid rgba(255,255,255,0.8);
   padding: 4px 11px;;
-  /*text-shadow: 0px 0px 12px black;*/
+  text-shadow: 0px 0px 12px black;
 }
 
 .intro {

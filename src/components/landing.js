@@ -11,13 +11,27 @@ export default class Landing extends Component {
     return (
       <div className="intro">
         <div className='row intro-name'>
-          <p className="intro-name">PAMELA SANDLER</p>
+          <p className="intro-name">PAMELA SANDLER M.S.</p>
         </div>
         <div className='row intro-description'>
-          <p className="intro-description">Whole Foods Nutrition l Recipe Creation l Mind-Body Wellness | Women’s Health & Wellbeing </p>
+          <p className="intro-description">Whole Foods Nutrition | Recipe Creation | Mind-Body Wellness | Women’s Health & Wellbeing </p>
         </div>
         <div className='row enter-button'>
           <button className="enter" onClick={this.enterSite}>ENTER</button>
+        </div>
+        <div className="intro-icons">
+          <a target="_blank" className="a-intro" href="https://www.linkedin.com/in/ariel-salem/">
+            <i className="fa fa-linkedin" aria-hidden="true"/>
+          </a>
+          <a target="_blank" className="a-intro" href="https://github.com/Asalem1">
+            <i className="fa fa-facebook" aria-hidden="true"/>
+          </a>
+          <a target="_blank" className="a-intro" href="https://github.com/Asalem1">
+            <i className="fa fa-instagram" aria-hidden="true"/>
+          </a>
+          <a target="_blank" className="a-intro" href="https://github.com/Asalem1">
+            <i className="fa fa-pinterest" aria-hidden="true"/>
+          </a>
         </div>
       </div>
     )
@@ -34,7 +48,7 @@ export default class Landing extends Component {
       autoplay: true,
       fade: true,
       draggable: false,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       pauseOnHover: false,
     }
     return (
