@@ -53,7 +53,7 @@ import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
             <DropdownItem><Link className="nav-link" to='/contact'>CONTACT</Link></DropdownItem>
           </DropdownMenu>
         </Dropdown>
-        <Link className="navbar-brand" to="/resources"><strong>PAMELA SANDLER M.S.</strong></Link>
+        <Link className="navbar-brand" to="/resources"><strong>NOURISH ROOTS LA</strong></Link>
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">

@@ -11,6 +11,10 @@ export default class PageHeader extends Component {
         <div>
           <p className="description-header">MASTERS OF SCIENCE IN NUTRITION, <a className="nunm" target="_blank" href="http://nunm.edu/" >NUNM</a></p>
         </div>
+        <br />
+        <div>
+          <p className="helpful-resources">|| HELPFUL RESOURCES ||</p>
+        </div>
       </div>
     );
   }

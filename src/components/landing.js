@@ -11,7 +11,7 @@ export default class Landing extends Component {
     return (
       <div className="intro">
         <div className='row intro-name'>
-          <p className="intro-name">PAMELA SANDLER M.S.</p>
+          <p className="intro-name">NOURISH ROOTS LA</p>
         </div>
         <div className='row intro-description'>
           <p className="intro-description">Whole Foods Nutrition | Recipe Creation | Mind-Body Wellness | Women’s Health & Wellbeing </p>
