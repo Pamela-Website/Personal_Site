@@ -20,13 +20,13 @@ export default class Landing extends Component {
           <button className="enter" onClick={this.enterSite}>ENTER</button>
         </div>
         <div className="intro-icons">
-          <a target="_blank" className="a-intro" href="https://www.linkedin.com/in/ariel-salem/">
-            <i className="fa fa-linkedin" aria-hidden="true"/>
+          <a target="_blank" className="a-intro" href="contact">
+            <i className="fa fa-envelope" aria-hidden="true"/>
           </a>
           <a target="_blank" className="a-intro" href="https://github.com/Asalem1">
-            <i className="fa fa-facebook" aria-hidden="true"/>
+            <i className="fa fa-facebook-official" aria-hidden="true"/>
           </a>
-          <a target="_blank" className="a-intro" href="https://github.com/Asalem1">
+          <a target="_blank" className="a-intro" href="https://www.instagram.com/NourishRootsLA">
             <i className="fa fa-instagram" aria-hidden="true"/>
           </a>
           <a target="_blank" className="a-intro" href="https://github.com/Asalem1">
