@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import Navigation from './navbar';
 
 export default class About extends Component {
   render() {
     return (
-      <div className="container about-container">
+      <div className="about-container">
         <div className="about-info">
           <div className="pamela-header">
+            <Navigation />
             <div className="row">
               <p className="about-header"> ABOUT PAMELA </p>
             </div>

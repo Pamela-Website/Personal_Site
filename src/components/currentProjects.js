@@ -25,13 +25,8 @@ export default class CurrentProjects extends Component {
           active={this.state.active}
           >
           <img src='http://www.goldenpoppyherbs.com/media/wysiwyg/Dong_Quai_botanical_Drawing.png' alt='Dong Quai Healing Properties' data-action='../../public/docs/DQ.pdf'  />
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album two' data-action="http://passer.cc"/>
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album three' data-action="https://doce.cc/"/>
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album four' data-action="http://tw.yahoo.com"/>
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album one' data-action="https://facebook.github.io/react/"/>
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album two' data-action="http://passer.cc"/>
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album three' data-action="https://doce.cc/"/>
-          <img src='https://static.pexels.com/photos/4988/beach-palms.jpg' alt='Album four' data-action="http://tw.yahoo.com"/>
+          <img src='https://i.pinimg.com/564x/cd/2b/b1/cd2bb1b74f6e9ade2545579d1133578b.jpg' alt='The Healing Properties of Goji Berries' data-action="../../public/docs/Goji_Berries.pdf"/>
+          <img src='https://www.mommypotamus.com/wp-content/uploads/2016/01/mthfr-gene-mutation.jpg' alt='MTHFR Gene Mutation' data-action="../../public/docs/MTHFR_GM.pdf"/>
         </Coverflow>
       </div>
     );
