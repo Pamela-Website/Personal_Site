@@ -6,13 +6,13 @@ import Footer from './footer';
 import Group from './offerings/group';
 import Home from './home';
 import Landing from './landing';
+import Navigation from './navbar';
 import Nutrition from './offerings/nutrition';
 import Offerings from './offerings/offerings';
 import $ from 'jquery';
 import { BrowserRouter, Route } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import React, { Component } from 'react';
-import Navigation from './navbar';
 
 export default class App extends Component {
   constructor(props) {
@@ -27,6 +27,7 @@ export default class App extends Component {
       rss_url: 'https://medium.com/feed/@psandler123'
     }
     $.get('https://api.rss2json.com/v1/api.json', data, (res) => {
+      console.log('here is the response: ', res);
       if (res.status === 'ok') {
         this.setState({ blogs: res.items })
       }
@@ -38,6 +39,7 @@ export default class App extends Component {
   }
 
   renderLanding(path, blogs) {
+    console.log('here are the blogs in the beginning: ', blogs);
     if (path === '/') {
       return (
         <div>
@@ -49,7 +51,6 @@ export default class App extends Component {
         <MuiThemeProvider>
           <BrowserRouter>
             <div>
-              <Navigation />
               <div>
                 <Route exact path="/" component={Landing}></Route>
                 <Route path="/resources" component={Home}></Route>

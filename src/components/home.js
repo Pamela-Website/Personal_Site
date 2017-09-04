@@ -9,6 +9,9 @@ export default class Home extends Component {
     return (
       <div>
         <PageHeader />
+        <div>
+          <p className="helpful-resources">|| HELPFUL RESOURCES ||</p>
+        </div>
         <div className="col-md-12">
           <CurrentProjects />
         </div>

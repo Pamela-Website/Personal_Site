@@ -8,15 +8,15 @@ export default class About extends Component {
         <div className="about-info">
           <div className="pamela-header">
             <Navigation />
-            <div className="row">
+            <div>
               <p className="about-header"> ABOUT PAMELA </p>
             </div>
-            <div className="row">
+            <div>
               <i className="about-subheader">Pamela's Story and How it All Began ... </i>
             </div>
           </div>
           <hr />
-          <div className="about-text">
+          <div className="container about-text">
             <div className="row">
               <div className="col-md-6">
                 <div className="row">
@@ -31,7 +31,7 @@ export default class About extends Component {
                   </div>
                 </div>
                 <br />
-                <div className="col-md-5 col-xs-12 offset-xs-0 offset-md-1 pamela-photo">
+                <div className="col-md-5 col-xs-12 offset-xs-0 offset-md-1 about-photo">
                 </div>
               </div>
               <div className="row">

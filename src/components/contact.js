@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
+import Navigation from './navbar';
 
 export default class Contact extends Component {
   constructor(props) {
@@ -105,9 +106,10 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div id="contact" className="contact">
+      <div className="contact">
         <section>
-          <header className="pamela-header">
+          <header className="contact-picture">
+            <Navigation />
             <p className="contact-header">Let's Connect</p>
           </header>
           <hr />

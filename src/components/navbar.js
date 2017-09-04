@@ -62,8 +62,8 @@ import Popover, {PopoverAnimationVertical} from 'material-ui/Popover';
             <li className="nav-item">
               <div
                 className="nav-link"
-                onMouseOver={this.handleTouchTap}
-                onMouseOut={this.handleTouchTap}
+                // onMouseOver={this.handleTouchTap}
+                // onMouseOut={this.handleTouchTap}
                 >OFFERINGS</div>
             </li>
             <li className="nav-item">

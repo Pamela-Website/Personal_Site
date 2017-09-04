@@ -16,10 +16,10 @@
 
 strong {
   font-size: 20px;
-  color: black;
+  color: white;
   letter-spacing: 3px;
-  /*font-weight: 100;*/
   font-variant: small-caps;
+  text-shadow: 0px 0px 12px black;
 }
 
 body {
@@ -35,7 +35,7 @@ body {
 
 .pamela-header {
   background: url('https://static.pexels.com/photos/4988/beach-palms.jpg');
-  background-position: 70% 77%;
+  background-position: 90% 80%;
   padding-bottom: 5%;
 }
 
@@ -83,8 +83,19 @@ body {
 
 .pamela-photo {
   background: url('../public/img/Pamela.Jpg');
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 1.5% 4%;
+}
+
+.about-photo {
+  background: url('../public/img/about-pamela.jpg');
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
   margin: 1.5% 4%;
 }
 
@@ -120,7 +131,8 @@ body {
 .menu-button {
   font-size: 18px;
   font-weight: 800;
-  color: black;
+  color: white;
+  text-shadow: 0px 0px 12px black;
  }
 
 .menu-item {
@@ -136,8 +148,8 @@ body {
 }
 
 .navbar {
-  background: none;
-  padding: 2% 4%;
+  background: rgba(0,0,0,0.2);
+  padding: 1% 5%;
   font-weight: 800
 }
 
@@ -154,11 +166,13 @@ body {
 
 .navbar-toggler-icon {
   margin-top: -1px !important;
-  padding-left: 35px;
+  padding-left: 35px !important;
+  background-color: rgba(255,255,255,0.6) !important;
+  border-radius: 5px !important;
 }
 
 .dropdown-menu {
-  background: none !important;
+  background: rgba(0,0,0,0.2) !important;
   left: -15px !important;
   border: none !important;
 
@@ -166,7 +180,8 @@ body {
 
 .nav-link, .menu-item {
   font-family: var(--main-font) !important;
-  color: rgba(0,0,0,.5) !important;
+  color: white !important;
+  text-shadow: 0px 0px 12px black !important;
   font-weight: 800 !important
 }
 
@@ -205,10 +220,27 @@ a:hover {
    }
  }
 
+ @keyframes slideInFromTop {
+   0% {
+     transform: translateY(-100%);
+   }
+   100% {
+     transform: translateY(0);
+   }
+ }
+
+ .home-nav {
+  animation: 1s ease-out 0s 1 slideInFromTop;
+ }
+
 .pageHeader {
   text-align: center;
-  padding-top: 3%;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
+  /*animation: 1s ease-out 0s 1 slideInFromLeft;*/
+  background-image: url('../public/img/oils.jpg');
+  background-position: 40% 70%;
+  background-attachment: fixed;
+  padding-bottom: 5%;
+  /*background-position: center;*/
 }
 
 .helpful-resources {
@@ -216,12 +248,15 @@ a:hover {
   letter-spacing: 1.5px;
   font-size: 35px;
   font-weight: 800;
+  text-align: center;
+  padding: 1%;
 }
 
 .name-header {
   font-size: calc(35px + 2vw);
   letter-spacing: 1px;
-  color: black;
+  padding-top: 3%;
+             color: black;
 }
 
 .nunm, .nunm:hover, .nunm:focus, .description-header {
@@ -245,6 +280,13 @@ a:hover {
   margin: 0px 6%;
 }
 
+.contact-picture {
+  background: url('../public/img/contact.jpeg');
+  background-position: center;
+  background-size: 100%;
+  padding-bottom: 5%;
+}
+
 .contact {
   /*background-color: #9DADAD;*/
   opacity: 0.9;
@@ -255,6 +297,10 @@ a:hover {
   padding-top: 2.5%;
   padding-bottom: 1%;
   font-variant: small-caps;
+  color: white;
+  text-shadow: 0 0 12px black;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 input, textarea {
@@ -271,8 +317,8 @@ input:focus, textarea:focus {
 }
 
 .contact-container {
-  background-color: #edfdff;
-  /*background-color: #F7F7F7;*/
+  /*background-color: #edfdff;*/
+  background-color: #F7F7F7;
   font-family: var(--main-body);
   width: 100%;
 }
@@ -308,7 +354,8 @@ input:focus, textarea:focus {
  */
 
 .coverflow__container__1P-xE {
-  background: transparent !important;
+  /*background: transparent !important;*/
+  background-color: #F5F5F5 !important;
 }
 
 .theme--link--2EYXGnYP:not(.theme--active--_5HYXGIE) {
@@ -390,20 +437,27 @@ b {
 }
 
 .blog {
-  margin: 0px 100px;
+  background-image: url('../public/img/blog.jpeg');
+  /*background-position: 40% 70%;*/
+  background-attachment: fixed;
+  padding-bottom: 5%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /*margin: 0px 100px;*/
 }
 
 .blog-description, .blog-header {
   font-variant: small-caps;
   font-size: 20px;
   font-weight: 800;
-  color: black;
-  /*text-shadow: 0px 0px 12px black;*/
+  color: white;
+  text-shadow: 0px 0px 12px black;
+  letter-spacing: 2px;
 }
 
 .blog-header {
+  padding-top: 2%;
   font-size: calc(27.5px + 1vw);
-  letter-spacing: 1px;
 }
 
 .blog-list {
