@@ -26,12 +26,25 @@ export default class App extends Component {
     const data = {
       rss_url: 'https://medium.com/feed/@psandler123'
     }
-    $.get('https://api.rss2json.com/v1/api.json', data, (res) => {
-      console.log('here is the response: ', res);
+    $.ajax({
+      url: 'https://api.rss2json.com/v1/api.json',
+      method: 'GET',
+      dataType: 'json',
+      data: {
+        rss_url: 'https://medium.com/feed/@psandler123'   ,
+      }
+    }).done((res) => {
+      console.log('here is the res: ', res)
       if (res.status === 'ok') {
         this.setState({ blogs: res.items })
       }
     })
+    // $.get('https://api.rss2json.com/v1/api.json', data, (res) => {
+    //   console.log('here is the response: ', res);
+    //   if (res.status === 'ok') {
+    //     this.setState({ blogs: res.items })
+    //   }
+    // })
   }
 
   componentDidMount() {

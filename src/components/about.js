@@ -6,7 +6,7 @@ export default class About extends Component {
     return (
       <div className="about-container">
         <div className="about-info">
-          <div className="pamela-header">
+          <div className="about-picture">
             <Navigation />
             <div>
               <p className="about-header"> ABOUT PAMELA </p>
