@@ -23,28 +23,27 @@ export default class App extends Component {
   }
 
   getBlogs() {
-    const data = {
-      rss_url: 'https://medium.com/feed/@psandler123'
-    }
-    $.ajax({
-      url: 'https://api.rss2json.com/v1/api.json',
-      method: 'GET',
-      dataType: 'json',
-      data: {
-        rss_url: 'https://medium.com/feed/@psandler123'   ,
-      }
-    }).done((res) => {
-      console.log('here is the res: ', res)
-      if (res.status === 'ok') {
-        this.setState({ blogs: res.items })
-      }
-    })
+    // const data = {
+    //   rss_url: 'https://medium.com/feed/@psandler123'
+    // }
     // $.get('https://api.rss2json.com/v1/api.json', data, (res) => {
     //   console.log('here is the response: ', res);
     //   if (res.status === 'ok') {
     //     this.setState({ blogs: res.items })
     //   }
     // })
+    $.ajax({
+      url: 'https://api.rss2json.com/v1/api.json',
+      method: 'GET',
+      dataType: 'json',
+      data: {
+        rss_url: 'https://medium.com/feed/@psandler123',
+      }
+    }).done((res) => {
+      if (res.status === 'ok') {
+        this.setState({ blogs: res.items })
+      }
+    })
   }
 
   componentDidMount() {
@@ -52,7 +51,6 @@ export default class App extends Component {
   }
 
   renderLanding(path, blogs) {
-    console.log('here are the blogs in the beginning: ', blogs);
     if (path === '/') {
       return (
         <div>

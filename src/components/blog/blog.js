@@ -5,17 +5,17 @@ import Navigation from '../navbar';
 export default class Blog extends Component {
   render() {
     return (
-      <div>
+      <div className="blogs">
         <div className="blog">
           <Navigation />
           <header>
-            <p className="blog-header">Nourish Roots L.A.</p>
+            <img className="blog-logo" src="../../../public/img/concept4-white.png" />
             <p className="blog-description"> Discover how it feels to nourish your mind, body and soul.
             </p>
           </header>
           <hr />
         </div>
-        <br />
+        <hr />
         <div>
           <BlogList blogs={this.props.blogs} />
         </div>
@@ -24,3 +24,4 @@ export default class Blog extends Component {
   }
 }
 
+//            <p className="blog-header">Nourish Roots L.A.</p> <-- this is the alternative header

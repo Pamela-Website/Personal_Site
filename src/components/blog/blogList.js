@@ -7,7 +7,6 @@ export default class BlogList extends Component {
     return (
       <div>
         {this.props.blogs.map((blog, i) => {
-          console.log('here is the blog: ', blog)
           const summary = $(blog.description).text();
           if (summary.length > 100) {
             return (
