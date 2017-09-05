@@ -7,13 +7,14 @@ import NBody from './nutrition-body';
 export default class Offerings extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <Header />
         <NBody />
         <hr />
         <CBody />
         <hr />
         <GBody />
+        <br />
       </div>
     );
   }

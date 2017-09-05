@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Navigation from '../navbar';
 
 export default class Header extends Component {
   render() {
     return (
-      <div className="pamela-header">
+      <div className="offering-header">
+        <Navigation />
         <header>
           <br />
           <p className="nutrition-intro">

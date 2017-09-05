@@ -5,11 +5,11 @@ import NBody from './nutrition-body';
 export default class Nutrition extends Component {
   render() {
     return (
-      <div className="container">
+      <div>
         <Header />
         <hr />
         <NBody />
-       <br />
+        <br />
       </div>
     );
   }

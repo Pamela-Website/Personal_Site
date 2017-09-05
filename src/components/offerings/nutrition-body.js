@@ -38,14 +38,6 @@ export default class NBody extends Component {
   renderStepActions(step) {
     return (
       <div style={{margin: '12px 0'}}>
-        <RaisedButton
-          label="Next"
-          disableTouchRipple={true}
-          disableFocusRipple={true}
-          primary={true}
-          onClick={this.handleNext}
-          style={{marginRight: 12}}
-        />
         {step > 0 && (
           <FlatButton
             label="Back"
@@ -54,6 +46,14 @@ export default class NBody extends Component {
             onClick={this.handlePrev}
           />
         )}
+        <RaisedButton
+          label="Next"
+          disableTouchRipple={true}
+          disableFocusRipple={true}
+          primary={true}
+          onClick={this.handleNext}
+          style={{marginRight: 12}}
+        />
       </div>
     );
   }

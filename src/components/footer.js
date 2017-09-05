@@ -8,13 +8,13 @@ export default class Footer extends Component {
           <a target="_blank" className="a-icons" href="contact">
             <i className="fa fa-envelope" aria-hidden="true"/>
           </a>
-          <a target="_blank" className="a-icons" href="https://github.com/Asalem1">
+          <a target="_blank" className="a-icons" href="https://www.facebook.com/nourish.roots.1">
             <i className="fa fa-facebook-official" aria-hidden="true"/>
           </a>
-          <a target="_blank" className="a-icons" href="https://www.instagram.com/NourishRootsLA/">
+          <a target="_blank" className="a-icons" href="https://www.instagram.com/nourishroots/">
             <i className="fa fa-instagram" aria-hidden="true"/>
           </a>
-          <a target="_blank" className="a-icons" href="https://github.com/Asalem1">
+          <a target="_blank" className="a-icons" href="https://www.pinterest.com/nourishroots/">
             <i className="fa fa-pinterest" aria-hidden="true"/>
           </a>
         </div>

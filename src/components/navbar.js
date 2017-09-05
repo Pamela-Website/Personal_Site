@@ -51,10 +51,10 @@
             <li className="nav-item">
               <Link className="nav-link" to="/contact">CONTACT</Link>
             </li>
-            <li className="nav-item nav-menu-item">
+            <li className="nav-item">
               <IconMenu
                 icon='OFFERINGS'
-                menuRipple
+                iconRipple={false}
               >
                 <MenuItem>
                     <Link className="menu-item" to="/nutritional-counseling">NUTRITIONAL COUNSELING</Link>

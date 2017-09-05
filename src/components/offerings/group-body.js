@@ -37,10 +37,7 @@ export default class GBody extends Component {
             </StepButton>
             <StepContent>
               <p className="offering-description">
-                GROUP WELLNESS
-              </p>
-              <p className="offering-description">
-                GROUP WELLNESS
+                Join me for a life-changing, inspirational group program that will empower you with important information while building a support network of like-minded individuals seeking to reclaim their health. Stay tuned for more details.
               </p>
             </StepContent>
           </Step>

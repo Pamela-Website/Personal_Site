@@ -1,29 +1,15 @@
 import React, { Component } from 'react';
 import Header from './header';
-import {
-  Step,
-  Stepper,
-  StepButton,
-  StepContent,
-} from 'material-ui/Stepper';
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import CBody from './corporate-body';
 
 export default class Corporate extends Component {
-   constructor(props) {
-    super(props);
-    this.state ={
-      stepIndex: 0,
-    }
-  }
-
   render() {
-    const {stepIndex} = this.state;
     return (
-      <div className="container">
+      <div>
         <Header />
-         <hr />
+        <hr />
         <CBody />
+        <br />
       </div>
     );
   }

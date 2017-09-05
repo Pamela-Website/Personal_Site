@@ -48,6 +48,11 @@ body {
   padding-bottom: 5%;
 }
 
+.offering-header {
+  background-image: url('../public/img/teamwork.jpeg');
+  background-size: 100%;
+}
+
 .about-picture {
  background: url('../public/img/about-background.jpg');
  background-position: center;
@@ -156,6 +161,10 @@ body {
   text-shadow: 0px 0px 12px black;
  }
 
+.menu-button:hover {
+  cursor: pointer;
+}
+
 .theme--menuItem--gEXk4-b1, .menu-item {
   text-align: center !important;
 }
@@ -206,19 +215,15 @@ body {
 
 .dropdown-menu {
   background: rgba(0,0,0,0.2) !important;
-  left: -15px !important;
+  left: -50px !important;
   border: none !important;
 }
 
-.navbar-toggleable-md .navbar-collapse {
+/*.navbar-toggleable-md .navbar-collapse {
   width: 75% !important;
-}
+}*/
 
-.nav-menu-item {
-
-}
-
-.theme--menuItem--gEXk4-b1:not(.theme--disabled--3P4e_poE):hover {
+.theme--menuItem--gEXk4-b1:not(.theme--disabled--3P4e_poE):hover, .dropdown-item:hover {
   cursor: auto !important;
   background-color: #66d7e5 !important;
 }
@@ -240,6 +245,12 @@ body {
   letter-spacing: 1.5px;
   margin-top: 4%;
   width: 150px;
+  outline: none;
+  border: none;
+}
+.theme--neutral--3ViU32p4:not([disabled]).theme--flat--2JPw5a_I, .theme--neutral--3ViU32p4:not([disabled]).theme--toggle--3xRDdAad:active {
+  outline: none;
+  border: none;
 }
 
 .nav-menu {
@@ -626,7 +637,8 @@ b {
   -ms-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
   transition: all 200ms ease-in;
-  color: #c98cff;
+  /*color: #c98cff;*/
+  color: #66d7e5;
 }
 
 .footer-copyright {
@@ -662,6 +674,9 @@ b {
 .pamela-quote {
   font-weight: 800;
   text-align: center;
+  color: white;
+  text-shadow: 0 0 12px black;
+  letter-spacing: 1.5px;
 }
 
 .nutrition-intro {
@@ -671,6 +686,8 @@ b {
   font-variant: small-caps;
   text-align: center;
   letter-spacing: 3px;
+  color: white;
+  text-shadow: 0 0 12px black;
 }
 
 .nutrition-header {
@@ -678,9 +695,12 @@ b {
   font-size: 21px;
   font-family: var(--main-intro);
   font-variant: small-caps;
-  /*padding: 4%;*/
+  padding-bottom: 2%;
+  margin: 0 15%;
   text-align: center;
-  /*letter-spacing: 1.5px;*/
+  text-shadow: 0 0 12px black;
+  color: white;
+  letter-spacing: 1.5px;
 }
 
 .offering-price {
@@ -792,4 +812,9 @@ b {
   color: white;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.coverflow__container__1P-xE {
+  width: 50% !important;
+  height: 70vh !important;
 }
