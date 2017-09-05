@@ -51,6 +51,7 @@ body {
 .offering-header {
   background-image: url('../public/img/teamwork.jpeg');
   background-size: 100%;
+  background-attachment: fixed;
 }
 
 .about-picture {
@@ -58,6 +59,7 @@ body {
  background-position: center;
  background-size: 100%;
  padding-bottom: 5%;
+  background-attachment: fixed;
 }
 
 .about-container {
@@ -350,9 +352,12 @@ a:hover {
 
 .contact-picture {
   background: url('../public/img/contact.jpeg');
-  background-position: center;
+  /*background-position: center;*/
+  background-position: 0 150%;
+  background-attachment: fixed;
   background-size: 100%;
   padding-bottom: 5%;
+
 }
 
 .contact {
