@@ -2,91 +2,155 @@ import React, { Component } from 'react';
 import Navigation from './navbar';
 import { GridList, GridTile } from 'material-ui/GridList';
 import Subheader from 'material-ui/Subheader';
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import { recipes } from './recipes-seed';
 
 export default class Recipe extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      styles: {
-        root: {
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-        },
-        gridList: {
-          width: '100%',
-          height: '100%',
-          margin: '0 5%'
-        },
-      },
-      tilesData: [
-        {
-          img: 'https://static.pexels.com/photos/296878/pexels-photo-296878.jpeg',
-          title: 'Breakfast',
-          author: 'jill111',
-        },
-        {
-          img: 'https://static.pexels.com/photos/262325/pexels-photo-262325.jpeg',
-          title: 'Tasty burger',
-          author: 'pashminu',
-        },
-        {
-          img: 'https://static.pexels.com/photos/414578/pexels-photo-414578.jpeg',
-          title: 'Camera',
-          author: 'Danson67',
-        },
-        {
-          img: 'https://static.pexels.com/photos/66627/pexels-photo-66627.jpeg',
-          title: 'Morning',
-          author: 'fancycrave1',
-        },
-        {
-          img: 'https://static.pexels.com/photos/139446/pexels-photo-139446.jpeg',
-          title: 'Hats',
-          author: 'Hans',
-        },
-        {
-          img: 'https://static.pexels.com/photos/158607/cairn-fog-mystical-background-158607.jpeg',
-          title: 'Honey',
-          author: 'fancycravel',
-        },
-        {
-          img: 'https://static.pexels.com/photos/20974/pexels-photo.jpg',
-          title: 'Vegetables',
-          author: 'jill111',
-        },
-        {
-          img: 'https://static.pexels.com/photos/39811/pexels-photo-39811.jpeg',
-          title: 'Water plant',
-          author: 'BkrmadtyaKarki',
-        },
-      ],
+      open: false,
+      title: '',
+      img: '',
+      ingredients: [],
+      directions: [],
+      benefits: '',
     }
+    this.handleClose = this.handleClose.bind(this);
+    this.renderIngredientsList = this.renderIngredientsList.bind(this);
+    this.renderDirectionsList = this.renderDirectionsList.bind(this);
   };
 
+  handleOpen(tile) {
+    let { img, title, directions, ingredients, benefits } = tile
+    console.log('here is the tile: ', tile);
+    this.setState({
+      open: true,
+      title,
+      img,
+      ingredients,
+      directions,
+      benefits,
+    });
+  }
+
+  handleClose() {
+    this.setState({ open: false });
+  }
+
+  renderIngredientsList() {
+    return (
+      <div className="recipe-list">
+        {this.state.ingredients.map((ingredient) => <li className="recipe-step">{ingredient}</li>)}
+      </div>
+    )
+  }
+
+  renderDirectionsList() {
+    return (
+      <div className="recipe-list">
+        {this.state.directions.map((direction) => <li className="recipe-step">{direction}</li>)}
+      </div>
+    )
+  }
+
   render() {
+    const styles = {
+      root: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'space-around',
+      },
+      gridList: {
+        width: '100%',
+        height: '100%',
+        margin: '0 5%'
+      },
+    };
+    const actions = [
+      <FlatButton
+        label="OK"
+        primary={true}
+        onClick={this.handleClose}
+      />,
+    ];
+    const customContentStyle = {
+      width: '90%',
+      maxWidth: 'none',
+    };
+    const customHeaderStyle = {
+      fontSize: '35px',
+      padding: '2%',
+      textAlign: 'center',
+      letterSpacing: '1.5px',
+      fontWeight: '800',
+      color: 'black',
+    }
     return (
       <div>
         <Navigation />
-        <div style={this.state.styles.root}>
+        <div style={styles.root}>
           <GridList
             cellHeight={300}
-            style={this.state.styles.gridList}
+            style={styles.gridList}
             cols={4}
             padding={20}
           >
-            <Subheader>
-              A Healthy Outside Starts From the Inside
+            <Subheader
+              style={customHeaderStyle}
+            >
+              || A Healthy Outside Starts From the Inside ||
             </Subheader>
-            {this.state.tilesData.map((tile) => (
+            {recipes.map((tile) => (
               <GridTile
+                className="recipe-picture"
                 key={tile.img}
-                title={tile.title}
-                subtitle={<span>by <b>{tile.author}</b></span>}
+                title={tile.restrictions}
+                subtitle={<span><b>{tile.title}</b></span>}
+                onClick={this.handleOpen.bind(this, tile)}
               >
                 <img src={tile.img} />
               </GridTile>
             ))}
+            <Dialog
+              title={this.state.title}
+              titleClassName="recipe-title"
+              actions={actions}
+              modal={false}
+              open={this.state.open}
+              onRequestClose={this.handleClose}
+              autoScrollBodyContent={true}
+              contentStyle={customContentStyle}
+            >
+              <br />
+              <div className="container-fluid">
+                <div className="row">
+                  <div className="col-md-6">
+                    <ul>
+                      <p className="recipe-ingredients">Ingredients: </p>
+                        { this.renderIngredientsList() }
+                    </ul>
+                  </div>
+                  <div className="col-md-5 offset-md-1">
+                    <img
+                      src={this.state.img}
+                      width="100%"
+                    />
+                  </div>
+                </div>
+                <div className="row recipe-benefits">
+                  <p className="recipe-header">Benefits: </p>
+                  <p className="recipe-step">{this.state.benefits}</p>
+                </div>
+                <div className="row">
+                  <ol>
+                    <p className="recipe-header">Directions: </p>
+                      { this.renderDirectionsList() }
+                  </ol>
+                </div>
+              </div>
+             </Dialog>
           </GridList>
         </div>
         <br />

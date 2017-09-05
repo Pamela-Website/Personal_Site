@@ -728,12 +728,6 @@ b {
   font-size: 17px;
 }
 
-/*  --main-font: 'Cormorant Garamond', serif;
-  --main-header: 'Playfair Display', serif;
-  --main-body: 'EB Garamond', serif;
-  --main-intro: 'Muli', serif;
-*/
-
 /*
 ||||||||||||||||||||||| LANDING |||||||||||||||||||||||
  */
@@ -763,13 +757,6 @@ b {
   background-position: center center !important;
   height: 100vh !important;
 }
-
-/*  --main-font: 'Cormorant Garamond', serif;
-  --main-header: 'Playfair Display', serif;
-  --main-body: 'EB Garamond', serif;
-  --main-intro: 'Muli', serif;
-*/
-
 
 .intro-name {
   font-family: var(--main-body);
@@ -822,4 +809,55 @@ b {
 .coverflow__container__1P-xE {
   width: 50% !important;
   height: 70vh !important;
+}
+
+/*
+||||||||||||||||||||||| RECIPES |||||||||||||||||||||||
+ */
+
+ /*  --main-font: 'Cormorant Garamond', serif;
+   --main-header: 'Playfair Display', serif;
+   --main-body: 'EB Garamond', serif;
+   --main-intro: 'Muli', serif;
+ */
+
+.recipe-picture:hover {
+  cursor: pointer;
+}
+
+.recipe-title {
+  font-family: var(--main-font);
+  color: black !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+  background-color: #66d7e5;
+}
+
+.recipe-benefits {
+  margin: 0 2%;
+}
+
+.recipe-header, .recipe-ingredients {
+ font-family: var(--main-header);
+ color: black !important;
+ font-size: 25px !important;
+ font-weight: 800 !important;
+ letter-spacing: 1.5px !important;
+}
+
+.recipe-step {
+ font-family: var(--main-body);
+ color: black !important;
+ font-size: 22px !important;
+ /*font-weight: 800 !important;*/
+ letter-spacing: 1px !important;
+}
+
+.recipe-list {
+  margin-left: 2%;
+}
+
+.recipe-ingredients {
+  margin-left: -1.5% !important;
 }
