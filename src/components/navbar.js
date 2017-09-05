@@ -28,10 +28,11 @@
           </DropdownToggle>
           <DropdownMenu>
             <DropdownItem><Link className="nav-link" to="/about">ABOUT</Link></DropdownItem>
-            <DropdownItem><Link className="nav-link" to="/offerings">OFFERINGS</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/resources">RESOURCES</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/recipes">RECIPES</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/blog">BLOG</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to='/contact'>CONTACT</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/offerings">OFFERINGS</Link></DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Link className="navbar-brand" to="/resources">
@@ -44,6 +45,9 @@
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/resources">RESOURCES</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/recipes">RECIPES</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/blog">BLOG</Link>
