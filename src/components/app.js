@@ -1,4 +1,4 @@
-import About from './about';
+import About from './bio/about';
 import Blog from './blog/blog';
 import Contact from './contact';
 import Corporate from './offerings/corporate';
@@ -9,6 +9,7 @@ import Landing from './landing';
 import Navigation from './navbar';
 import Nutrition from './offerings/nutrition';
 import Offerings from './offerings/offerings';
+import Philosophy from './bio/philosophy';
 import Recipe from './recipe';
 import $ from 'jquery';
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -69,11 +70,13 @@ export default class App extends Component {
                 <Route path="/blog" render={() => (
                   <Blog blogs={blogs} />
                 )}/>
-                <Route path="/about" component={About}></Route>
+                <Route path="/about-me" component={About}></Route>
+                <Route path="/health-philosophy" component={Philosophy}></Route>
+                <Route path="/testimonials" component={About}></Route>
                 <Route path="/recipes" component={Recipe}></Route>
                 <Route path="/contact" component={Contact}></Route>
                 <Route path="/nutritional-counseling" component={Nutrition}></Route>
-                <Route path="/offerings" component={Offerings}></Route>
+                <Route path="/services" component={Offerings}></Route>
                 <Route path="/group-sessions" component={Group}></Route>
                 <Route path="/corporate-wellness" component={Corporate}></Route>
               </div>

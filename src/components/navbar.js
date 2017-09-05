@@ -27,12 +27,14 @@
               </span></span>
           </DropdownToggle>
           <DropdownMenu>
-            <DropdownItem><Link className="nav-link" to="/about">ABOUT</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/about-me">ABOUT ME</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/health-philosophy">HEALTH PHILOSOPHY</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/testimonials">TESTIMONIALS</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/resources">RESOURCES</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/recipes">RECIPES</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to="/blog">BLOG</Link></DropdownItem>
             <DropdownItem><Link className="nav-link" to='/contact'>CONTACT</Link></DropdownItem>
-            <DropdownItem><Link className="nav-link" to="/offerings">OFFERINGS</Link></DropdownItem>
+            <DropdownItem><Link className="nav-link" to="/services">SERVICES</Link></DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <Link className="navbar-brand" to="/resources">
@@ -40,9 +42,6 @@
         </Link>
         <div  id="navbarNavDropdown" className="navbar-collapse collapse">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">ABOUT</Link>
-            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/resources">RESOURCES</Link>
             </li>
@@ -53,11 +52,8 @@
               <Link className="nav-link" to="/blog">BLOG</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact">CONTACT</Link>
-            </li>
-            <li className="nav-item">
               <IconMenu
-                icon='OFFERINGS'
+                icon='SERVICES'
                 iconRipple={false}
               >
                 <MenuItem>
@@ -68,6 +64,25 @@
                 </MenuItem>
                 <MenuItem>
                     <Link className="menu-item" to="/corporate-wellness">CORPORATE WELLNESS</Link>
+                </MenuItem>
+              </IconMenu>
+            </li>
+            <li className="nav-item">
+              <IconMenu
+                icon='BIO & CONTACT'
+                iconRipple={false}
+              >
+                <MenuItem>
+                    <Link className="menu-item" to="/about-me">ABOUT ME</Link>
+                </MenuItem>
+                <MenuItem >
+                    <Link className="menu-item" to="/health-philosophy">HEALTH PHILOSOPHY</Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link className="menu-item" to="/testimonials">TESTIMONIALS</Link>
+                </MenuItem>
+                <MenuItem>
+                    <Link className="menu-item" to="/contact">CONTACT</Link>
                 </MenuItem>
               </IconMenu>
             </li>

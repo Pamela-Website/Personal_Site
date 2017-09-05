@@ -55,10 +55,18 @@ body {
 }
 
 .about-picture {
- background: url('../public/img/about-background.jpg');
- background-position: center;
- background-size: 100%;
- padding-bottom: 5%;
+  background: url('../public/img/about-background.jpg');
+  background-position: center;
+  background-size: 100%;
+  padding-bottom: 5%;
+  background-attachment: fixed;
+}
+
+.bio-picture {
+  background: url('../public/img/bio-pamela.JPG');
+  background-position: 0 200%;
+  background-size: 100%;
+  padding-bottom: 5%;
   background-attachment: fixed;
 }
 
@@ -145,9 +153,43 @@ body {
   margin-bottom: 5%;
 }
 
-.about-text {
-  padding-left: 3%;
+.about-credentials-title {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
+
+.about-credentials {
+  border-left: 3px solid rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+.about-credentials-text {
+  padding-left: 5%;
+  font-size: 17px;
+}
+
+.about-credentials-text:hover {
+  padding-left: 7%;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #66d7e5;
+  -webkit-transition: all 350ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 350ms ease-in;
+  -ms-transform: scale(1.05);
+  -moz-transition: all 350ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 350ms ease-in;
+  transform: scale(1.05);
+}
+
+.about-institution {
+  font-style: italic;
+  margin-bottom: -1%;
+}
+
 /*
 ||||||||||||||||||||||| NAVBAR |||||||||||||||||||||||
  */
@@ -192,7 +234,8 @@ body {
 }
 
 .navbar {
-  background: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.2);
+  /*background-color: rgba(105,215,229,0.5);*/
   padding: 1% 5%;
   font-weight: 800
 }
@@ -249,7 +292,9 @@ body {
   width: 150px;
   outline: none;
   border: none;
+  margin-left: -20%;
 }
+
 .theme--neutral--3ViU32p4:not([disabled]).theme--flat--2JPw5a_I, .theme--neutral--3ViU32p4:not([disabled]).theme--toggle--3xRDdAad:active {
   outline: none;
   border: none;

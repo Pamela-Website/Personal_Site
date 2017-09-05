@@ -24,7 +24,6 @@ export default class Recipe extends Component {
 
   handleOpen(tile) {
     let { img, title, directions, ingredients, benefits } = tile
-    console.log('here is the tile: ', tile);
     this.setState({
       open: true,
       title,
