@@ -18,12 +18,12 @@
      });
    }
 
-   render() {
+  render() {
     return (
      <nav className="navbar navbar-toggleable-md navbar-light bg-faded navMaster">
        <Dropdown className="navbar-toggler navbar-toggler-right btn" type="button" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
          <DropdownToggle>
-             <span className="menu-button"><span className="navbar-toggler-icon" onClick={this.toggle}>
+             <span className="menu-button">MENU<span className="navbar-toggler-icon" onClick={this.toggle}>
              </span></span>
          </DropdownToggle>
          <DropdownMenu>
@@ -90,8 +90,8 @@
        </div>
    </nav>
    )
-     }
-   }
+  }
+ }
 
 
 
