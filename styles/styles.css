@@ -65,7 +65,7 @@ body {
 }
 
 .bio-picture {
-  background: url('../public/img/bio-pamela.JPG');
+  background: url('../public/img/bio-pamela.jpg');
   background-position: 0 200%;
   background-size: 100%;
   /*padding-bottom: 5%;*/
@@ -417,7 +417,7 @@ a:hover {
 }
 
 .contact-picture {
-  background: url('../public/img/contact2.jpeg');
+  background: url('../public/img/contact.jpeg');
   /*background-position: center;*/
   /*background-position: 0 150%;*/
   background-attachment: fixed;
@@ -800,19 +800,19 @@ b {
 ||||||||||||||||||||||| LANDING |||||||||||||||||||||||
  */
 .landing-slider-1 {
-  background-image: url('../public/img/img-1.jpeg');
+  background-image: url('../public/img/img-1.jpg');
 }
 
 .landing-slider-5 {
-  background-image: url('../public/img/img-2.jpeg');
+  background-image: url('../public/img/img-2.jpg');
 }
 
 .landing-slider-2 {
-  background-image: url('../public/img/img-3.jpeg');
+  background-image: url('../public/img/img-3.jpg');
 }
 
 .landing-slider-3 {
-  background-image: url('../public/img/img-4.jpeg');
+  background-image: url('../public/img/img-4.jpg');
 }
 
 .landing-slider-4 {
