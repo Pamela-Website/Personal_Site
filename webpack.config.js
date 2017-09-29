@@ -26,6 +26,10 @@ module.exports = {
         loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
       },
       {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000'
+      },
+      {
          test: /\.css$/,
          use: [
            "style-loader",
@@ -49,6 +53,12 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // for hot reloading
     new webpack.NoEmitOnErrorsPlugin(), // won't compile with errors
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin()
     // new webpack.ExtractTextPlugin('styles/styles.css', {
     //   allChunks: true
     // })
