@@ -13,7 +13,6 @@ export default class Blog extends Component {
             <p className="blog-description"> Discover how it feels to nourish your mind, body and soul.
             </p>
           </header>
-          <hr />
         </div>
         <hr />
         <div>
