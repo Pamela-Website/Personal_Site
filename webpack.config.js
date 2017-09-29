@@ -53,12 +53,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // for hot reloading
     new webpack.NoEmitOnErrorsPlugin(), // won't compile with errors
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin()
+
     // new webpack.ExtractTextPlugin('styles/styles.css', {
     //   allChunks: true
     // })
