@@ -417,13 +417,13 @@ a:hover {
 }
 
 .contact-picture {
-  background: url('../public/img/contact.jpeg');
+  background: url('../public/img/contact2.jpeg');
   /*background-position: center;*/
-  background-position: 0 150%;
+  /*background-position: 0 150%;*/
   background-attachment: fixed;
   background-size: 100%;
   /*padding-bottom: 5%;*/
-  height: 400px;
+  height: 300px;
 }
 
 .contact {
@@ -856,16 +856,21 @@ b {
   font-size: 20px;
   letter-spacing: 1px;
   border: 3.5px solid rgba(255,255,255,0.8);
-  padding: 4px 11px;;
+  padding: 2.5px 11px;;
   text-shadow: 0px 0px 12px black;
 }
 
-.enter-button:hover > .enter:hover {
-  background: white;
-  color: purple;
+.enter:hover {
+  cursor: pointer
 }
 
+/*.enter-button:hover > .enter:hover {
+  background-color: white;
+  color: purple;
+}*/
+
 .intro {
+  z-index: 10;
   position: absolute;
   top: 50%;
   left: 50%;
