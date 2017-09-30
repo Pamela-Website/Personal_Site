@@ -276,7 +276,7 @@ body {
 .dropdown-menu {
   /*background: rgba(0,0,0,0.4);*/
   background: rgba(0,0,0,0.2) !important;
-  left: -104px !important; /*-165 || -104 with MENU*/
+  left: -165px !important; /*-165 || -104 with MENU*/
   top: 45px;
   border: none !important;
   -ms-transform: translate(-33%, 0%);

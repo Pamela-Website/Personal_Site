@@ -23,7 +23,7 @@
      <nav className="navbar navbar-toggleable-md navbar-light bg-faded navMaster">
        <Dropdown className="navbar-toggler navbar-toggler-right btn" type="button" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
          <DropdownToggle>
-             <span className="menu-button">MENU<span className="navbar-toggler-icon" onClick={this.toggle}>
+             <span className="menu-button"><span className="navbar-toggler-icon" onClick={this.toggle}>
              </span></span>
          </DropdownToggle>
          <DropdownMenu>
@@ -51,41 +51,7 @@
            <li className="nav-item">
              <Link className="nav-link" to="/blog">BLOG</Link>
            </li>
-           <li className="nav-item">
-             <IconMenu
-               icon='SERVICES'
-               iconRipple={false}
-             >
-               <Link className='menu-item' to='/nutritional-counseling' >
-                 <MenuItem className='menu-item' caption='NUTRITIONAL COUNSELING' />
-               </Link>
-               <Link className="menu-item" to="/group-sessions">
-                 <MenuItem className='menu-item' caption='GROUP SESSIONS' />
-               </Link>
-               <Link className="menu-item" to="/corporate-wellness">
-                 <MenuItem className='menu-item' caption='CORPORATE WELLNESS' />
-               </Link>
-             </IconMenu>
-           </li>
-           <li className="nav-item">
-             <IconMenu
-               icon='BIO & CONTACT'
-               iconRipple={false}
-             >
-               <Link className="menu-item" to="/about-me">
-                 <MenuItem className='menu-item' caption='ABOUT ME' />
-               </Link>
-               <Link className="menu-item" to="/health-philosophy">
-                 <MenuItem className='menu-item' caption='HEALTH PHILOSOPHY' />
-               </Link>
-               <Link className="menu-item" to="/testimonials">
-                 <MenuItem className='menu-item' caption='TESTIMONIALS' />
-               </Link>
-               <Link className="menu-item" to="/contact">
-                 <MenuItem className='menu-item' caption='CONTACT' />
-               </Link>
-             </IconMenu>
-           </li>
+
          </ul>
        </div>
    </nav>
