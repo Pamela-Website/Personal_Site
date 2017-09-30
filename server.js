@@ -30,28 +30,27 @@ app.get('*', (req, res) => {
   });
 
 app.post('/send', (req, res, next) => {
-  console.log('here is the body: ', req.body)
-  let { name, email, message, hear } = req.body;
-  let data = {
-    from: email,
-    to: user,
-    subject: name,
-    text: `
-    Hi Pamela,
-      I heard about your from: ${hear}.
+  // let { name, email, message, hear } = req.body;
+  // let data = {
+  //   from: email,
+  //   to: user,
+  //   subject: name,
+  //   text: `
+  //   Hi Pamela,
+  //     I heard about your from: ${hear}.
 
-      ${message}`,
-  };
-  mailgun.messages().send(data, (err, body) => {
-    if (err) {
-      console.error('there was an error: ', err);
-      res.status(404);
-      res.send(err);
-    } else {
-      console.log('here is the data in mailgun: ', body);
-      res.send(body);
-    }
-  })
+  //     ${message}`,
+  // };
+  // mailgun.messages().send(data, (err, body) => {
+  //   if (err) {
+  //     console.error('there was an error: ', err);
+  //     res.status(404);
+  //     res.send(err);
+  //   } else {
+  //     console.log('here is the data in mailgun: ', body);
+  //     res.send(body);
+  //   }
+  // })
 })
 
 app.listen(process.env.PORT || port, function() {
