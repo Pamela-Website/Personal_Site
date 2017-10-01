@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { Menu, IconMenu, MenuItem } from 'react-toolbox/lib/menu';
 
-
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -24,8 +23,11 @@ export default class Navigation extends Component {
 
   render() {
     return (
-    <AppBar className="navbar navbar-toggleable-md navbar-light bg-faded">
-      <Dropdown className="navbar-toggler navbar-toggler-right btn" type="button" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-faded">
+      <Link className="navbar-brand" to="/resources">
+        <img className="logo" src="../../public/img/concept4-white.png" />
+      </Link>
+      <Dropdown className="navbar-toggler btn" type="button" isOpen={this.state.dropdownOpen} toggle={this.toggle}>
         <DropdownToggle>
             <span className="menu-button"><span className="navbar-toggler-icon" onClick={this.toggle}>
             </span></span>
@@ -41,10 +43,7 @@ export default class Navigation extends Component {
           <DropdownItem><Link className="nav-link" to="/services">SERVICES</Link></DropdownItem>
         </DropdownMenu>
       </Dropdown>
-      <Link className="navbar-brand" to="/resources">
-        <img className="logo" src="../../public/img/concept4-white.png" />
-      </Link>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className="collapse navbar-collapse" id="navbarNavDropdown">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
             <Link className="nav-link" to="/resources">RESOURCES</Link>
@@ -92,7 +91,7 @@ export default class Navigation extends Component {
           </li>
         </ul>
       </div>
-    </AppBar>
+    </nav>
     )
   }
 }
