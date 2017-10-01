@@ -26,31 +26,31 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
-  });
+  res.sendFile(path.resolve(__dirname, 'views', 'index.html'));
+});
 
 app.post('/send', (req, res, next) => {
-  // let { name, email, message, hear } = req.body;
-  // let data = {
-  //   from: email,
-  //   to: user,
-  //   subject: name,
-  //   text: `
-  //   Hi Pamela,
-  //     I heard about your from: ${hear}.
+  let { name, email, message, hear } = req.body;
+  let data = {
+    from: email,
+    to: user,
+    subject: name,
+    text: `
+    Hi Pamela,
+      I heard about your from: ${hear}.
 
-  //     ${message}`,
-  // };
-  // mailgun.messages().send(data, (err, body) => {
-  //   if (err) {
-  //     console.error('there was an error: ', err);
-  //     res.status(404);
-  //     res.send(err);
-  //   } else {
-  //     console.log('here is the data in mailgun: ', body);
-  //     res.send(body);
-  //   }
-  // })
+      ${message}`,
+  };
+  mailgun.messages().send(data, (err, body) => {
+    if (err) {
+      console.error('there was an error: ', err);
+      res.status(404);
+      res.send(err);
+    } else {
+      console.log('here is the data in mailgun: ', body);
+      res.send(body);
+    }
+  })
 })
 
 app.listen(process.env.PORT || port, function() {
