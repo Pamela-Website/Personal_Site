@@ -78,7 +78,7 @@ export default class NBody extends Component {
           </StepButton>
           <StepContent>
             <p className="offering-description">
-              To better understand your story, your health and your goals (or: to better establish how we can work together to ensure your success), let’s connect and get acquainted. Please contact me to schedule your complimentary phone consultation. I’m looking forward to talking with you.
+              This complimentary 20-minute phone consultation will allow me to understand your story, your health and your goals, and establish how we can work together to ensure your success. Please contact me to schedule your complimentary phone consultation.
             </p>
             {this.renderStepActions(0)}
           </StepContent>
@@ -95,19 +95,22 @@ export default class NBody extends Component {
           <StepContent>
             <div>
               <p className="offering-description">
-                Interested in reclaiming your health? I’m here for you. During your consultation, we’ll explore how your physical, mental and emotional states are impacting your health and we’ll discuss practical tools for transformation. Working together we will create a personalized, tailor made nutrition and lifestyle plan designed to meet your unique health goals.
+                Interested in reclaiming your health? I’m here for you. During your session, we’ll explore how your physical, mental and emotional states are impacting your health and we’ll discuss practical tools for transformation. Together, we will create a personalized nutrition and lifestyle plan designed to meet your unique health goals.
               </p>
               <p className="offering-title">
                 One-on-One Initial Nutritional Consultation (90-minutes)
               </p>
               <p className="offering-description">
-                Each and every one of us has individual requirements that are dependent on the status of our health. The purpose of this session is for me to get to know you better and to get you started on your unique journey to optimal health. This will be an opportunity for me to develop a detailed understanding of your story, your health and your goals while discussing practical tools for transformation. Working together we will create a customized nutrition and lifestyle plan tailored to you and your requirements. This will include full symptomatic support, recipes, meal plans, supplemental and herbal protocols along with guidance that will be tailored to your nutrition needs. Please contact me to schedule your consultation. I’m looking forward to getting started on this journey with you.
+                This in-depth session is an opportunity for me to develop a detailed understanding of your story, your health and your goals while discussing practical tools for transformation. Working together we will create a customized nutrition and lifestyle plan tailored to you and your nutritional needs, including full symptomatic support, recipes, meal plans, supplemental and herbal protocols along with guidance. Please contact me to schedule your appointment.
               </p>
               <p className="offering-title">
                 One-on-One Nutritional Consultation Follow-Up Appointment (60-minutes)
               </p>
+              <p className="offering-title">
+                <em>*For current clients only*</em>
+              </p>
               <p className="offering-description">
-                This plan is for current clients. Follow up’s provide the opportunity to monitor your progress, re-evaluate your existing health goals and adjust your personalized plan as needed. (OR: Follow up’s provide the opportunity to monitor your progress, re-evaluate your existing health goals and action plan while adjusting your personalized plan as required.) Let’s continue to nourish your mind, body and soul. Please contact me to schedule your follow up. I’m looking forward to continuing this journey with you.
+                Follow-up appointments provide the opportunity to monitor your progress, re-evaluate your existing health goals and adjust your personalized plan as needed. Let’s continue to nourish your mind, body and soul. Please contact me to schedule your follow up.
               </p>
             </div>
             {this.renderStepActions(1)}
@@ -124,7 +127,7 @@ export default class NBody extends Component {
           </StepButton>
           <StepContent>
             <p className="offering-description">
-              Outside of LA or prefer to meet remotely? No problem. We can connect via videoconferencing or telephone. Regardless of where you’re based I’d love to work with you. If you’re outside of LA or traveling, I offer across state and international consultations via videoconferencing or telephone. Please contact me to schedule your virtual consultation. I’m looking forward to embarking on this journey together.
+              Outside of LA or prefer to meet remotely? No problem. We can connect via videoconferencing or telephone. Regardless of where you’re based I’d love to work with you. Please contact me to schedule your virtual session.
             </p>
             {this.renderStepActions(2)}
           </StepContent>
@@ -146,7 +149,7 @@ export default class NBody extends Component {
               </i>
             </p>
             <p className="offering-description">
-              A little progress each day adds up to big results! Feel your best self yet by prioritizing your health and committing to your goals. To show my full commitment to you and your health, I’m offering a 10% discount when you sign up for a nutritional consultation & wellness package/program. Please contact me to secure your package. I’m looking forward to continuing our journey together.
+              Small changes in your everyday life will lead to huge results! Feel your best self yet by prioritizing your health and committing to your goals. To show my full commitment to you and your health, I’m offering a 10% discount when you sign up for a nutritional counseling & wellness package. Please contact me to secure your package.
             </p>
             <p className="offering-title">
               1-MONTH Nutritional Consultation & Wellness DISCOVERY Package
@@ -164,7 +167,7 @@ export default class NBody extends Component {
               This package incorporates eight nutritional consultations (60-minutes each) of one-on-one conversations, along with email support between sessions.
             </p>
             <p className="offering-description">
-              We meet weekly for the first month and then fortnightly for the remaining two months.
+              We meet weekly for the first month and then biweekly for the remaining two months.
             </p>
             <p className="offering-title">
               6-MONTH Nutritional Consultation & Wellness FLOURISH Package
@@ -194,13 +197,13 @@ export default class NBody extends Component {
               In-Home Nutritional Consultation
             </p>
             <p className="offering-description">
-              Your health and wellbeing is my top priority. To lighten your load and make life easier for you, I offer in-home visits (distance dependent). Home visits can be an excellent way for me to better understand your home lifestyle, which can aid in the creation of a nutrition plan that is uniquely you. At the heart of your home visit is your personalized nutrition consultation with the additional options of a pantry makeover and/or an in-home cooking demonstration. Please contact me to schedule your in-home consultation.
+              Your health and wellbeing is my top priority. To lighten your load and make life easier for you, I offer in-home visits (dependent on location and subject to mileage costs). Home visits can be an excellent way for me to better understand your home lifestyle, which can aid in the creation of a nutrition plan that is uniquely you. At the heart of your home visit is your personalized nutrition consultation with the additional options of a pantry makeover and/or an in-home cooking demonstration. Please contact me to schedule your in-home session.
             </p>
             <p className="offering-title">
               Pantry Makeover
             </p>
             <p className="offering-description">
-              How confusing is it trying to work out what we should be eating and who we should be listening to?  This pantry makeover is all about your health needs and what works best for you. A pantry makeover can be an excellent way to learn a few tricks of the trade when it comes to reading nutrition labels and better understanding packaging ploys. This can be an effective way to reach your goals at a faster pace. We’ll start with your pantry and finish at the market where together we’ll select the right ingredients for you. You’ll be sure to enjoy more bang for your buck when it comes to nourishing yourself and your loves ones. Please contact me to schedule your pantry makeover.
+              How confusing is it trying to work out what we should be eating and who we should be listening to?  This pantry makeover is all about your health needs and what works best for you. A pantry makeover can be an excellent way to learn a few tricks of the trade when it comes to reading nutrition labels and better understanding marketing packaging ploys. This can be an effective way to reach your goals at a faster pace. We’ll start with your pantry and finish at the market where together we’ll select the right ingredients for you. You’ll be sure to enjoy more bang for your buck when it comes to nourishing yourself and your loves ones. Please contact me to schedule your pantry makeover.
             </p>
             <p className="offering-title">
               In-Home Cooking Demonstration

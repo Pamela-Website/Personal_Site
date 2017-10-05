@@ -13,7 +13,7 @@ export default class Landing extends Component {
         <div className="row">
           <div className="col-xs-12">
             <div className='row intro-name'>
-              <img className="intro-logo" src="../../public/img/concept-white.png" />
+              <img className="intro-logo" src="../../public/img/landing-logo.png" />
             </div>
             <div className='row intro-description'>
               <p className="intro-description">Whole Foods Nutrition | Recipe Creation | Mind-Body Wellness | Women’s Health & Wellbeing </p>
