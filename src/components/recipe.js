@@ -15,7 +15,7 @@ var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/res
 
 // Authorization scopes required by the API; multiple scopes can be
 // included, separated by spaces.
-var SCOPES = 'https://www.googleapis.com/auth/drive.metadata.readonly';
+var SCOPES = 'https://www.googleapis.com/auth/drive.metadata';
 
 var authorizeButton = document.getElementById('authorize-button');
 var signoutButton = document.getElementById('signout-button');
@@ -85,21 +85,21 @@ function handleSignoutClick(event) {
 function appendPre(message) {
   var pre = document.getElementById('content');
   var textContent = document.createTextNode(message + '\n');
-  pre.appendChild(textContent);
+  // pre.appendChild(textContent);
 }
 
 /**
  * Print files.
  */
 function listFiles() {
-  console.log('listfiles is being called inside: ', gapi);
+  console.log('listfiles is being called inside: ', gapi.client.drive.files.list);
   gapi.client.drive.files.list({
     'pageSize': 10,
     'fields': "nextPageToken, files(id, name)"
   }).then(function(response) {
-    console.log('here is the response: ', response);
-    appendPre('Files:');
+    // appendPre('Files:');
     var files = response.result.files;
+    console.log('here is the file: ', files);
     if (files && files.length > 0) {
       for (var i = 0; i < files.length; i++) {
         var file = files[i];

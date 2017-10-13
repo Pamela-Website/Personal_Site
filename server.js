@@ -41,6 +41,22 @@ app.post('/send', (req, res, next) => {
 
       ${message}`,
   };
+  let toClient = {
+    from: user,
+    to: email,
+    subject: 'Email received',
+    text: `
+    Hello ${name},
+
+    Thanks for connecting with me. I'll be in touch shortly (usually within 48 hours) in response to your inquiry.
+    I look forward to helping you in any way you need.
+
+    Best wishes,
+    Pamela Sandler
+
+    In Health | In Happiness | In Nourishment
+    `,
+  }
   mailgun.messages().send(data, (err, body) => {
     if (err) {
       console.error('there was an error: ', err);
@@ -48,6 +64,16 @@ app.post('/send', (req, res, next) => {
       res.send(err);
     } else {
       console.log('here is the data in mailgun: ', body);
+      res.send(body);
+    }
+  });
+  mailgun.messages().send(toClient, (err, body) => {
+    if (err) {
+      console.error('there was an error: ', err);
+      res.status(404);
+      res.send(err);
+    } else {
+      console.log('here is the data in sent to the client: ', body);
       res.send(body);
     }
   })

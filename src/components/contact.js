@@ -1,4 +1,3 @@
-import { Alert } from 'reactstrap';
 import React, { Component } from 'react';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
@@ -14,6 +13,7 @@ export default class Contact extends Component {
     }
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.renderSuccessMessage = this.renderSuccessMessage.bind(this);
   }
 
   handleOpen() {
@@ -21,18 +21,17 @@ export default class Contact extends Component {
    };
 
    handleClose() {
-     this.setState({open: false});
+     this.setState({open: false, success: ''});
    };
 
   checkInputs(event) {
-    console.log('here is the event: ', this.refs)
     event.preventDefault();
     let hear = this.refs.hear.value;
     let name = this.refs.name.value;
     let email = this.refs.email.value;
     let message = this.refs.message.value;
     if (!name.length || !email.length || !message.length || !hear.length) {
-      this.setState({ success: false })
+      this.setState({ success: false });
     } else {
       this.sendEmail(name, email, message, hear);
       this.refs.name.value = '';
@@ -77,30 +76,35 @@ export default class Contact extends Component {
     if (this.state.success === true) {
       return (
         <div>
-          <Alert color="success" className="sucess-alert">
-            <p>Your email was sent successfully. </p>
-          </Alert>
+          <Dialog
+            title="Email Sent Successfully!"
+            actions={actions}
+            modal={false}
+            open={this.state.open}
+            onRequestClose={this.handleClose}
+          >
+            Thanks so much for reaching out. I NEED TO GET A NEW RESPONSE HERE
+          </Dialog>
         </div>
       )
     } else if (this.state.success === false) {
         return (
           <div>
-            <Alert color="danger" className="sucess-alert">
-              <p>Please make sure to fill-in all the input fields. </p>
-            </Alert>
+            <Dialog
+              title="Error Submitting"
+              actions={actions}
+              modal={false}
+              open={this.state.open}
+              onRequestClose={this.handleClose}
+            >
+              Please make sure to fill-in all the input fields.
+            </Dialog>
           </div>
         )
     } else {
       return (
           <br />
       )
-    }
-  }
-
-  componentDidUpdate() {
-    if (this.state.success === false || this.state.success === true) {
-      const context = this;
-      setTimeout(() => context.setState({ success: '' }), 7000)
     }
   }
 
@@ -138,17 +142,17 @@ export default class Contact extends Component {
                   </div>
                   <br />
                   <div className="row send-message">
-                    <button type="submit" className="send-message-button"> Send Message </button>
+                    <button type="submit" className="send-message-button" onClick={this.handleOpen}> Send Message </button>
                   </div>
                 </div>
                 <div className="col-sm-4 offset-sm-1 pamela-photo">
-
+                  {this.renderSuccessMessage()}
                 </div>
               </div>
             </div>
           </form>
           <div>
-            {this.renderSuccessMessage()}
+          <br />
           </div>
         </section>
       </div>
