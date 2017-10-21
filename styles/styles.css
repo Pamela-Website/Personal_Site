@@ -1,6 +1,11 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+@font-face {
+  font-family: 'Cormorant Garamond', serif;
+  src: 'https://fonts.googleapis.com/css?family=Cormorant+Garamond';
+}
+
 :root {
   /*--main-font: 'Slabo 27px', serif;*/
   /*--main-font: 'Playfair Display', serif;*/
@@ -233,7 +238,7 @@ body {
 }
 
 .theme--menu--3P9oUbIV:not(.theme--static--22s5QI3f).theme--active--2Y5ehQtw {
-  margin-top: 45%;
+  margin-top: 25%;
 }
 
 .theme--menu--3P9oUbIV:not(.theme--static--22s5QI3f).theme--active--2Y5ehQtw {
@@ -241,7 +246,7 @@ body {
 }
 
 .theme--menu--3P9oUbIV.theme--topRight--mk08KTws {
-  top: -7px !important;
+  margin-top: 50px !important;
 }
 
 #navbarNavDropdown{
@@ -313,11 +318,12 @@ body {
   text-shadow: 0px 0px 12px black !important;
   font-weight: 800 !important;
   letter-spacing: 1.5px;
-  margin-top: 2%;
-  width: 150px;
+  margin-top: 3px;
+  width: 160%; /*150px;*/
   outline: none;
+  padding: 0 7.5px;
   border: none;
-  margin-left: -20%;
+  margin-left: -27%;
 }
 
 .theme--neutral--3ViU32p4:not([disabled]).theme--flat--2JPw5a_I, .theme--neutral--3ViU32p4:not([disabled]).theme--toggle--3xRDdAad:active {
@@ -339,6 +345,10 @@ a:hover {
 /*.navMaster {
   position: fixed;
 }*/
+
+.nav-item {
+  padding: 0 7.5px;
+}
 
 /*
 ||||||||||||||||||||||| PAGEHEADER |||||||||||||||||||||||

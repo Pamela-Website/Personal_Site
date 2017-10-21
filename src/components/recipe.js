@@ -10,106 +10,154 @@ import oauth from '../../public/oauth';
 var CLIENT_ID = oauth.client_id;
 var API_KEY = oauth.drive_api;
 
-// Array of API discovery doc URLs for APIs used by the quickstart
+// function retrieveAllFiles(callback) {
+//   console.log('calling retrieveAllFiles');
+//   var retrievePageOfFiles = function(request, result) {
+//     console.log('here is the request in retrievePageOfFiles: ', request);
+//     console.log('here is the result in retrievePageOfFiles: ', result);
+//     request.execute(function(resp) {
+//       console.log('here is the resp in execute: ', resp);
+//       console.log('looking for gapi: ', gapi.client)
+//       result = result.concat(resp.items);
+//       var nextPageToken = resp.nextPageToken;
+//       if (nextPageToken) {
+//         request = gapi.client.drive.files.list({
+//           'pageToken': nextPageToken
+//         });
+//         retrievePageOfFiles(request, result);
+//       } else {
+//         callback(result);
+//       }
+//     });
+//   }
+//   var initialRequest = gapi.client.drive.files.list();
+//   retrievePageOfFiles(initialRequest, []);
+// }
+
+function start() {
+  console.log('start is being called');
+  // 2. Initialize the JavaScript client library.
+  gapi.client.init({
+    'apiKey': API_KEY,
+    // clientId and scope are optional if auth is not required.
+    'clientId': CLIENT_ID,
+    'scope': SCOPES,
+    // 'discoveryDocs': DISCOVERY_DOCS,
+  }).then(function() {
+    console.log('this function is triggering')
+    // 3. Initialize and make the API request.
+    return gapi.client.request({
+      'path': DISCOVERY_DOCS
+    })
+  }).then(function(response) {
+    console.log(response.result);
+  // }, function(reason) {
+  //   console.log('here is an error');
+  //   console.log('Error: ' + reason.result.error.message);
+  });
+};
+
+
+// // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
 
-// Authorization scopes required by the API; multiple scopes can be
-// included, separated by spaces.
+// // Authorization scopes required by the API; multiple scopes can be
+// // included, separated by spaces.
+// var authorizeButton = document.getElementById('authorize-button');
+// var signoutButton = document.getElementById('signout-button');
+
+// /**
+//  *  On load, called to load the auth2 library and API client library.
+//  */
+// function handleClientLoad() {
+//   gapi.load('client:auth2', initClient);
+// }
+
+// /**
+//  *  Initializes the API client library and sets up sign-in state
+//  *  listeners.
+//  */
+// function initClient() {
+//   gapi.client.init({
+//     apiKey: API_KEY,
+//     clientId: CLIENT_ID,
+//     discoveryDocs: DISCOVERY_DOCS,
+//     scope: SCOPES
+//   }).then(function () {
+//     // Listen for sign-in state changes.
+//     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+//     // Handle the initial sign-in state.
+//     updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+//     // authorizeButton.onclick = handleAuthClick();
+//     // signoutButton.onclick = handleSignoutClick();
+//   });
+// }
+
+// /**
+//  *  Called when the signed in status changes, to update the UI
+//  *  appropriately. After a sign-in, the API is called.
+//  */
+// function updateSigninStatus(isSignedIn) {
+//   console.log('here is the signin: ', isSignedIn);
+//   if (isSignedIn) {
+//     console.log('listing the files here')
+//     listFiles();
+//   } else {
+//     console.log('this didnt work');
+//   }
+// }
+
+// /**
+//  *  Sign in the user upon button click.
+//  */
+// function handleAuthClick(event) {
+//   gapi.auth2.getAuthInstance().signIn();
+// }
+
+// /**
+//  *  Sign out the user upon button click.
+//  */
+// function handleSignoutClick(event) {
+//   gapi.auth2.getAuthInstance().signOut();
+// }
+
+// /**
+//  * Append a pre element to the body containing the given message
+//  * as its text node. Used to display the results of the API call.
+//  *
+//  * @param {string} message Text to be placed in pre element.
+//  */
+// function appendPre(message) {
+//   var pre = document.getElementById('content');
+//   var textContent = document.createTextNode(message + '\n');
+//   // pre.appendChild(textContent);
+// }
+
+// /**
+//  * Print files.
+//  */
+// function listFiles() {
+//   console.log('listfiles is being called inside: ', gapi.client.drive.files.list);
+//   gapi.client.drive.files.list({
+//     'pageSize': 10,
+//     'fields': "nextPageToken, files(id, name)"
+//   }).then(function(response) {
+//     // appendPre('Files:');
+//     var files = response.result.files;
+//     console.log('here is the file: ', files);
+//     if (files && files.length > 0) {
+//       for (var i = 0; i < files.length; i++) {
+//         var file = files[i];
+//         appendPre(file.name + ' (' + file.id + ')');
+//       }
+//     } else {
+//       appendPre('No files found.');
+//     }
+//   });
+// }
 var SCOPES = 'https://www.googleapis.com/auth/drive.metadata';
 
-var authorizeButton = document.getElementById('authorize-button');
-var signoutButton = document.getElementById('signout-button');
-
-/**
- *  On load, called to load the auth2 library and API client library.
- */
-function handleClientLoad() {
-  gapi.load('client:auth2', initClient);
-}
-
-/**
- *  Initializes the API client library and sets up sign-in state
- *  listeners.
- */
-function initClient() {
-  gapi.client.init({
-    apiKey: API_KEY,
-    clientId: CLIENT_ID,
-    discoveryDocs: DISCOVERY_DOCS,
-    scope: SCOPES
-  }).then(function () {
-    // Listen for sign-in state changes.
-    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-    // Handle the initial sign-in state.
-    updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-    // authorizeButton.onclick = handleAuthClick();
-    // signoutButton.onclick = handleSignoutClick();
-  });
-}
-
-/**
- *  Called when the signed in status changes, to update the UI
- *  appropriately. After a sign-in, the API is called.
- */
-function updateSigninStatus(isSignedIn) {
-  console.log('here is the signin: ', isSignedIn);
-  if (isSignedIn) {
-    console.log('listing the files here')
-    listFiles();
-  } else {
-    console.log('this didnt work');
-  }
-}
-
-/**
- *  Sign in the user upon button click.
- */
-function handleAuthClick(event) {
-  gapi.auth2.getAuthInstance().signIn();
-}
-
-/**
- *  Sign out the user upon button click.
- */
-function handleSignoutClick(event) {
-  gapi.auth2.getAuthInstance().signOut();
-}
-
-/**
- * Append a pre element to the body containing the given message
- * as its text node. Used to display the results of the API call.
- *
- * @param {string} message Text to be placed in pre element.
- */
-function appendPre(message) {
-  var pre = document.getElementById('content');
-  var textContent = document.createTextNode(message + '\n');
-  // pre.appendChild(textContent);
-}
-
-/**
- * Print files.
- */
-function listFiles() {
-  console.log('listfiles is being called inside: ', gapi.client.drive.files.list);
-  gapi.client.drive.files.list({
-    'pageSize': 10,
-    'fields': "nextPageToken, files(id, name)"
-  }).then(function(response) {
-    // appendPre('Files:');
-    var files = response.result.files;
-    console.log('here is the file: ', files);
-    if (files && files.length > 0) {
-      for (var i = 0; i < files.length; i++) {
-        var file = files[i];
-        appendPre(file.name + ' (' + file.id + ')');
-      }
-    } else {
-      appendPre('No files found.');
-    }
-  });
-}
 
 export default class Recipe extends Component {
   constructor(props) {
@@ -128,7 +176,10 @@ export default class Recipe extends Component {
   };
 
   componentWillMount() {
-    handleClientLoad();
+    // handleClientLoad();
+    // 1. Load the JavaScript client library.
+    // retrieveAllFiles(gapi.load('client'), start)
+    gapi.load('client', start);
   }
 
   handleOpen(tile) {
@@ -199,8 +250,7 @@ export default class Recipe extends Component {
       <div>
         <Navigation />
         <div style={styles.root}>
-        <button id="authorize-button" onClick={handleAuthClick}>Authorize</button>
-        <button id="signout-button" onClick={handleSignoutClick}>Sign Out</button>
+
           <GridList
             cellHeight={300}
             style={styles.gridList}
