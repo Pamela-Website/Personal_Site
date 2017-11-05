@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path'); //helps manipulate path names
+var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-source-map', //gives us line numbers in case there are errors for debugging
@@ -23,7 +24,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot-loader', 'babel-loader?presets[]=react,presets[]=es2015']
+        loaders: ['react-hot-loader/webpack', 'babel-loader?presets[]=react,presets[]=es2015']
       },
       {
         test: /\.(png|jpg)$/,
@@ -58,7 +59,7 @@ module.exports = {
         NODE_ENV: JSON.stringify('production')
       }
     }),
-    new webpack.optimize.UglifyJsPlugin()
+    new UglifyJSPlugin()
     // new webpack.ExtractTextPlugin('styles/styles.css', {
     //   allChunks: true
     // })
