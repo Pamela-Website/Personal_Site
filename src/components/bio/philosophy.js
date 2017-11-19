@@ -22,11 +22,11 @@ export default class Philosophy extends Component {
                 </i>
               </div>
               <div className="row about-me">
-                When it comes to health, there’s no “one size fits all” philosophy. That’s why my whole foods nutrition practice is based upon a personalized and tailored approach to health and wellbeing, based on each person’s specific needs. Step by step, we will work together to identify your unique goals and create effective strategies to set you up for success for life.
+                When it comes to health, there’s no “one size fits all” philosophy. That’s why my whole foods nutrition practice is based upon a personalized and tailored approach to health and wellbeing, based on each person’s specific needs. Step by step, we will work together to identify your unique goals and create effective strategies to set you up for success.
               </div>
               <br />
               <div className="row about-me">
-                As humans, we are designed to be in a state of balance, and yet, we become disconnected from ourselves and our food, leaving us in a constant state of imbalance. My functional healthcare approach looks at you as a whole person and how each area of your life influences and impacts your health. In order to restore balance in your life, we will follow a mind-body approach that will facilitate your natural healing processes and utilize the transformational powers of food as medicine.
+                As humans, we are designed to be in a state of balance, and yet, we can become disconnected from ourselves and our food, leaving us in a constant state of imbalance. My functional healthcare approach looks at you as a whole person and how each area of your life influences and impacts your health. In order to restore balance in your life, we will follow a mind-body approach that will facilitate your natural healing processes and utilize the transformational powers of food as medicine.
                 </div>
               </div>
               <br />

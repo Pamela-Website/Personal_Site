@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.renderFooter = this.renderFooter.bind(this);
+  };
+
+  renderFooter() {
+    if (window.location.pathname === '/recipes') {
+      return <span />;
+    }
     return (
       <div className="footer">
         <div className="footer-icons">
@@ -19,6 +28,14 @@ export default class Footer extends Component {
           </a>
         </div>
         <br />
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div>
+        { this.renderFooter() }
       </div>
     )
   }

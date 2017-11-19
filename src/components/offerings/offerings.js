@@ -12,10 +12,18 @@ export default class Offerings extends Component {
         <NBody />
         <hr />
         <CBody />
-        <hr />
-        <GBody />
         <br />
       </div>
     );
   }
 }
+
+/*      <div>
+        <Header />
+        <NBody />
+        <hr />
+        <CBody />
+        <hr />
+        <GBody />
+        <br />
+      </div>*/

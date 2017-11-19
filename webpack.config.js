@@ -4,31 +4,28 @@ var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-source-map', //gives us line numbers in case there are errors for debugging
-  entry: [ //defines where webpack will look for our files
-    // UNCOMMENT webpack-dev & webpack/hot for LIVE RELOAD
-    // 'webpack-dev-server/client?http://127.0.0.1:8080/',
-    // 'webpack/hot/only-dev-server', //allows for hot reloading
+  entry: [
     './src', //the folder where webpack will look for our initial file to run - defaults to index.html
     // './styles'
   ],
-  output: { //for deployment purposes, not necessary otherwise
+  output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
-  resolve: { //where webpack will look for the files to bundle together
+  resolve: {
     modules: ['node_modules', 'src'],
-    extensions: ['.js', '.jsx'] //type of file extensions webpack will expect
+    extensions: ['.js', '.jsx'],
   },
-  module: { //define our loaders
+  module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot-loader/webpack', 'babel-loader?presets[]=react,presets[]=es2015']
+        loaders: ['react-hot-loader/webpack', 'babel-loader?presets[]=react,presets[]=es2015'],
       },
       {
         test: /\.(png|jpg)$/,
-        loader: 'url?limit=25000'
+        loader: 'url?limit=25000',
       },
       {
          test: /\.css$/,
@@ -49,17 +46,19 @@ module.exports = {
     ]
   },
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    inline: true,
+    port: 3000,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(), // for hot reloading
     new webpack.NoEmitOnErrorsPlugin(), // won't compile with errors
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
+        NODE_ENV: JSON.stringify('production'),
+      },
     }),
-    new UglifyJSPlugin()
+    new UglifyJSPlugin(),
     // new webpack.ExtractTextPlugin('styles/styles.css', {
     //   allChunks: true
     // })

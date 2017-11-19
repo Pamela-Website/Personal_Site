@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const nodemailer = require('nodemailer');
 const api_key = require('./public/oauth').api_key;
 const domain = require('./public/oauth').domain;
 const user = require('./public/oauth').user;

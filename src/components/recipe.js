@@ -6,6 +6,7 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import { recipes } from './recipes-seed';
 import oauth from '../../public/oauth';
+import ComingSoon from './coming_soon';
 
 var CLIENT_ID = oauth.client_id;
 var API_KEY = oauth.drive_api;
@@ -247,7 +248,13 @@ export default class Recipe extends Component {
       color: 'black',
     }
     return (
-      <div>
+      <ComingSoon />
+
+    )
+  }
+}
+
+/*<div>
         <Navigation />
         <div style={styles.root}>
 
@@ -314,8 +321,4 @@ export default class Recipe extends Component {
           </GridList>
         </div>
         <br />
-      </div>
-    )
-  }
-}
-
+      </div>*/

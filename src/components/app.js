@@ -6,7 +6,6 @@ import Footer from './footer';
 import Group from './offerings/group';
 import Home from './home';
 import Landing from './landing';
-import Navigation from './navbar';
 import Nutrition from './offerings/nutrition';
 import Offerings from './offerings/offerings';
 import Philosophy from './bio/philosophy';
@@ -46,11 +45,11 @@ export default class App extends Component {
         this.setState({ blogs: res.items })
       }
     })
-  }
+  };
 
   componentDidMount() {
     this.getBlogs();
-  }
+  };
 
   renderLanding(path, blogs) {
     if (path === '/') {
@@ -86,15 +85,15 @@ export default class App extends Component {
         </MuiThemeProvider>
       );
     }
-  }
+  };
 
   render() {
-    const blogs = this.state.blogs;
+    const { blogs } = this.state;
     let path = window.location.pathname
     return (
       <div>
         {this.renderLanding(path, blogs)}
       </div>
     );
-  }
-}
+  };
+};

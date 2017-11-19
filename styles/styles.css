@@ -70,8 +70,9 @@ body {
 }
 
 .bio-picture {
-  background: url('../public/img/bio-pamela.jpg');
-  background-position: 0 200%;
+  background: url('../public/img/bio-pamela.JPG');
+  background-position: 0 125%;
+  background-repeat: no-repeat;
   background-size: 100%;
   /*padding-bottom: 5%;*/
   height: 400px;
@@ -176,22 +177,7 @@ body {
 .about-credentials-text {
   padding-left: 5%;
   font-size: 17px;
-}
-
-.about-credentials-text:hover {
-  padding-left: 7%;
-  font-size: 17px;
   font-weight: 800;
-  letter-spacing: 1px;
-  color: #66d7e5;
-  -webkit-transition: all 350ms ease-in;
-  -webkit-transform: scale(1.05);
-  -ms-transition: all 350ms ease-in;
-  -ms-transform: scale(1.05);
-  -moz-transition: all 350ms ease-in;
-  -moz-transform: scale(1.05);
-  transition: all 350ms ease-in;
-  transform: scale(1.05);
 }
 
 .about-institution {
@@ -799,10 +785,15 @@ b {
   font-weight: 800;
 }
 
-.offering-description {
+.offering-description, .forbes-link {
   padding: 10px 0;
   font-family: var(--main-body) !important;
   font-size: 18px;
+  color: black;
+}
+
+.forbes-link:hover {
+  color: #66d7e5;
 }
 
 .offering-title {
@@ -839,7 +830,8 @@ b {
   transform: scale(1.22);
   background-size: cover;
   background-position: center center !important;
-  height: 100vh !important;
+  min-height: 1000px !important;
+  height: 100% !important;
 }
 
 .intro-name {
@@ -951,4 +943,50 @@ b {
 
 .recipe-ingredients {
   margin-left: -1.5% !important;
+}
+
+
+/*COMING SOON*/
+
+.coming-soon {
+  background: url('../public/img/coming-soon.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 850px;
+  background-attachment: fixed;
+}
+
+.coming-soon-header {
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1px;
+  font-size: 55px;
+  font-family: var(--main-header);
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 0 12px black;
+}
+
+.coming-soon-container {
+  text-align: center;
+  background-color: rgba(255,255,255,0.6);
+  color: black;
+}
+
+.coming-soon-subheader {
+  margin: 0;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 0 12px black;
+  font-size: 35px;
 }

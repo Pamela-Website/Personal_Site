@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 
 export default class Landing extends Component {
   enterSite() {
-    window.location.href = '/resources'
+    window.location.href = '/about-me'
   }
 
   intro() {

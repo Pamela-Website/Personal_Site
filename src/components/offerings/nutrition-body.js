@@ -89,7 +89,7 @@ export default class NBody extends Component {
             icon={'+'}
           >
             <p className="offering-price">
-              One-on-One Nutritional Consultation (90-minutes)
+              One-on-One Nutritional Counseling (90-minutes)
            </p>
           </StepButton>
           <StepContent>
@@ -98,13 +98,13 @@ export default class NBody extends Component {
                 Interested in reclaiming your health? I’m here for you. During your session, we’ll explore how your physical, mental and emotional states are impacting your health and we’ll discuss practical tools for transformation. Together, we will create a personalized nutrition and lifestyle plan designed to meet your unique health goals.
               </p>
               <p className="offering-title">
-                One-on-One Initial Nutritional Consultation (90-minutes)
+                One-on-One Initial Nutritional Counseling (90-minutes)
               </p>
               <p className="offering-description">
                 This in-depth session is an opportunity for me to develop a detailed understanding of your story, your health and your goals while discussing practical tools for transformation. Working together we will create a customized nutrition and lifestyle plan tailored to you and your nutritional needs, including full symptomatic support, recipes, meal plans, supplemental and herbal protocols along with guidance. Please contact me to schedule your appointment.
               </p>
               <p className="offering-title">
-                One-on-One Nutritional Consultation Follow-Up Appointment (60-minutes)
+                One-on-One Nutritional Counseling Follow-Up Appointment (60-minutes)
               </p>
               <p className="offering-title">
                 <em>*For current clients only*</em>
@@ -122,7 +122,7 @@ export default class NBody extends Component {
             icon={'+'}
           >
             <p className="offering-price">
-              Virtual Nutritional Consultation (60-minutes)
+              Virtual Nutritional Counseling (60-minutes)
             </p>
           </StepButton>
           <StepContent>
@@ -145,14 +145,13 @@ export default class NBody extends Component {
             <p className="offering-title">
               <i>
                 “Do something today that your future self will thank you for”
-                 OR: “Change is hard at first, messy in the middle and gorgeous at the end” Robin Sharma
               </i>
             </p>
             <p className="offering-description">
               Small changes in your everyday life will lead to huge results! Feel your best self yet by prioritizing your health and committing to your goals. To show my full commitment to you and your health, I’m offering a 10% discount when you sign up for a nutritional counseling & wellness package. Please contact me to secure your package.
             </p>
             <p className="offering-title">
-              1-MONTH Nutritional Consultation & Wellness DISCOVERY Package
+              1-MONTH Nutritional Counseling & Wellness DISCOVERY Package
             </p>
             <p className="offering-description">
               This package incorporates four nutritional consultations (60-minutes each) of one-on-one conversations, along with email support between sessions.
@@ -161,7 +160,7 @@ export default class NBody extends Component {
               We meet weekly for one month.
             </p>
             <p className="offering-title">
-              3-MONTH Nutritional Consultation & Wellness RESTORATION Package
+              3-MONTH Nutritional Counseling & Wellness RESTORATION Package
             </p>
             <p className="offering-description">
               This package incorporates eight nutritional consultations (60-minutes each) of one-on-one conversations, along with email support between sessions.
@@ -170,9 +169,9 @@ export default class NBody extends Component {
               We meet weekly for the first month and then biweekly for the remaining two months.
             </p>
             <p className="offering-title">
-              6-MONTH Nutritional Consultation & Wellness FLOURISH Package
+              6-MONTH Nutritional Counseling & Wellness FLOURISH Package
             </p>
-            <i>Sometimes it’s not as simple as making basic dietary changes (or: sometimes there’s no quick fix)
+            <i>Sometimes it’s not as simple as making basic dietary changes
             </i>
             <p className="offering-description">
               This package incorporates 18 nutritional consultations (60-minutes each) of one-on-one conversations, along with unlimited email support between sessions.
@@ -194,10 +193,10 @@ export default class NBody extends Component {
           </StepButton>
           <StepContent>
             <p className="offering-title">
-              In-Home Nutritional Consultation
+              In-Home Nutritional Counseling
             </p>
             <p className="offering-description">
-              Your health and wellbeing is my top priority. To lighten your load and make life easier for you, I offer in-home visits (dependent on location and subject to mileage costs). Home visits can be an excellent way for me to better understand your home lifestyle, which can aid in the creation of a nutrition plan that is uniquely you. At the heart of your home visit is your personalized nutrition consultation with the additional options of a pantry makeover and/or an in-home cooking demonstration. Please contact me to schedule your in-home session.
+              Your health and wellbeing is my top priority. To lighten your load and make life easier for you, I offer in-home visits (dependent on location and subject to mileage costs). Home visits can be an excellent way for me to better understand your home lifestyle, which can aid in the creation of a nutrition plan that is uniquely you. At the heart of your home visit is your personalized nutritional counseling with the additional options of a pantry makeover and/or an in-home cooking demonstration. Please contact me to schedule your in-home session.
             </p>
             <p className="offering-title">
               Pantry Makeover
