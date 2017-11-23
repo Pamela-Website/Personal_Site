@@ -163,7 +163,7 @@ body {
 }
 
 .about-credentials-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -178,6 +178,7 @@ body {
   padding-left: 5%;
   font-size: 17px;
   font-weight: 800;
+  color: rgba(0,0,0,0.6);
 }
 
 .about-institution {
@@ -767,11 +768,11 @@ b {
 
 .nutrition-header {
   font-weight: 800;
-  font-size: 21px;
+  font-size: calc(1.5vh + 5px);
   font-family: var(--main-intro);
   font-variant: small-caps;
   padding-bottom: 2%;
-  margin: 0 15%;
+  margin: 0 12.5%;
   text-align: center;
   text-shadow: 0 0 12px black;
   color: white;

@@ -36,9 +36,11 @@ app.post('/send', (req, res, next) => {
     subject: name,
     text: `
     Hi Pamela,
-      I heard about your from: ${hear}.
+    I heard about your from:
 
-      ${message}`,
+    ${hear}.
+
+    ${message}`,
   };
   let toClient = {
     from: user,
@@ -47,13 +49,15 @@ app.post('/send', (req, res, next) => {
     text: `
     Hello ${name},
 
-    Thanks for connecting with me. I'll be in touch shortly (usually within 48 hours) in response to your inquiry.
-    I look forward to helping you in any way you need.
+    Welcome to the Nourish Roots community. Thanks for connecting with me. I'll respond to your inquiry shortly.
 
-    Best wishes,
-    Pamela Sandler
+    I look forward to helping you on your journey towards optimum health.
 
     In Health | In Happiness | In Nourishment
+
+    Pamela Sandler
+
+    XOX
     `,
   }
   mailgun.messages().send(data, (err, body) => {

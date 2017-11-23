@@ -18,7 +18,7 @@ export default class About extends Component {
           <hr />
           <div className="container">
             <div className="row">
-              <div className="col-sm-8">
+              <div className="col-sm-10 offset-sm-1 col-md-8">
                 <div className="row">
                   <div className="row">
                     <i className="about-quote">"There is no sincerer love than the love of food." –George Bernard Shaw</i>
@@ -35,7 +35,7 @@ export default class About extends Component {
                   </div>
                   <br />
                   <div className="row about-me">
-                     Having lived around the globe in England, Israel, Australia and the U.S., it is clear to me that for each and every one of us, nutrition and lifestyle plays a fundamental role in our health and wellness. As in the case of a tree, wherever it is situated, its roots must be nurtured and nourished in order for its stem and branches to flourish, yielding true health. Our foundation mirrors the roots of a tree, as we too must tackle the cause of our ailments in order to achieve true health. I learned that it is only by looking at a person as a whole, that we can fully address the root causes of imbalance, facilitate the body’s natural healing mechanisms (through diet and lifestyle) and in turn create positive changes that have lasting effects.
+                     Having lived around the globe in England, Israel, Australia and the U.S., it is clear to me that for each and every one of us, nutrition and lifestyle plays a fundamental role in our health and wellness. As in the case of a tree, wherever it is situated, its roots must be nurtured and nourished in order for its stems and branches to flourish, yielding true health. Our foundation mirrors the roots of a tree, as we too must tackle the cause of our ailments in order to achieve true health. I learned that it is only by looking at a person as a whole, that we can fully address the root causes of imbalance, facilitate the body’s natural healing mechanisms (through diet and lifestyle) and in turn create positive changes that have lasting effects.
                   </div>
                   <br />
                   <div className="row about-me">
@@ -45,7 +45,7 @@ export default class About extends Component {
                 <br />
                 <div className="row">
                   <div className="row about-me">
-                    Now settled in LA with my wonderful husband Ariel, I feel blessed that I have found a path that has provided me with the opportunity to help others become the best version of themselves. Healthy living is something that we all deserve and by working together we can pave the way to a healthier, more nourished you.
+                    Now settled in LA with my wonderful husband Ariel, I feel blessed that I have found a path that has provided me with the opportunity to support others in becoming the best version of themselves. Healthy living is something that we all deserve and by working together we can pave the way to a healthier, more nourished you.
                   </div>
                 </div>
                 <br />
@@ -68,16 +68,8 @@ export default class About extends Component {
                 </div>
               </div>
               <br />
-              <div className="col-sm-3 offset-sm-1 about-credentials">
+              <div className="d-xs-none d-sm-none d-md-block col-md-3 offset-md-1 about-credentials">
                 <p className="about-credentials-title">Credentials: </p>
-                <div className="row">
-                  <p className="about-credentials-text">
-                    Clinical Internship Focused on Women’s & Child Health – 2017
-                    <p className="about-institution">
-                      Magnolia Family Clinic, Portland, Oregon
-                    </p>
-                  </p>
-                </div>
                 <div className="row">
                   <p className="about-credentials-text">
                     Master’s of Science in Nutrition – 2017
@@ -94,9 +86,29 @@ export default class About extends Component {
                     </p>
                   </p>
                 </div>
+                <p className="about-credentials-title">Experience: </p>
+                <div className="row">
+                  <p className="about-credentials-text">
+                    Clinical Internship Focused on Women’s & Child Health – 2017
+                    <p className="about-institution">
+                      Magnolia Family Clinic, Portland, Oregon
+                    </p>
+                  </p>
+                </div>
+                <p className="about-credentials-title">Specialized Skills: </p>
                 <div className="row">
                   <p className="about-credentials-text">
                     Nutritional Counseling & Health Coaching
+                  </p>
+                </div>
+                <div className="row">
+                  <p className="about-credentials-text">
+                    Women's Health and Fertility
+                  </p>
+                </div>
+                <div className="row">
+                  <p className="about-credentials-text">
+                    Recipe Creation & Customization
                   </p>
                 </div>
                 <div className="row">
@@ -107,11 +119,6 @@ export default class About extends Component {
                 <div className="row">
                   <p className="about-credentials-text">
                     Culinary Skills & Cooking with Medicinal Herbs
-                  </p>
-                </div>
-                <div className="row">
-                  <p className="about-credentials-text">
-                    Women's Health and Fertility
                   </p>
                 </div>
                 <div className="row">

@@ -42,7 +42,7 @@ export default class Landing extends Component {
   }
 
   render() {
-    let settings = {
+    const settings = {
       arrows: false,
       centerMode: true,
       dots: false,
@@ -54,7 +54,7 @@ export default class Landing extends Component {
       draggable: false,
       autoplaySpeed: 5000,
       pauseOnHover: false,
-    }
+    };
     return (
       <div>
         <Slider {...settings}>

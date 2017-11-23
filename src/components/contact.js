@@ -83,7 +83,9 @@ export default class Contact extends Component {
             open={this.state.open}
             onRequestClose={this.handleClose}
           >
-            Thanks so much for reaching out. I NEED TO GET A NEW RESPONSE HERE
+            Thanks so much for reaching out. You'll be receiving a confirmation email shortly. Please check your email (or spam) for details on how to proceed.
+
+            Nourish Roots XOX
           </Dialog>
         </div>
       )
