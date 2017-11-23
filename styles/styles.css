@@ -881,7 +881,7 @@ b {
 .intro {
   z-index: 10;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   color: white;
   -ms-transform: translate(-50%, -50%);
