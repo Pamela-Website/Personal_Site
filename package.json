@@ -7,7 +7,7 @@
     "watch": "webpack --watch",
     "build": "set NODE_ENV=production webpack --progress --colors -p --config webpack.prod.config.js",
     "dev": "webpack-dev-server --progress --colors --watch",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "jest": {
     "testEnvironment": "jest-environment-node",
