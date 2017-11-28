@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 
-
 export default class Landing extends Component {
   enterSite() {
     window.location.href = '/about-me'
@@ -25,14 +24,11 @@ export default class Landing extends Component {
               <a target="_blank" className="a-intro" href="contact">
                 <i className="fa fa-envelope" aria-hidden="true"/>
               </a>
-              <a target="_blank" className="a-intro" href="https://www.facebook.com/nourish.roots.1">
+              <a target="_blank" className="a-intro" href="https://www.facebook.com/nourishrootsnutrition/">
                 <i className="fa fa-facebook-official" aria-hidden="true"/>
               </a>
               <a target="_blank" className="a-intro" href="https://www.instagram.com/nourishroots/">
                 <i className="fa fa-instagram" aria-hidden="true"/>
-              </a>
-              <a target="_blank" className="a-intro" href="https://www.pinterest.com/nourishroots/">
-                <i className="fa fa-pinterest" aria-hidden="true"/>
               </a>
             </div>
           </div>
@@ -79,7 +75,10 @@ export default class Landing extends Component {
   }
 }
 
-/*<div className="landing-slider">
+/*              <a target="_blank" className="a-intro" href="https://www.pinterest.com/nourishroots/">
+                <i className="fa fa-pinterest" aria-hidden="true"/>
+              </a>
+        <div className="landing-slider">
             {this.intro()}
           </div>
           <div className="landing-slider">
