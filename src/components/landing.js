@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 export default class Landing extends Component {
   enterSite() {
     window.location.href = '/about-me'
-  }
+  };
 
   intro() {
     return (
@@ -35,7 +35,7 @@ export default class Landing extends Component {
         </div>
       </div>
     )
-  }
+  };
 
   render() {
     const settings = {
@@ -54,26 +54,29 @@ export default class Landing extends Component {
     return (
       <div>
         <Slider {...settings}>
-          <div className="landing-slider-1">
-            {this.intro()}
+          <div id="landing">
+            <img src="../../public/img/img-1.jpeg" />
           </div>
-          <div className="landing-slider-2">
-            {this.intro()}
+          <div id="landing">
+            <img src="../../public/img/img-2.jpg" />
           </div>
-          <div className="landing-slider-3">
-            {this.intro()}
+          <div id="landing">
+            <img src="../../public/img/img-3.jpeg" />
           </div>
-          <div className="landing-slider-4">
-            {this.intro()}
+          <div id="landing">
+            <img src="../../public/img/img-4.jpg" />
           </div>
-          <div className="landing-slider-5">
-            {this.intro()}
+          <div id="landing">
+            <img src="../../public/img/img-5.jpg" />
           </div>
         </Slider>
+        <div>
+          {this.intro()}
+        </div>
       </div>
     )
-  }
-}
+  };
+};
 
 /*              <a target="_blank" className="a-intro" href="https://www.pinterest.com/nourishroots/">
                 <i className="fa fa-pinterest" aria-hidden="true"/>

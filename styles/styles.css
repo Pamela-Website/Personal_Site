@@ -685,15 +685,10 @@ b {
   background-color: #F5F5F5;
 }
 
-.footer-icons, .intro-icons {
+.footer-icons {
   font-size: 20px;
   padding: 2% 0;
   text-align: center;
-}
-
-.intro-icons {
-  color: white;
-  transform: translate(0, 100%);
 }
 
 .a-icons {
@@ -702,17 +697,17 @@ b {
 }
 
 .a-intro {
-  padding: 0px 5px;
+  padding: 0px 10px;
   color: white;
   text-shadow: 0px 0px 12px black;
 }
 
 .a-icons:hover, .a-intro:hover {
-  padding: 0px 5px;
-  -webkit-transition: all 200ms ease-in;
+  padding: 0px 10px;
+/*  -webkit-transition: all 200ms ease-in;
   -ms-transition: all 200ms ease-in;
   -moz-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
+  transition: all 200ms ease-in;*/
   /*color: #c98cff;*/
   color: #66d7e5 !important;
 }
@@ -807,32 +802,25 @@ b {
 /*
 ||||||||||||||||||||||| LANDING |||||||||||||||||||||||
  */
-.landing-slider-1 {
-  background-image: url('../public/img/img-1.jpg');
+/*img > #landing {
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  position: absolute;
+}*/
+
+#landing {
+  transform: scale(1.1);
+  height: 100vh;
+  width: 100vw;
 }
 
-.landing-slider-5 {
-  background-image: url('../public/img/img-2.jpg');
-}
-
-.landing-slider-2 {
-  background-image: url('../public/img/img-3.jpg');
-}
-
-.landing-slider-3 {
-  background-image: url('../public/img/img-4.jpg');
-}
-
-.landing-slider-4 {
-  background-image: url('../public/img/img-5.jpg');
-}
-
-.landing-slider-1, .landing-slider-2, .landing-slider-3, .landing-slider-4, .landing-slider-5, .slick-slide {
-  transform: scale(1.22);
-  background-size: cover;
-  background-position: center center !important;
-  min-height: 1000px !important;
-  height: 100% !important;
+#landing > img {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: block;
+  margin: 0 auto;
 }
 
 .intro-name {
@@ -848,11 +836,19 @@ b {
 .intro-description {
   font-family: var(--main-header);
   color: white;
-  font-size: 18px;
+  font-size: 23px;
   margin: auto;
   padding: 15px 0;
   letter-spacing: 2px;
   text-shadow: 0px 0px 12px black;
+}
+
+.intro-icons {
+  color: white;
+  transform: translate(0, 100%);
+  font-size: 25px;
+  text-align: center;
+  padding: 1% 0;
 }
 
 .enter-button > .enter{
@@ -861,22 +857,18 @@ b {
   background-color: transparent;
   color: white;
   outline: none;
-  margin-top: 10px;
-  font-size: 20px;
+  margin-top: 9px;
+  font-size: 30px;
   letter-spacing: 1px;
   border: 3.5px solid rgba(255,255,255,0.8);
   padding: 2.5px 11px;;
   text-shadow: 0px 0px 12px black;
 }
 
-.enter:hover {
-  cursor: pointer
+.enter-button > .enter:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.4);
 }
-
-/*.enter-button:hover > .enter:hover {
-  background-color: white;
-  color: purple;
-}*/
 
 .intro {
   z-index: 10;
