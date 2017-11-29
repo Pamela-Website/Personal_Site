@@ -81,18 +81,4 @@ export default class Landing extends Component {
 /*              <a target="_blank" className="a-intro" href="https://www.pinterest.com/nourishroots/">
                 <i className="fa fa-pinterest" aria-hidden="true"/>
               </a>
-        <div className="landing-slider">
-            {this.intro()}
-          </div>
-          <div className="landing-slider">
-            {this.intro()}
-          </div>
-          <div className="landing-slider">
-            {this.intro()}
-          </div>
-          <div className="landing-slider">
-            {this.intro()}
-          </div>
-          <div className="landing-slider">
-            {this.intro()}
-          </div>*/
+      */

@@ -71,9 +71,9 @@ body {
 
 .bio-picture {
   background: url('../public/img/bio-pamela.JPG');
-  background-position: 0 125%;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   /*padding-bottom: 5%;*/
   height: 400px;
   background-attachment: fixed;

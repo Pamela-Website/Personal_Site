@@ -1,7 +1,5 @@
 node_modules
-public
-bundle.js
-oauth.js
+
 client_secret.json
 coverage
 quickstart.js
